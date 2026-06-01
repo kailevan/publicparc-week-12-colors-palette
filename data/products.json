@@ -1,0 +1,7051 @@
+[
+{
+"id": 0,
+"handle": "ecru-logo-knit-hoodie",
+"title": "Ecru Logo Knit Hoodie",
+"type": "Hoodie",
+"price": 61.0,
+"cur": "EUR",
+"img": "assets/products/ecru-logo-knit-hoodie.jpg",
+"family": "ecru",
+"h": 49.8,
+"s": 0.094,
+"l": 0.895,
+"rgb": [
+231,
+230,
+226
+],
+"thumb": "assets/thumbs/ecru-logo-knit-hoodie.webp"
+},
+{
+"id": 1,
+"handle": "black-logo-knit-hoodie",
+"title": "Black Logo Knit Hoodie",
+"type": "Hoodie",
+"price": 61.0,
+"cur": "EUR",
+"img": "assets/products/black-logo-knit-hoodie.jpg",
+"family": "black",
+"h": 0.0,
+"s": 0.0,
+"l": 0.051,
+"rgb": [
+13,
+13,
+13
+],
+"thumb": "assets/thumbs/black-logo-knit-hoodie.webp"
+},
+{
+"id": 2,
+"handle": "khaki-logo-knit-hoodie",
+"title": "Khaki Logo Knit Hoodie",
+"type": "Hoodie",
+"price": 61.0,
+"cur": "EUR",
+"img": "assets/products/khaki-logo-knit-hoodie.jpg",
+"family": "khaki",
+"h": 43.6,
+"s": 0.334,
+"l": 0.421,
+"rgb": [
+143,
+124,
+72
+],
+"thumb": "assets/thumbs/khaki-logo-knit-hoodie.webp"
+},
+{
+"id": 3,
+"handle": "brown-knit-balaclava",
+"title": "Brown Knit Balaclava",
+"type": "Balaclava",
+"price": 10.0,
+"cur": "EUR",
+"img": "assets/products/brown-knit-balaclava.jpg",
+"family": "brown",
+"h": 23.1,
+"s": 0.236,
+"l": 0.25,
+"rgb": [
+79,
+60,
+49
+],
+"thumb": "assets/thumbs/brown-knit-balaclava.webp"
+},
+{
+"id": 4,
+"handle": "heavy-washed-khaki-knit-pants",
+"title": "Heavy Washed Khaki Knit Pants",
+"type": "Jogger",
+"price": 48.0,
+"cur": "EUR",
+"img": "assets/products/heavy-washed-khaki-knit-pants.jpg",
+"family": "khaki",
+"h": 34.7,
+"s": 0.313,
+"l": 0.208,
+"rgb": [
+69,
+56,
+36
+],
+"thumb": "assets/thumbs/heavy-washed-khaki-knit-pants.webp"
+},
+{
+"id": 5,
+"handle": "cargo-skirt",
+"title": "Wmns Cargo Skirt",
+"type": "Skirt",
+"price": 23.0,
+"cur": "EUR",
+"img": "assets/products/cargo-skirt.jpg",
+"family": "unknown",
+"h": 81.1,
+"s": 0.023,
+"l": 0.38,
+"rgb": [
+98,
+99,
+95
+],
+"thumb": "assets/thumbs/cargo-skirt.webp"
+},
+{
+"id": 6,
+"handle": "cargo-mini-skirt",
+"title": "Wmns Cargo Mini Skirt",
+"type": "",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/cargo-mini-skirt.jpg",
+"family": "unknown",
+"h": 62.4,
+"s": 0.031,
+"l": 0.389,
+"rgb": [
+102,
+102,
+96
+],
+"thumb": "assets/thumbs/cargo-mini-skirt.webp"
+},
+{
+"id": 7,
+"handle": "light-grey-acid-jogger",
+"title": "Faded Grey Stonewashed Jogger",
+"type": "Jogger",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/light-grey-acid-jogger.jpg",
+"family": "grey",
+"h": 93.6,
+"s": 0.013,
+"l": 0.729,
+"rgb": [
+186,
+187,
+185
+],
+"thumb": "assets/thumbs/light-grey-acid-jogger.webp"
+},
+{
+"id": 8,
+"handle": "anthracite-acid-jogger",
+"title": "Anthracite Stonewashed Jogger",
+"type": "Jogger",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-acid-jogger.jpg",
+"family": "anthracite",
+"h": 218.4,
+"s": 0.051,
+"l": 0.135,
+"rgb": [
+33,
+34,
+36
+],
+"thumb": "assets/thumbs/anthracite-acid-jogger.webp"
+},
+{
+"id": 9,
+"handle": "brown-acid-jogger",
+"title": "Hazel Brown Stonewashed Jogger",
+"type": "Jogger",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/brown-acid-jogger.jpg",
+"family": "brown",
+"h": 18.3,
+"s": 0.098,
+"l": 0.217,
+"rgb": [
+61,
+53,
+50
+],
+"thumb": "assets/thumbs/brown-acid-jogger.webp"
+},
+{
+"id": 10,
+"handle": "anthracite-acid-wmns-hoodie",
+"title": "Anthracite Wmns Hoodie",
+"type": "Wmns Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-acid-wmns-hoodie.jpg",
+"family": "anthracite",
+"h": 249.1,
+"s": 0.113,
+"l": 0.125,
+"rgb": [
+29,
+28,
+35
+],
+"thumb": "assets/thumbs/anthracite-acid-wmns-hoodie.webp"
+},
+{
+"id": 11,
+"handle": "grey-acid-wmns-hoodie",
+"title": "Faded Grey Wmns Hoodie",
+"type": "Wmns Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/grey-acid-wmns-hoodie.jpg",
+"family": "grey",
+"h": 327.7,
+"s": 0.056,
+"l": 0.645,
+"rgb": [
+170,
+159,
+165
+],
+"thumb": "assets/thumbs/grey-acid-wmns-hoodie.webp"
+},
+{
+"id": 12,
+"handle": "brown-acid-wmns-hoodie",
+"title": "Cocoa Wmns Hoodie",
+"type": "Wmns Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/brown-acid-wmns-hoodie.jpg",
+"family": "brown",
+"h": 11.6,
+"s": 0.179,
+"l": 0.344,
+"rgb": [
+104,
+78,
+72
+],
+"thumb": "assets/thumbs/brown-acid-wmns-hoodie.webp"
+},
+{
+"id": 13,
+"handle": "anthracite-acid-wmns-crewneck",
+"title": "Anthracite Wmns Cropped Crewneck",
+"type": "Wmns Crewneck",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-acid-wmns-crewneck.jpg",
+"family": "anthracite",
+"h": 254.2,
+"s": 0.117,
+"l": 0.124,
+"rgb": [
+30,
+28,
+35
+],
+"thumb": "assets/thumbs/anthracite-acid-wmns-crewneck.webp"
+},
+{
+"id": 14,
+"handle": "grey-acid-wmns-crewneck",
+"title": "Faded Grey Wmns Cropped Crewneck",
+"type": "Wmns Crewneck",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/grey-acid-wmns-crewneck.jpg",
+"family": "grey",
+"h": 2.6,
+"s": 0.113,
+"l": 0.434,
+"rgb": [
+123,
+99,
+98
+],
+"thumb": "assets/thumbs/grey-acid-wmns-crewneck.webp"
+},
+{
+"id": 15,
+"handle": "brown-acid-wmns-crewneck",
+"title": "Cocoa Wmns Cropped Crewneck",
+"type": "Wmns Crewneck",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/brown-acid-wmns-crewneck.jpg",
+"family": "brown",
+"h": 12.1,
+"s": 0.19,
+"l": 0.254,
+"rgb": [
+77,
+57,
+52
+],
+"thumb": "assets/thumbs/brown-acid-wmns-crewneck.webp"
+},
+{
+"id": 16,
+"handle": "navy-acid-wmns-crewneck",
+"title": "Navy Wmns Cropped Crewneck",
+"type": "Wmns Crewneck",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/navy-acid-wmns-crewneck.jpg",
+"family": "navy",
+"h": 234.7,
+"s": 0.145,
+"l": 0.171,
+"rgb": [
+37,
+38,
+50
+],
+"thumb": "assets/thumbs/navy-acid-wmns-crewneck.webp"
+},
+{
+"id": 17,
+"handle": "brown-acid-wmns-jogger",
+"title": "Cocoa Wmns Jogger",
+"type": "Wmns Jogger",
+"price": 34.0,
+"cur": "EUR",
+"img": "assets/products/brown-acid-wmns-jogger.jpg",
+"family": "brown",
+"h": 12.1,
+"s": 0.19,
+"l": 0.254,
+"rgb": [
+77,
+57,
+52
+],
+"thumb": "assets/thumbs/brown-acid-wmns-jogger.webp"
+},
+{
+"id": 18,
+"handle": "blue-grey-acid-wmns-jogger",
+"title": "Aqua Grey Wmns Jogger",
+"type": "Wmns Jogger",
+"price": 34.0,
+"cur": "EUR",
+"img": "assets/products/blue-grey-acid-wmns-jogger.jpg",
+"family": "grey",
+"h": 238.0,
+"s": 0.08,
+"l": 0.514,
+"rgb": [
+121,
+122,
+141
+],
+"thumb": "assets/thumbs/blue-grey-acid-wmns-jogger.webp"
+},
+{
+"id": 19,
+"handle": "anthracite-acid-wmns-turtle-hood",
+"title": "Anthracite Wmns Mask Hoodie",
+"type": "Wmns Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-acid-wmns-turtle-hood.jpg",
+"family": "anthracite",
+"h": 258.7,
+"s": 0.124,
+"l": 0.057,
+"rgb": [
+14,
+13,
+16
+],
+"thumb": "assets/thumbs/anthracite-acid-wmns-turtle-hood.webp"
+},
+{
+"id": 20,
+"handle": "brown-acid-wmns-turtle-hood",
+"title": "Cocoa Wmns Mask Hoodie",
+"type": "Wmns Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/brown-acid-wmns-turtle-hood.jpg",
+"family": "brown",
+"h": 13.1,
+"s": 0.182,
+"l": 0.342,
+"rgb": [
+103,
+78,
+71
+],
+"thumb": "assets/thumbs/brown-acid-wmns-turtle-hood.webp"
+},
+{
+"id": 21,
+"handle": "navy-acid-wmns-turtle-hood",
+"title": "Navy Wmns Mask Hoodie",
+"type": "Wmns Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/navy-acid-wmns-turtle-hood.jpg",
+"family": "navy",
+"h": 226.7,
+"s": 0.076,
+"l": 0.417,
+"rgb": [
+98,
+102,
+114
+],
+"thumb": "assets/thumbs/navy-acid-wmns-turtle-hood.webp"
+},
+{
+"id": 22,
+"handle": "blue-grey-acid-wmns-turtle-hood",
+"title": "Aqua Grey Wmns Mask Hoodie",
+"type": "Wmns Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/blue-grey-acid-wmns-turtle-hood.jpg",
+"family": "grey",
+"h": 237.7,
+"s": 0.081,
+"l": 0.514,
+"rgb": [
+121,
+122,
+141
+],
+"thumb": "assets/thumbs/blue-grey-acid-wmns-turtle-hood.webp"
+},
+{
+"id": 23,
+"handle": "navy-stonewashed-jogger",
+"title": "Navy Stonewashed Jogger",
+"type": "Jogger",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/navy-stonewashed-jogger.jpg",
+"family": "navy",
+"h": 206.0,
+"s": 0.175,
+"l": 0.269,
+"rgb": [
+57,
+70,
+81
+],
+"thumb": "assets/thumbs/navy-stonewashed-jogger.webp"
+},
+{
+"id": 24,
+"handle": "aqua-grey-acid-balaclava-2-0",
+"title": "Aqua Grey Balaclava 2.0",
+"type": "Balaclava",
+"price": 16.0,
+"cur": "EUR",
+"img": "assets/products/aqua-grey-acid-balaclava-2-0.jpg",
+"family": "grey",
+"h": 19.0,
+"s": 0.52,
+"l": 0.76,
+"rgb": [
+226,
+182,
+162
+],
+"thumb": "assets/thumbs/aqua-grey-acid-balaclava-2-0.webp"
+},
+{
+"id": 25,
+"handle": "beige-acid-balaclava-2-0",
+"title": "Beige Balaclava 2.0",
+"type": "Balaclava",
+"price": 16.0,
+"cur": "EUR",
+"img": "assets/products/beige-acid-balaclava-2-0.jpg",
+"family": "beige",
+"h": 19.7,
+"s": 0.288,
+"l": 0.516,
+"rgb": [
+167,
+119,
+96
+],
+"thumb": "assets/thumbs/beige-acid-balaclava-2-0.webp"
+},
+{
+"id": 26,
+"handle": "ecru-acid-balaclava-2-0",
+"title": "Ecru Balaclava 2.0",
+"type": "Balaclava",
+"price": 16.0,
+"cur": "EUR",
+"img": "assets/products/ecru-acid-balaclava-2-0.jpg",
+"family": "ecru",
+"h": 19.1,
+"s": 0.522,
+"l": 0.762,
+"rgb": [
+226,
+183,
+162
+],
+"thumb": "assets/thumbs/ecru-acid-balaclava-2-0.webp"
+},
+{
+"id": 27,
+"handle": "brown-oil-balaclava-1-0",
+"title": "Brown Oil Balaclava 1.0",
+"type": "Balaclava",
+"price": 18.0,
+"cur": "EUR",
+"img": "assets/products/brown-oil-balaclava-1-0.jpg",
+"family": "brown",
+"h": 23.1,
+"s": 0.236,
+"l": 0.25,
+"rgb": [
+79,
+60,
+49
+],
+"thumb": "assets/thumbs/brown-oil-balaclava-1-0.webp"
+},
+{
+"id": 28,
+"handle": "anthracite-logo-acid-wmns-hoodie",
+"title": "Anthracite Wmns Logo Hoodie",
+"type": "Wmns Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-logo-acid-wmns-hoodie.jpg",
+"family": "anthracite",
+"h": 248.3,
+"s": 0.111,
+"l": 0.125,
+"rgb": [
+29,
+28,
+35
+],
+"thumb": "assets/thumbs/anthracite-logo-acid-wmns-hoodie.webp"
+},
+{
+"id": 29,
+"handle": "grey-logo-acid-wmns-hoodie",
+"title": "Faded Grey Wmns Logo Hoodie",
+"type": "Wmns Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/grey-logo-acid-wmns-hoodie.jpg",
+"family": "grey",
+"h": 325.8,
+"s": 0.058,
+"l": 0.646,
+"rgb": [
+170,
+159,
+165
+],
+"thumb": "assets/thumbs/grey-logo-acid-wmns-hoodie.webp"
+},
+{
+"id": 30,
+"handle": "aqua-grey-logo-acid-wmns-hoodie",
+"title": "Aqua Grey Wmns Logo Hoodie",
+"type": "Wmns Hoodie",
+"price": 99.0,
+"cur": "EUR",
+"img": "assets/products/aqua-grey-logo-acid-wmns-hoodie.jpg",
+"family": "grey",
+"h": 236.3,
+"s": 0.092,
+"l": 0.516,
+"rgb": [
+120,
+122,
+143
+],
+"thumb": "assets/thumbs/aqua-grey-logo-acid-wmns-hoodie.webp"
+},
+{
+"id": 31,
+"handle": "brown-logo-acid-wmns-jogger",
+"title": "Cocoa Wmns Flared Jogger",
+"type": "Wmns Jogger",
+"price": 34.0,
+"cur": "EUR",
+"img": "assets/products/brown-logo-acid-wmns-jogger.jpg",
+"family": "brown",
+"h": 14.4,
+"s": 0.218,
+"l": 0.256,
+"rgb": [
+79,
+58,
+51
+],
+"thumb": "assets/thumbs/brown-logo-acid-wmns-jogger.webp"
+},
+{
+"id": 32,
+"handle": "navy-logo-acid-wmns-jogger",
+"title": "Navy Wmns Flared Jogger",
+"type": "Wmns Jogger",
+"price": 34.0,
+"cur": "EUR",
+"img": "assets/products/navy-logo-acid-wmns-jogger.jpg",
+"family": "navy",
+"h": 232.3,
+"s": 0.113,
+"l": 0.21,
+"rgb": [
+47,
+49,
+60
+],
+"thumb": "assets/thumbs/navy-logo-acid-wmns-jogger.webp"
+},
+{
+"id": 33,
+"handle": "blue-logo-grey-acid-wmns-jogger",
+"title": "Aqua Grey Wmns Flared Jogger",
+"type": "Wmns Jogger",
+"price": 34.0,
+"cur": "EUR",
+"img": "assets/products/blue-logo-grey-acid-wmns-jogger.jpg",
+"family": "grey",
+"h": 243.8,
+"s": 0.083,
+"l": 0.35,
+"rgb": [
+83,
+82,
+97
+],
+"thumb": "assets/thumbs/blue-logo-grey-acid-wmns-jogger.webp"
+},
+{
+"id": 34,
+"handle": "light-blue-knit-hoodie",
+"title": "Light Blue Oil Knit Hoodie",
+"type": "Hoodie",
+"price": 135.0,
+"cur": "EUR",
+"img": "assets/products/light-blue-knit-hoodie.jpg",
+"family": "light_blue",
+"h": 201.3,
+"s": 0.088,
+"l": 0.533,
+"rgb": [
+126,
+139,
+146
+],
+"thumb": "assets/thumbs/light-blue-knit-hoodie.webp"
+},
+{
+"id": 35,
+"handle": "aqua-grey-oil-knit-hoodie",
+"title": "Aqua Grey Oil Knit Hoodie",
+"type": "Hoodie",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/aqua-grey-oil-knit-hoodie.jpg",
+"family": "grey",
+"h": 213.0,
+"s": 0.03,
+"l": 0.568,
+"rgb": [
+142,
+144,
+148
+],
+"thumb": "assets/thumbs/aqua-grey-oil-knit-hoodie.webp"
+},
+{
+"id": 36,
+"handle": "blue-oil-knit-pants",
+"title": "Navy Oil Knit Pants",
+"type": "Jogger",
+"price": 125.0,
+"cur": "EUR",
+"img": "assets/products/blue-oil-knit-pants.jpg",
+"family": "navy",
+"h": 209.5,
+"s": 0.153,
+"l": 0.473,
+"rgb": [
+102,
+121,
+139
+],
+"thumb": "assets/thumbs/blue-oil-knit-pants.webp"
+},
+{
+"id": 37,
+"handle": "beige-oil-knit-pants",
+"title": "Beige Oil Knit Pants",
+"type": "Jogger",
+"price": 125.0,
+"cur": "EUR",
+"img": "assets/products/beige-oil-knit-pants.jpg",
+"family": "beige",
+"h": 44.6,
+"s": 0.123,
+"l": 0.521,
+"rgb": [
+148,
+140,
+118
+],
+"thumb": "assets/thumbs/beige-oil-knit-pants.webp"
+},
+{
+"id": 38,
+"handle": "aqua-grey-oil-knit-pants",
+"title": "Aqua Grey Oil Knit Pants",
+"type": "Jogger",
+"price": 125.0,
+"cur": "EUR",
+"img": "assets/products/aqua-grey-oil-knit-pants.jpg",
+"family": "grey",
+"h": 211.3,
+"s": 0.065,
+"l": 0.615,
+"rgb": [
+150,
+157,
+163
+],
+"thumb": "assets/thumbs/aqua-grey-oil-knit-pants.webp"
+},
+{
+"id": 39,
+"handle": "faded-grey-oil-knit-crewneck",
+"title": "Faded Grey Oil Knit Crewneck",
+"type": "Crewneck",
+"price": 115.0,
+"cur": "EUR",
+"img": "assets/products/faded-grey-oil-knit-crewneck.jpg",
+"family": "grey",
+"h": 44.7,
+"s": 0.089,
+"l": 0.611,
+"rgb": [
+165,
+160,
+147
+],
+"thumb": "assets/thumbs/faded-grey-oil-knit-crewneck.webp"
+},
+{
+"id": 40,
+"handle": "grey-oil-knit-crewneck",
+"title": "Grey Oil Knit Crewneck",
+"type": "Crewneck",
+"price": 90.0,
+"cur": "EUR",
+"img": "assets/products/grey-oil-knit-crewneck.jpg",
+"family": "grey",
+"h": 57.2,
+"s": 0.022,
+"l": 0.551,
+"rgb": [
+143,
+143,
+138
+],
+"thumb": "assets/thumbs/grey-oil-knit-crewneck.webp"
+},
+{
+"id": 41,
+"handle": "aqua-grey-oil-knit-crewneck",
+"title": "Aqua Grey Oil Knit Crewneck",
+"type": "Crewneck",
+"price": 115.0,
+"cur": "EUR",
+"img": "assets/products/aqua-grey-oil-knit-crewneck.jpg",
+"family": "grey",
+"h": 207.7,
+"s": 0.02,
+"l": 0.569,
+"rgb": [
+143,
+145,
+147
+],
+"thumb": "assets/thumbs/aqua-grey-oil-knit-crewneck.webp"
+},
+{
+"id": 42,
+"handle": "blue-oil-knit-hood",
+"title": "Navy Oil Knit Hood",
+"type": "Knit Hood",
+"price": 21.0,
+"cur": "EUR",
+"img": "assets/products/blue-oil-knit-hood.jpg",
+"family": "navy",
+"h": 17.5,
+"s": 0.282,
+"l": 0.518,
+"rgb": [
+167,
+118,
+97
+],
+"thumb": "assets/thumbs/blue-oil-knit-hood.webp"
+},
+{
+"id": 43,
+"handle": "light-blue-oil-knit-hood",
+"title": "Light Blue Oil Knit Hood",
+"type": "Knit Hood",
+"price": 21.0,
+"cur": "EUR",
+"img": "assets/products/light-blue-oil-knit-hood.jpg",
+"family": "light_blue",
+"h": 16.9,
+"s": 0.361,
+"l": 0.683,
+"rgb": [
+203,
+161,
+145
+],
+"thumb": "assets/thumbs/light-blue-oil-knit-hood.webp"
+},
+{
+"id": 44,
+"handle": "faded-grey-oil-knit-hood",
+"title": "Faded Grey Oil Knit Hood",
+"type": "Knit Hood",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/faded-grey-oil-knit-hood.jpg",
+"family": "grey",
+"h": 16.9,
+"s": 0.312,
+"l": 0.611,
+"rgb": [
+187,
+142,
+125
+],
+"thumb": "assets/thumbs/faded-grey-oil-knit-hood.webp"
+},
+{
+"id": 45,
+"handle": "aqua-grey-oil-knit-hood",
+"title": "Aqua Grey Oil Knit Hood",
+"type": "Knit Hood",
+"price": 21.0,
+"cur": "EUR",
+"img": "assets/products/aqua-grey-oil-knit-hood.jpg",
+"family": "grey",
+"h": 18.9,
+"s": 0.278,
+"l": 0.516,
+"rgb": [
+166,
+119,
+97
+],
+"thumb": "assets/thumbs/aqua-grey-oil-knit-hood.webp"
+},
+{
+"id": 46,
+"handle": "blue-oil-knit-balaclava-2-0",
+"title": "Navy Oil Knit Balaclava 2.0",
+"type": "Balaclava",
+"price": 18.0,
+"cur": "EUR",
+"img": "assets/products/blue-oil-knit-balaclava-2-0.jpg",
+"family": "navy",
+"h": 16.2,
+"s": 0.402,
+"l": 0.686,
+"rgb": [
+207,
+160,
+143
+],
+"thumb": "assets/thumbs/blue-oil-knit-balaclava-2-0.webp"
+},
+{
+"id": 47,
+"handle": "light-blue-oil-knit-balaclava-2-0",
+"title": "Light Blue Oil Knit Balaclava 2.0",
+"type": "Balaclava",
+"price": 18.0,
+"cur": "EUR",
+"img": "assets/products/light-blue-oil-knit-balaclava-2-0.jpg",
+"family": "light_blue",
+"h": 17.9,
+"s": 0.468,
+"l": 0.697,
+"rgb": [
+214,
+163,
+142
+],
+"thumb": "assets/thumbs/light-blue-oil-knit-balaclava-2-0.webp"
+},
+{
+"id": 48,
+"handle": "anthracite-reversible-bomber",
+"title": "Midnight Washed Reversible Bomber",
+"type": "Bomber Jacket",
+"price": 86.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-reversible-bomber.jpg",
+"family": "unknown",
+"h": 208.2,
+"s": 0.065,
+"l": 0.217,
+"rgb": [
+52,
+56,
+59
+],
+"thumb": "assets/thumbs/anthracite-reversible-bomber.webp"
+},
+{
+"id": 49,
+"handle": "khaki-reversible-bomber",
+"title": "Swamped Green Reversible Bomber",
+"type": "Bomber Jacket",
+"price": 131.0,
+"cur": "EUR",
+"img": "assets/products/khaki-reversible-bomber.jpg",
+"family": "green",
+"h": 72.2,
+"s": 0.152,
+"l": 0.346,
+"rgb": [
+96,
+102,
+75
+],
+"thumb": "assets/thumbs/khaki-reversible-bomber.webp"
+},
+{
+"id": 50,
+"handle": "anthracite-acid-crewneck",
+"title": "Anthracite Stonewashed Crewneck",
+"type": "Crewneck",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-acid-crewneck.jpg",
+"family": "anthracite",
+"h": 218.4,
+"s": 0.051,
+"l": 0.135,
+"rgb": [
+33,
+34,
+36
+],
+"thumb": "assets/thumbs/anthracite-acid-crewneck.webp"
+},
+{
+"id": 51,
+"handle": "aqua-grey-acid-crewneck",
+"title": "Aqua Grey Stonewashed Crewneck",
+"type": "Crewneck",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/aqua-grey-acid-crewneck.jpg",
+"family": "grey",
+"h": 218.9,
+"s": 0.1,
+"l": 0.59,
+"rgb": [
+140,
+147,
+161
+],
+"thumb": "assets/thumbs/aqua-grey-acid-crewneck.webp"
+},
+{
+"id": 52,
+"handle": "faded-grey-acid-crewneck",
+"title": "Faded Grey Stonewashed Crewneck",
+"type": "Crewneck",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/faded-grey-acid-crewneck.jpg",
+"family": "grey",
+"h": 193.7,
+"s": 0.006,
+"l": 0.8,
+"rgb": [
+204,
+204,
+204
+],
+"thumb": "assets/thumbs/faded-grey-acid-crewneck.webp"
+},
+{
+"id": 53,
+"handle": "cocoa-acid-crewneck",
+"title": "Hazel Brown Stonewashed Crewneck",
+"type": "Crewneck",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/cocoa-acid-crewneck.jpg",
+"family": "brown",
+"h": 18.3,
+"s": 0.098,
+"l": 0.217,
+"rgb": [
+61,
+53,
+50
+],
+"thumb": "assets/thumbs/cocoa-acid-crewneck.webp"
+},
+{
+"id": 54,
+"handle": "navy-acid-crewneck",
+"title": "Navy Stonewashed Crewneck",
+"type": "Crewneck",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/navy-acid-crewneck.jpg",
+"family": "navy",
+"h": 208.6,
+"s": 0.167,
+"l": 0.272,
+"rgb": [
+58,
+70,
+81
+],
+"thumb": "assets/thumbs/navy-acid-crewneck.webp"
+},
+{
+"id": 55,
+"handle": "jogger-black-reaktiv",
+"title": "Black Jogger",
+"type": "Jogger",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/jogger-black-reaktiv.jpg",
+"family": "black",
+"h": 243.0,
+"s": 0.03,
+"l": 0.114,
+"rgb": [
+28,
+28,
+30
+],
+"thumb": "assets/thumbs/jogger-black-reaktiv.webp"
+},
+{
+"id": 56,
+"handle": "crewneck-black-reaktiv",
+"title": "Black Crewneck",
+"type": "Crewneck",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/crewneck-black-reaktiv.jpg",
+"family": "black",
+"h": 243.0,
+"s": 0.03,
+"l": 0.114,
+"rgb": [
+28,
+28,
+30
+],
+"thumb": "assets/thumbs/crewneck-black-reaktiv.webp"
+},
+{
+"id": 57,
+"handle": "crewneck-ecru-reaktiv",
+"title": "White Crewneck",
+"type": "Crewneck",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/crewneck-ecru-reaktiv.jpg",
+"family": "white",
+"h": 230.2,
+"s": 0.193,
+"l": 0.858,
+"rgb": [
+212,
+214,
+226
+],
+"thumb": "assets/thumbs/crewneck-ecru-reaktiv.webp"
+},
+{
+"id": 58,
+"handle": "black-waffel-hoodie",
+"title": "Black Thermal Hoodie",
+"type": "Hoodie",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/black-waffel-hoodie.jpg",
+"family": "black",
+"h": 241.1,
+"s": 0.023,
+"l": 0.129,
+"rgb": [
+32,
+32,
+34
+],
+"thumb": "assets/thumbs/black-waffel-hoodie.webp"
+},
+{
+"id": 59,
+"handle": "peach-knit-hood",
+"title": "Peach Knit Hood",
+"type": "Knit Hood",
+"price": 21.0,
+"cur": "EUR",
+"img": "assets/products/peach-knit-hood.jpg",
+"family": "peach",
+"h": 23.9,
+"s": 0.397,
+"l": 0.575,
+"rgb": [
+190,
+138,
+104
+],
+"thumb": "assets/thumbs/peach-knit-hood.webp"
+},
+{
+"id": 60,
+"handle": "khaki-wmns-reversible-bomber",
+"title": "Khaki Wmns Reversible Bomber",
+"type": "Bomber Jacket",
+"price": 95.0,
+"cur": "EUR",
+"img": "assets/products/khaki-wmns-reversible-bomber.jpg",
+"family": "khaki",
+"h": 40.1,
+"s": 0.126,
+"l": 0.268,
+"rgb": [
+77,
+71,
+60
+],
+"thumb": "assets/thumbs/khaki-wmns-reversible-bomber.webp"
+},
+{
+"id": 61,
+"handle": "black-wmns-reversible-bomber",
+"title": "Black Wmns Reversible Bomber",
+"type": "Bomber Jacket",
+"price": 95.0,
+"cur": "EUR",
+"img": "assets/products/black-wmns-reversible-bomber.jpg",
+"family": "black",
+"h": 355.6,
+"s": 0.038,
+"l": 0.127,
+"rgb": [
+34,
+31,
+31
+],
+"thumb": "assets/thumbs/black-wmns-reversible-bomber.webp"
+},
+{
+"id": 62,
+"handle": "beige-wmns-reversible-bomber",
+"title": "Beige Wmns Reversible Bomber",
+"type": "Bomber Jacket",
+"price": 95.0,
+"cur": "EUR",
+"img": "assets/products/beige-wmns-reversible-bomber.jpg",
+"family": "beige",
+"h": 21.1,
+"s": 0.288,
+"l": 0.656,
+"rgb": [
+192,
+160,
+142
+],
+"thumb": "assets/thumbs/beige-wmns-reversible-bomber.webp"
+},
+{
+"id": 63,
+"handle": "beige-reversible-bomber",
+"title": "Beige Reversible Cargo Bomber",
+"type": "Bomber Jacket",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/beige-reversible-bomber.jpg",
+"family": "beige",
+"h": 28.6,
+"s": 0.353,
+"l": 0.811,
+"rgb": [
+224,
+206,
+190
+],
+"thumb": "assets/thumbs/beige-reversible-bomber.webp"
+},
+{
+"id": 64,
+"handle": "black-bomber-jacket-1",
+"title": "Black Bomber Jacket",
+"type": "Bomber Jacket",
+"price": 159.0,
+"cur": "EUR",
+"img": "assets/products/black-bomber-jacket-1.jpg",
+"family": "black",
+"h": 6.2,
+"s": 0.021,
+"l": 0.122,
+"rgb": [
+32,
+31,
+30
+],
+"thumb": "assets/thumbs/black-bomber-jacket-1.webp"
+},
+{
+"id": 65,
+"handle": "navy-bomber-jacket",
+"title": "Navy Bomber Jacket",
+"type": "Bomber Jacket",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/navy-bomber-jacket.jpg",
+"family": "navy",
+"h": 235.9,
+"s": 0.037,
+"l": 0.109,
+"rgb": [
+27,
+27,
+29
+],
+"thumb": "assets/thumbs/navy-bomber-jacket.webp"
+},
+{
+"id": 66,
+"handle": "anthracite-bomber-jacket-1",
+"title": "Beige Bomber Jacket",
+"type": "Bomber Jacket",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-bomber-jacket-1.jpg",
+"family": "beige",
+"h": 22.5,
+"s": 0.158,
+"l": 0.484,
+"rgb": [
+143,
+119,
+104
+],
+"thumb": "assets/thumbs/anthracite-bomber-jacket-1.webp"
+},
+{
+"id": 67,
+"handle": "stone-bomber-jacket",
+"title": "Stone Bomber Jacket",
+"type": "Bomber Jacket",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/stone-bomber-jacket.jpg",
+"family": "stone",
+"h": 332.9,
+"s": 0.059,
+"l": 0.733,
+"rgb": [
+191,
+183,
+187
+],
+"thumb": "assets/thumbs/stone-bomber-jacket.webp"
+},
+{
+"id": 68,
+"handle": "anthracite-cap",
+"title": "Anthracite Cap",
+"type": "Cap",
+"price": 35.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-cap.jpg",
+"family": "anthracite",
+"h": 228.6,
+"s": 0.059,
+"l": 0.386,
+"rgb": [
+93,
+95,
+104
+],
+"thumb": "assets/thumbs/anthracite-cap.webp"
+},
+{
+"id": 69,
+"handle": "black-cap",
+"title": "Black Cap",
+"type": "Cap",
+"price": 16.0,
+"cur": "EUR",
+"img": "assets/products/black-cap.jpg",
+"family": "black",
+"h": 227.8,
+"s": 0.122,
+"l": 0.122,
+"rgb": [
+27,
+29,
+35
+],
+"thumb": "assets/thumbs/black-cap.webp"
+},
+{
+"id": 70,
+"handle": "grey-knit-ripped-crewneck",
+"title": "Grey Knit Destroy Crewneck",
+"type": "Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/grey-knit-ripped-crewneck.jpg",
+"family": "grey",
+"h": 216.3,
+"s": 0.087,
+"l": 0.211,
+"rgb": [
+49,
+53,
+59
+],
+"thumb": "assets/thumbs/grey-knit-ripped-crewneck.webp"
+},
+{
+"id": 71,
+"handle": "brown-knit-ripped-crewneck",
+"title": "Brown Knit Destroy Crewneck",
+"type": "Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/brown-knit-ripped-crewneck.jpg",
+"family": "brown",
+"h": 19.9,
+"s": 0.264,
+"l": 0.311,
+"rgb": [
+100,
+72,
+58
+],
+"thumb": "assets/thumbs/brown-knit-ripped-crewneck.webp"
+},
+{
+"id": 72,
+"handle": "anthracite-knit-ripped-hoodie",
+"title": "Anthracite Knit Destroy Hoodie",
+"type": "Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-knit-ripped-hoodie.jpg",
+"family": "anthracite",
+"h": 207.3,
+"s": 0.162,
+"l": 0.124,
+"rgb": [
+27,
+32,
+37
+],
+"thumb": "assets/thumbs/anthracite-knit-ripped-hoodie.webp"
+},
+{
+"id": 73,
+"handle": "grey-knit-ripped-hoodie",
+"title": "Grey Knit Destroy Hoodie",
+"type": "Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/grey-knit-ripped-hoodie.jpg",
+"family": "grey",
+"h": 213.0,
+"s": 0.098,
+"l": 0.212,
+"rgb": [
+49,
+54,
+59
+],
+"thumb": "assets/thumbs/grey-knit-ripped-hoodie.webp"
+},
+{
+"id": 74,
+"handle": "brown-knit-ripped-hoodie",
+"title": "Brown Knit Destroy Hoodie",
+"type": "Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/brown-knit-ripped-hoodie.jpg",
+"family": "brown",
+"h": 20.2,
+"s": 0.27,
+"l": 0.308,
+"rgb": [
+100,
+72,
+57
+],
+"thumb": "assets/thumbs/brown-knit-ripped-hoodie.webp"
+},
+{
+"id": 75,
+"handle": "antra-double-layered-shirt",
+"title": "Anthracite Macan Shirt",
+"type": "Shirt",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/antra-double-layered-shirt.jpg",
+"family": "anthracite",
+"h": 297.0,
+"s": 0.046,
+"l": 0.296,
+"rgb": [
+79,
+72,
+79
+],
+"thumb": "assets/thumbs/antra-double-layered-shirt.webp"
+},
+{
+"id": 76,
+"handle": "white-double-layered-t-shirt",
+"title": "White Macan T-Shirt",
+"type": "T-Shirt",
+"price": 34.0,
+"cur": "EUR",
+"img": "assets/products/white-double-layered-t-shirt.jpg",
+"family": "white",
+"h": 301.4,
+"s": 0.044,
+"l": 0.29,
+"rgb": [
+77,
+71,
+77
+],
+"thumb": "assets/thumbs/white-double-layered-t-shirt.webp"
+},
+{
+"id": 77,
+"handle": "antra-double-layered-t-shirt",
+"title": "Anthracite Macan T-Shirt",
+"type": "T-Shirt",
+"price": 34.0,
+"cur": "EUR",
+"img": "assets/products/antra-double-layered-t-shirt.jpg",
+"family": "anthracite",
+"h": 219.8,
+"s": 0.034,
+"l": 0.303,
+"rgb": [
+75,
+76,
+80
+],
+"thumb": "assets/thumbs/antra-double-layered-t-shirt.webp"
+},
+{
+"id": 78,
+"handle": "antra-cropped-double-layered-t-shirt",
+"title": "Anthracite Wmns Cropped Macan T-Shirt",
+"type": "T-Shirt",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/antra-cropped-double-layered-t-shirt.jpg",
+"family": "anthracite",
+"h": 293.1,
+"s": 0.067,
+"l": 0.215,
+"rgb": [
+58,
+51,
+58
+],
+"thumb": "assets/thumbs/antra-cropped-double-layered-t-shirt.webp"
+},
+{
+"id": 79,
+"handle": "beige-cropped-double-layered-t-shirt",
+"title": "Beige Wmns Cropped Macan T-Shirt",
+"type": "T-Shirt",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/beige-cropped-double-layered-t-shirt.jpg",
+"family": "beige",
+"h": 10.3,
+"s": 0.127,
+"l": 0.6,
+"rgb": [
+166,
+144,
+140
+],
+"thumb": "assets/thumbs/beige-cropped-double-layered-t-shirt.webp"
+},
+{
+"id": 80,
+"handle": "beige-wmns-macan-pants",
+"title": "Beige Wmns Macan Biker Pants",
+"type": "Pants",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/beige-wmns-macan-pants.jpg",
+"family": "beige",
+"h": 15.0,
+"s": 0.122,
+"l": 0.521,
+"rgb": [
+148,
+125,
+118
+],
+"thumb": "assets/thumbs/beige-wmns-macan-pants.webp"
+},
+{
+"id": 81,
+"handle": "black-strap-cargo-pants",
+"title": "Black Strap Cargo Pants",
+"type": "Cargo Pants",
+"price": 90.0,
+"cur": "EUR",
+"img": "assets/products/black-strap-cargo-pants.jpg",
+"family": "black",
+"h": 233.0,
+"s": 0.023,
+"l": 0.06,
+"rgb": [
+15,
+15,
+16
+],
+"thumb": "assets/thumbs/black-strap-cargo-pants.webp"
+},
+{
+"id": 82,
+"handle": "antra-circle-line-t-shirt",
+"title": "Anthracite Circle Line T-Shirt",
+"type": "T-Shirt",
+"price": 23.0,
+"cur": "EUR",
+"img": "assets/products/antra-circle-line-t-shirt.jpg",
+"family": "anthracite",
+"h": 228.6,
+"s": 0.001,
+"l": 0.289,
+"rgb": [
+74,
+74,
+74
+],
+"thumb": "assets/thumbs/antra-circle-line-t-shirt.webp"
+},
+{
+"id": 83,
+"handle": "navy-circle-line-t-shirt",
+"title": "Navy Circle Line T-Shirt",
+"type": "T-Shirt",
+"price": 23.0,
+"cur": "EUR",
+"img": "assets/products/navy-circle-line-t-shirt.jpg",
+"family": "navy",
+"h": 196.7,
+"s": 0.094,
+"l": 0.208,
+"rgb": [
+48,
+55,
+58
+],
+"thumb": "assets/thumbs/navy-circle-line-t-shirt.webp"
+},
+{
+"id": 84,
+"handle": "brown-circle-line-t-shirt",
+"title": "Brown Circle Line T-Shirt",
+"type": "T-Shirt",
+"price": 23.0,
+"cur": "EUR",
+"img": "assets/products/brown-circle-line-t-shirt.jpg",
+"family": "brown",
+"h": 27.4,
+"s": 0.366,
+"l": 0.215,
+"rgb": [
+75,
+53,
+35
+],
+"thumb": "assets/thumbs/brown-circle-line-t-shirt.webp"
+},
+{
+"id": 85,
+"handle": "beige-circle-line-t-shirt",
+"title": "Beige Circle Line T-Shirt",
+"type": "T-Shirt",
+"price": 23.0,
+"cur": "EUR",
+"img": "assets/products/beige-circle-line-t-shirt.jpg",
+"family": "beige",
+"h": 38.1,
+"s": 0.319,
+"l": 0.603,
+"rgb": [
+186,
+162,
+121
+],
+"thumb": "assets/thumbs/beige-circle-line-t-shirt.webp"
+},
+{
+"id": 86,
+"handle": "ecru-circle-line-t-shirt",
+"title": "Ecru Circle Line T-Shirt",
+"type": "T-Shirt",
+"price": 23.0,
+"cur": "EUR",
+"img": "assets/products/ecru-circle-line-t-shirt.jpg",
+"family": "ecru",
+"h": 39.5,
+"s": 0.335,
+"l": 0.816,
+"rgb": [
+224,
+213,
+192
+],
+"thumb": "assets/thumbs/ecru-circle-line-t-shirt.webp"
+},
+{
+"id": 87,
+"handle": "orange-circle-line-t-shirt",
+"title": "Orange Circle Line T-Shirt",
+"type": "T-Shirt",
+"price": 23.0,
+"cur": "EUR",
+"img": "assets/products/orange-circle-line-t-shirt.jpg",
+"family": "orange",
+"h": 13.3,
+"s": 0.921,
+"l": 0.551,
+"rgb": [
+246,
+81,
+35
+],
+"thumb": "assets/thumbs/orange-circle-line-t-shirt.webp"
+},
+{
+"id": 88,
+"handle": "black-waxed-shorts",
+"title": "Black Waxed Shorts",
+"type": "Shorts",
+"price": 100.0,
+"cur": "EUR",
+"img": "assets/products/black-waxed-shorts.jpg",
+"family": "black",
+"h": 221.9,
+"s": 0.073,
+"l": 0.216,
+"rgb": [
+51,
+53,
+59
+],
+"thumb": "assets/thumbs/black-waxed-shorts.webp"
+},
+{
+"id": 89,
+"handle": "dirt-waxed-cargo-shorts",
+"title": "Dirt Waxed Cargo Shorts",
+"type": "Shorts",
+"price": 110.0,
+"cur": "EUR",
+"img": "assets/products/dirt-waxed-cargo-shorts.jpg",
+"family": "brown",
+"h": 12.8,
+"s": 0.208,
+"l": 0.256,
+"rgb": [
+79,
+57,
+52
+],
+"thumb": "assets/thumbs/dirt-waxed-cargo-shorts.webp"
+},
+{
+"id": 90,
+"handle": "grey-waxed-cargo-shorts",
+"title": "Grey Waxed Cargo Shorts",
+"type": "Shorts",
+"price": 110.0,
+"cur": "EUR",
+"img": "assets/products/grey-waxed-cargo-shorts.jpg",
+"family": "grey",
+"h": 19.3,
+"s": 0.294,
+"l": 0.513,
+"rgb": [
+167,
+118,
+94
+],
+"thumb": "assets/thumbs/grey-waxed-cargo-shorts.webp"
+},
+{
+"id": 91,
+"handle": "ocean-blue-waxed-cargo-shorts",
+"title": "Ocean Blue Waxed Cargo Shorts",
+"type": "Shorts",
+"price": 110.0,
+"cur": "EUR",
+"img": "assets/products/ocean-blue-waxed-cargo-shorts.jpg",
+"family": "blue",
+"h": 11.1,
+"s": 0.196,
+"l": 0.256,
+"rgb": [
+78,
+57,
+52
+],
+"thumb": "assets/thumbs/ocean-blue-waxed-cargo-shorts.webp"
+},
+{
+"id": 92,
+"handle": "pink-waxed-cargo-shorts",
+"title": "Light Grey Waxed Cargo Shorts",
+"type": "Shorts",
+"price": 110.0,
+"cur": "EUR",
+"img": "assets/products/pink-waxed-cargo-shorts.jpg",
+"family": "light_grey",
+"h": 12.1,
+"s": 0.203,
+"l": 0.255,
+"rgb": [
+78,
+57,
+52
+],
+"thumb": "assets/thumbs/pink-waxed-cargo-shorts.webp"
+},
+{
+"id": 93,
+"handle": "stone-waxed-cargo-shorts",
+"title": "Stone Waxed Cargo Shorts",
+"type": "Shorts",
+"price": 110.0,
+"cur": "EUR",
+"img": "assets/products/stone-waxed-cargo-shorts.jpg",
+"family": "stone",
+"h": 30.6,
+"s": 0.464,
+"l": 0.928,
+"rgb": [
+245,
+237,
+228
+],
+"thumb": "assets/thumbs/stone-waxed-cargo-shorts.webp"
+},
+{
+"id": 94,
+"handle": "black-shorts",
+"title": "Black Shorts",
+"type": "Shorts",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/black-shorts.jpg",
+"family": "black",
+"h": 224.8,
+"s": 0.073,
+"l": 0.133,
+"rgb": [
+31,
+33,
+36
+],
+"thumb": "assets/thumbs/black-shorts.webp"
+},
+{
+"id": 95,
+"handle": "beige",
+"title": "Beige Shorts",
+"type": "Shorts",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/beige.jpg",
+"family": "beige",
+"h": 20.4,
+"s": 0.267,
+"l": 0.733,
+"rgb": [
+205,
+181,
+169
+],
+"thumb": "assets/thumbs/beige.webp"
+},
+{
+"id": 96,
+"handle": "black-t-shirt-84",
+"title": "Black Slim T-Shirt",
+"type": "T-Shirt",
+"price": 55.0,
+"cur": "EUR",
+"img": "assets/products/black-t-shirt-84.jpg",
+"family": "black",
+"h": 221.9,
+"s": 0.085,
+"l": 0.142,
+"rgb": [
+33,
+35,
+39
+],
+"thumb": "assets/thumbs/black-t-shirt-84.webp"
+},
+{
+"id": 97,
+"handle": "khaki-t-shirt-84",
+"title": "Khaki Slim T-Shirt",
+"type": "T-Shirt",
+"price": 25.0,
+"cur": "EUR",
+"img": "assets/products/khaki-t-shirt-84.jpg",
+"family": "khaki",
+"h": 56.3,
+"s": 0.04,
+"l": 0.299,
+"rgb": [
+79,
+79,
+73
+],
+"thumb": "assets/thumbs/khaki-t-shirt-84.webp"
+},
+{
+"id": 98,
+"handle": "navy-t-shirt-84",
+"title": "Light Blue Slim T-Shirt",
+"type": "T-Shirt",
+"price": 25.0,
+"cur": "EUR",
+"img": "assets/products/navy-t-shirt-84.jpg",
+"family": "light_blue",
+"h": 204.2,
+"s": 0.52,
+"l": 0.82,
+"rgb": [
+185,
+214,
+233
+],
+"thumb": "assets/thumbs/navy-t-shirt-84.webp"
+},
+{
+"id": 99,
+"handle": "off-white-t-shirt-84",
+"title": "Off White Slim T-Shirt",
+"type": "T-Shirt",
+"price": 55.0,
+"cur": "EUR",
+"img": "assets/products/off-white-t-shirt-84.jpg",
+"family": "off_white",
+"h": 212.2,
+"s": 0.102,
+"l": 0.913,
+"rgb": [
+230,
+233,
+235
+],
+"thumb": "assets/thumbs/off-white-t-shirt-84.webp"
+},
+{
+"id": 100,
+"handle": "stone-t-shirt-84",
+"title": "Stone Slim T-Shirt",
+"type": "T-Shirt",
+"price": 55.0,
+"cur": "EUR",
+"img": "assets/products/stone-t-shirt-84.jpg",
+"family": "stone",
+"h": 341.0,
+"s": 0.027,
+"l": 0.553,
+"rgb": [
+144,
+138,
+140
+],
+"thumb": "assets/thumbs/stone-t-shirt-84.webp"
+},
+{
+"id": 101,
+"handle": "beige-t-shirt-84",
+"title": "Beige Slim T-Shirt",
+"type": "T-Shirt",
+"price": 25.0,
+"cur": "EUR",
+"img": "assets/products/beige-t-shirt-84.jpg",
+"family": "beige",
+"h": 18.8,
+"s": 0.204,
+"l": 0.652,
+"rgb": [
+184,
+159,
+148
+],
+"thumb": "assets/thumbs/beige-t-shirt-84.webp"
+},
+{
+"id": 102,
+"handle": "anthracite-t-shirt-84",
+"title": "Anthracite Slim T-Shirt",
+"type": "T-Shirt",
+"price": 25.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-t-shirt-84.jpg",
+"family": "anthracite",
+"h": 215.9,
+"s": 0.097,
+"l": 0.247,
+"rgb": [
+57,
+62,
+69
+],
+"thumb": "assets/thumbs/anthracite-t-shirt-84.webp"
+},
+{
+"id": 103,
+"handle": "black-long-sleeve-85",
+"title": "Black Long-Sleeve",
+"type": "Longsleeve",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/black-long-sleeve-85.jpg",
+"family": "black",
+"h": 220.5,
+"s": 0.094,
+"l": 0.135,
+"rgb": [
+31,
+33,
+38
+],
+"thumb": "assets/thumbs/black-long-sleeve-85.webp"
+},
+{
+"id": 104,
+"handle": "navy-long-sleeve-85",
+"title": "Light Blue Long-Sleeve",
+"type": "Longsleeve",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/navy-long-sleeve-85.jpg",
+"family": "light_blue",
+"h": 204.4,
+"s": 0.519,
+"l": 0.823,
+"rgb": [
+186,
+214,
+233
+],
+"thumb": "assets/thumbs/navy-long-sleeve-85.webp"
+},
+{
+"id": 105,
+"handle": "off-white-long-sleeve-85",
+"title": "Off White Long-Sleeve",
+"type": "Longsleeve",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/off-white-long-sleeve-85.jpg",
+"family": "off_white",
+"h": 211.0,
+"s": 0.107,
+"l": 0.914,
+"rgb": [
+231,
+233,
+235
+],
+"thumb": "assets/thumbs/off-white-long-sleeve-85.webp"
+},
+{
+"id": 106,
+"handle": "stone-long-sleeve-85",
+"title": "Stone Long-Sleeve",
+"type": "Longsleeve",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/stone-long-sleeve-85.jpg",
+"family": "stone",
+"h": 340.5,
+"s": 0.026,
+"l": 0.555,
+"rgb": [
+144,
+139,
+141
+],
+"thumb": "assets/thumbs/stone-long-sleeve-85.webp"
+},
+{
+"id": 107,
+"handle": "anthracite-long-sleeve-85",
+"title": "Anthracite Long-Sleeve",
+"type": "Longsleeve",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-long-sleeve-85.jpg",
+"family": "anthracite",
+"h": 216.5,
+"s": 0.1,
+"l": 0.246,
+"rgb": [
+57,
+61,
+69
+],
+"thumb": "assets/thumbs/anthracite-long-sleeve-85.webp"
+},
+{
+"id": 108,
+"handle": "black-regular-t-shirt-86",
+"title": "Black Regular T-Shirt",
+"type": "T-Shirt",
+"price": 25.0,
+"cur": "EUR",
+"img": "assets/products/black-regular-t-shirt-86.jpg",
+"family": "black",
+"h": 221.7,
+"s": 0.088,
+"l": 0.138,
+"rgb": [
+32,
+34,
+38
+],
+"thumb": "assets/thumbs/black-regular-t-shirt-86.webp"
+},
+{
+"id": 109,
+"handle": "khaki-regular-t-shirt-86",
+"title": "Khaki Regular T-Shirt",
+"type": "T-Shirt",
+"price": 55.0,
+"cur": "EUR",
+"img": "assets/products/khaki-regular-t-shirt-86.jpg",
+"family": "khaki",
+"h": 62.3,
+"s": 0.037,
+"l": 0.302,
+"rgb": [
+80,
+80,
+74
+],
+"thumb": "assets/thumbs/khaki-regular-t-shirt-86.webp"
+},
+{
+"id": 110,
+"handle": "navy-regular-t-shirt-86",
+"title": "Light Blue Regular T-Shirt",
+"type": "T-Shirt",
+"price": 25.0,
+"cur": "EUR",
+"img": "assets/products/navy-regular-t-shirt-86.jpg",
+"family": "light_blue",
+"h": 204.3,
+"s": 0.519,
+"l": 0.822,
+"rgb": [
+186,
+214,
+233
+],
+"thumb": "assets/thumbs/navy-regular-t-shirt-86.webp"
+},
+{
+"id": 111,
+"handle": "beige-regular-t-shirt-86",
+"title": "Beige Regular T-Shirt",
+"type": "T-Shirt",
+"price": 25.0,
+"cur": "EUR",
+"img": "assets/products/beige-regular-t-shirt-86.jpg",
+"family": "beige",
+"h": 17.5,
+"s": 0.156,
+"l": 0.601,
+"rgb": [
+169,
+147,
+137
+],
+"thumb": "assets/thumbs/beige-regular-t-shirt-86.webp"
+},
+{
+"id": 112,
+"handle": "anthracite-regular-t-shirt-86",
+"title": "Anthracite Regular T-Shirt",
+"type": "T-Shirt",
+"price": 55.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-regular-t-shirt-86.jpg",
+"family": "anthracite",
+"h": 216.0,
+"s": 0.096,
+"l": 0.247,
+"rgb": [
+57,
+62,
+69
+],
+"thumb": "assets/thumbs/anthracite-regular-t-shirt-86.webp"
+},
+{
+"id": 113,
+"handle": "black-oversized-t-shirt-87",
+"title": "Black Heavy T-Shirt",
+"type": "T-Shirt",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/black-oversized-t-shirt-87.jpg",
+"family": "black",
+"h": 221.9,
+"s": 0.085,
+"l": 0.142,
+"rgb": [
+33,
+35,
+39
+],
+"thumb": "assets/thumbs/black-oversized-t-shirt-87.webp"
+},
+{
+"id": 114,
+"handle": "navy-oversized-t-shirt-87",
+"title": "Light Blue Heavy T-Shirt",
+"type": "T-Shirt",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/navy-oversized-t-shirt-87.jpg",
+"family": "light_blue",
+"h": 205.0,
+"s": 0.66,
+"l": 0.888,
+"rgb": [
+208,
+230,
+245
+],
+"thumb": "assets/thumbs/navy-oversized-t-shirt-87.webp"
+},
+{
+"id": 115,
+"handle": "stone-oversized-t-shirt-87",
+"title": "Stone Heavy T-Shirt",
+"type": "T-Shirt",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/stone-oversized-t-shirt-87.jpg",
+"family": "stone",
+"h": 333.7,
+"s": 0.017,
+"l": 0.475,
+"rgb": [
+123,
+119,
+121
+],
+"thumb": "assets/thumbs/stone-oversized-t-shirt-87.webp"
+},
+{
+"id": 116,
+"handle": "beige-oversized-t-shirt-87",
+"title": "Beige Heavy T-Shirt",
+"type": "T-Shirt",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/beige-oversized-t-shirt-87.jpg",
+"family": "beige",
+"h": 17.8,
+"s": 0.167,
+"l": 0.6,
+"rgb": [
+170,
+146,
+136
+],
+"thumb": "assets/thumbs/beige-oversized-t-shirt-87.webp"
+},
+{
+"id": 117,
+"handle": "anthracite-oversized-t-shirt-87",
+"title": "Anthracite Heavy T-Shirt",
+"type": "T-Shirt",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-oversized-t-shirt-87.jpg",
+"family": "anthracite",
+"h": 214.3,
+"s": 0.1,
+"l": 0.217,
+"rgb": [
+50,
+54,
+61
+],
+"thumb": "assets/thumbs/anthracite-oversized-t-shirt-87.webp"
+},
+{
+"id": 118,
+"handle": "blueberry-t-shirt",
+"title": "Blueberry T-Shirt",
+"type": "T-Shirt",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/blueberry-t-shirt.jpg",
+"family": "blue",
+"h": 204.5,
+"s": 0.666,
+"l": 0.891,
+"rgb": [
+208,
+230,
+246
+],
+"thumb": "assets/thumbs/blueberry-t-shirt.webp"
+},
+{
+"id": 119,
+"handle": "blue-dot-t-shirt",
+"title": "Blue Dot T-Shirt",
+"type": "T-Shirt",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/blue-dot-t-shirt.jpg",
+"family": "blue",
+"h": 17.4,
+"s": 0.107,
+"l": 0.893,
+"rgb": [
+231,
+227,
+225
+],
+"thumb": "assets/thumbs/blue-dot-t-shirt.webp"
+},
+{
+"id": 120,
+"handle": "board",
+"title": "ANTHRACITE CUTTING BOARD",
+"type": "Board",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/board.jpg",
+"family": "anthracite",
+"h": 30.6,
+"s": 0.145,
+"l": 0.16,
+"rgb": [
+47,
+41,
+35
+],
+"thumb": "assets/thumbs/board.webp"
+},
+{
+"id": 121,
+"handle": "anthracite-clay-fork",
+"title": "ANTHRACITE SALAD FORK",
+"type": "Object",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-clay-fork.jpg",
+"family": "anthracite",
+"h": 30.7,
+"s": 0.074,
+"l": 0.305,
+"rgb": [
+84,
+78,
+72
+],
+"thumb": "assets/thumbs/anthracite-clay-fork.webp"
+},
+{
+"id": 122,
+"handle": "colors-signature-clay-bag",
+"title": "GREY PARIS BAG",
+"type": "Bag",
+"price": 150.0,
+"cur": "EUR",
+"img": "assets/products/colors-signature-clay-bag.jpg",
+"family": "grey",
+"h": 209.2,
+"s": 0.004,
+"l": 0.464,
+"rgb": [
+118,
+118,
+119
+],
+"thumb": "assets/thumbs/colors-signature-clay-bag.webp"
+},
+{
+"id": 123,
+"handle": "terracotta-bowl",
+"title": "TERRACOTTA LOGO BOWL",
+"type": "bowl",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/terracotta-bowl.jpg",
+"family": "rust",
+"h": 15.3,
+"s": 0.628,
+"l": 0.303,
+"rgb": [
+126,
+53,
+29
+],
+"thumb": "assets/thumbs/terracotta-bowl.webp"
+},
+{
+"id": 124,
+"handle": "triple-molds",
+"title": "VANILLA TUBES",
+"type": "bowl",
+"price": 120.0,
+"cur": "EUR",
+"img": "assets/products/triple-molds.jpg",
+"family": "ecru",
+"h": 34.3,
+"s": 0.273,
+"l": 0.523,
+"rgb": [
+167,
+138,
+100
+],
+"thumb": "assets/thumbs/triple-molds.webp"
+},
+{
+"id": 125,
+"handle": "terracotta-mug",
+"title": "CHOCOLATE MUG",
+"type": "Cup",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/terracotta-mug.jpg",
+"family": "brown",
+"h": 16.3,
+"s": 0.749,
+"l": 0.219,
+"rgb": [
+98,
+37,
+14
+],
+"thumb": "assets/thumbs/terracotta-mug.webp"
+},
+{
+"id": 126,
+"handle": "anthracite-mug",
+"title": "ANTHRACITE MUG",
+"type": "Cup",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-mug.jpg",
+"family": "anthracite",
+"h": 19.3,
+"s": 0.081,
+"l": 0.212,
+"rgb": [
+58,
+52,
+50
+],
+"thumb": "assets/thumbs/anthracite-mug.webp"
+},
+{
+"id": 127,
+"handle": "ecru-mug",
+"title": "VANILLA MUG",
+"type": "Cup",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/ecru-mug.jpg",
+"family": "ecru",
+"h": 31.4,
+"s": 0.217,
+"l": 0.651,
+"rgb": [
+185,
+167,
+147
+],
+"thumb": "assets/thumbs/ecru-mug.webp"
+},
+{
+"id": 128,
+"handle": "ecru-glossy-plate",
+"title": "CREAM PLATE",
+"type": "Plate",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/ecru-glossy-plate.jpg",
+"family": "ecru",
+"h": 32.3,
+"s": 0.373,
+"l": 0.822,
+"rgb": [
+226,
+211,
+193
+],
+"thumb": "assets/thumbs/ecru-glossy-plate.webp"
+},
+{
+"id": 129,
+"handle": "terracotta-plate",
+"title": "GINGER PLATE",
+"type": "Plate",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/terracotta-plate.jpg",
+"family": "rust",
+"h": 358.7,
+"s": 0.358,
+"l": 0.536,
+"rgb": [
+179,
+95,
+96
+],
+"thumb": "assets/thumbs/terracotta-plate.webp"
+},
+{
+"id": 130,
+"handle": "terracotta-triple-rings",
+"title": "TERRACOTTA RINGS",
+"type": "egg cup",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/terracotta-triple-rings.jpg",
+"family": "rust",
+"h": 19.8,
+"s": 0.483,
+"l": 0.38,
+"rgb": [
+144,
+81,
+50
+],
+"thumb": "assets/thumbs/terracotta-triple-rings.webp"
+},
+{
+"id": 131,
+"handle": "terracotta-triple-rings-copy",
+"title": "SEASALT RINGS",
+"type": "egg cup",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/terracotta-triple-rings-copy.jpg",
+"family": "off_white",
+"h": 27.8,
+"s": 0.204,
+"l": 0.644,
+"rgb": [
+183,
+163,
+146
+],
+"thumb": "assets/thumbs/terracotta-triple-rings-copy.webp"
+},
+{
+"id": 132,
+"handle": "ecru-triple-rings-copy",
+"title": "GREY RINGS",
+"type": "egg cup",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/ecru-triple-rings-copy.jpg",
+"family": "grey",
+"h": 35.1,
+"s": 0.021,
+"l": 0.388,
+"rgb": [
+101,
+99,
+97
+],
+"thumb": "assets/thumbs/ecru-triple-rings-copy.webp"
+},
+{
+"id": 133,
+"handle": "colors-ecru-signature-cup",
+"title": "CREAM SIGNATURE CUP",
+"type": "Cup",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/colors-ecru-signature-cup.jpg",
+"family": "ecru",
+"h": 31.7,
+"s": 0.225,
+"l": 0.635,
+"rgb": [
+183,
+163,
+141
+],
+"thumb": "assets/thumbs/colors-ecru-signature-cup.webp"
+},
+{
+"id": 134,
+"handle": "colors-ecru-signature-cup-copy",
+"title": "ANTHRACITE SIGNATURE CUP",
+"type": "Cup",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/colors-ecru-signature-cup-copy.jpg",
+"family": "anthracite",
+"h": 22.4,
+"s": 0.1,
+"l": 0.207,
+"rgb": [
+58,
+51,
+47
+],
+"thumb": "assets/thumbs/colors-ecru-signature-cup-copy.webp"
+},
+{
+"id": 135,
+"handle": "colors-signature-glass",
+"title": "CHAMPAGNE GLASS",
+"type": "Cup",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/colors-signature-glass.jpg",
+"family": "ecru",
+"h": 33.3,
+"s": 0.256,
+"l": 0.525,
+"rgb": [
+165,
+137,
+103
+],
+"thumb": "assets/thumbs/colors-signature-glass.webp"
+},
+{
+"id": 136,
+"handle": "espresso-mug",
+"title": "SMALL CHOCOLATE MUG",
+"type": "Cup",
+"price": 20.0,
+"cur": "EUR",
+"img": "assets/products/espresso-mug.jpg",
+"family": "brown",
+"h": 16.3,
+"s": 0.751,
+"l": 0.218,
+"rgb": [
+98,
+37,
+14
+],
+"thumb": "assets/thumbs/espresso-mug.webp"
+},
+{
+"id": 137,
+"handle": "sienna-mug",
+"title": "OVERSIZED CHOCOLATE MUG",
+"type": "Cup",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/sienna-mug.jpg",
+"family": "brown",
+"h": 7.4,
+"s": 0.429,
+"l": 0.198,
+"rgb": [
+72,
+34,
+29
+],
+"thumb": "assets/thumbs/sienna-mug.webp"
+},
+{
+"id": 138,
+"handle": "ring-vase",
+"title": "BUBBLE VASE",
+"type": "Vase",
+"price": 180.0,
+"cur": "EUR",
+"img": "assets/products/ring-vase.jpg",
+"family": "unknown",
+"h": 26.6,
+"s": 0.234,
+"l": 0.843,
+"rgb": [
+224,
+214,
+205
+],
+"thumb": "assets/thumbs/ring-vase.webp"
+},
+{
+"id": 139,
+"handle": "bangle",
+"title": "SILVER BANGLE",
+"type": "Accessoires",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/bangle.jpg",
+"family": "grey",
+"h": 216.7,
+"s": 0.006,
+"l": 0.479,
+"rgb": [
+122,
+122,
+123
+],
+"thumb": "assets/thumbs/bangle.webp"
+},
+{
+"id": 140,
+"handle": "terracotta-signet-ring",
+"title": "COCOA SIGNET RING",
+"type": "Accessoires",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/terracotta-signet-ring.jpg",
+"family": "brown",
+"h": 17.9,
+"s": 0.498,
+"l": 0.383,
+"rgb": [
+146,
+78,
+49
+],
+"thumb": "assets/thumbs/terracotta-signet-ring.webp"
+},
+{
+"id": 141,
+"handle": "silver-signet-ring",
+"title": "SILVER SIGNET RING",
+"type": "Accessoires",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/silver-signet-ring.jpg",
+"family": "grey",
+"h": 29.2,
+"s": 0.116,
+"l": 0.271,
+"rgb": [
+77,
+69,
+61
+],
+"thumb": "assets/thumbs/silver-signet-ring.webp"
+},
+{
+"id": 142,
+"handle": "white-logo-ring",
+"title": "POWDER LOGO RING",
+"type": "Accessoires",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/white-logo-ring.jpg",
+"family": "ecru",
+"h": 27.9,
+"s": 0.177,
+"l": 0.643,
+"rgb": [
+180,
+163,
+148
+],
+"thumb": "assets/thumbs/white-logo-ring.webp"
+},
+{
+"id": 143,
+"handle": "butter-yellow-bag",
+"title": "BUTTER CREAM BAG",
+"type": "Bag",
+"price": 180.0,
+"cur": "EUR",
+"img": "assets/products/butter-yellow-bag.jpg",
+"family": "ecru",
+"h": 44.1,
+"s": 0.269,
+"l": 0.667,
+"rgb": [
+193,
+181,
+147
+],
+"thumb": "assets/thumbs/butter-yellow-bag.webp"
+},
+{
+"id": 144,
+"handle": "brown-sugar-bowl-copy",
+"title": "GREY SPOON",
+"type": "bowl",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/brown-sugar-bowl-copy.jpg",
+"family": "grey",
+"h": 31.4,
+"s": 0.021,
+"l": 0.464,
+"rgb": [
+121,
+119,
+116
+],
+"thumb": "assets/thumbs/brown-sugar-bowl-copy.webp"
+},
+{
+"id": 145,
+"handle": "brown-sugar-bowl-copy-1",
+"title": "TERRACOTTA BOWL",
+"type": "bowl",
+"price": 70.0,
+"cur": "EUR",
+"img": "assets/products/brown-sugar-bowl-copy-1.jpg",
+"family": "rust",
+"h": 25.6,
+"s": 0.618,
+"l": 0.345,
+"rgb": [
+142,
+80,
+34
+],
+"thumb": "assets/thumbs/brown-sugar-bowl-copy-1.webp"
+},
+{
+"id": 146,
+"handle": "powder-logo-ring-copy",
+"title": "BLACK LOGO RING",
+"type": "Accessoires",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/powder-logo-ring-copy.jpg",
+"family": "black",
+"h": 23.5,
+"s": 0.065,
+"l": 0.213,
+"rgb": [
+58,
+54,
+51
+],
+"thumb": "assets/thumbs/powder-logo-ring-copy.webp"
+},
+{
+"id": 147,
+"handle": "black-hoodie-it",
+"title": "Black Hoodie",
+"type": "Hoodie",
+"price": 90.0,
+"cur": "EUR",
+"img": "assets/products/black-hoodie-it.jpg",
+"family": "black",
+"h": 204.7,
+"s": 0.043,
+"l": 0.11,
+"rgb": [
+27,
+28,
+29
+],
+"thumb": "assets/thumbs/black-hoodie-it.webp"
+},
+{
+"id": 148,
+"handle": "anthracite-hoodie-it",
+"title": "Anthracite Hoodie",
+"type": "Hoodie",
+"price": 90.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-hoodie-it.jpg",
+"family": "anthracite",
+"h": 222.6,
+"s": 0.087,
+"l": 0.202,
+"rgb": [
+47,
+50,
+56
+],
+"thumb": "assets/thumbs/anthracite-hoodie-it.webp"
+},
+{
+"id": 149,
+"handle": "grey-hoodie-it",
+"title": "Grey Hoodie",
+"type": "Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/grey-hoodie-it.jpg",
+"family": "grey",
+"h": 352.4,
+"s": 0.018,
+"l": 0.538,
+"rgb": [
+139,
+135,
+136
+],
+"thumb": "assets/thumbs/grey-hoodie-it.webp"
+},
+{
+"id": 150,
+"handle": "beige-hoodie-it",
+"title": "Beige Hoodie",
+"type": "Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/beige-hoodie-it.jpg",
+"family": "beige",
+"h": 32.0,
+"s": 0.373,
+"l": 0.659,
+"rgb": [
+200,
+170,
+136
+],
+"thumb": "assets/thumbs/beige-hoodie-it.webp"
+},
+{
+"id": 151,
+"handle": "brown-hoodie-it",
+"title": "Brown Hoodie",
+"type": "Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/brown-hoodie-it.jpg",
+"family": "brown",
+"h": 17.9,
+"s": 0.28,
+"l": 0.167,
+"rgb": [
+54,
+38,
+31
+],
+"thumb": "assets/thumbs/brown-hoodie-it.webp"
+},
+{
+"id": 152,
+"handle": "grey-melange-hoodie-it",
+"title": "Grey Melange Hoodie",
+"type": "Hoodie",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/grey-melange-hoodie-it.jpg",
+"family": "grey",
+"h": 234.8,
+"s": 0.099,
+"l": 0.772,
+"rgb": [
+191,
+192,
+203
+],
+"thumb": "assets/thumbs/grey-melange-hoodie-it.webp"
+},
+{
+"id": 153,
+"handle": "navy-melange-hoodie-it",
+"title": "Navy Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/navy-melange-hoodie-it.jpg",
+"family": "navy",
+"h": 215.7,
+"s": 0.275,
+"l": 0.161,
+"rgb": [
+30,
+39,
+52
+],
+"thumb": "assets/thumbs/navy-melange-hoodie-it.webp"
+},
+{
+"id": 154,
+"handle": "royal-blue-hoodie-it",
+"title": "Royal Blue Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/royal-blue-hoodie-it.jpg",
+"family": "royal_blue",
+"h": 211.2,
+"s": 0.622,
+"l": 0.507,
+"rgb": [
+51,
+126,
+207
+],
+"thumb": "assets/thumbs/royal-blue-hoodie-it.webp"
+},
+{
+"id": 155,
+"handle": "baby-blue-hoodie-it",
+"title": "Baby Blue Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/baby-blue-hoodie-it.jpg",
+"family": "blue",
+"h": 211.5,
+"s": 0.153,
+"l": 0.712,
+"rgb": [
+170,
+181,
+193
+],
+"thumb": "assets/thumbs/baby-blue-hoodie-it.webp"
+},
+{
+"id": 156,
+"handle": "taupe-hoodie-it",
+"title": "Taupe Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/taupe-hoodie-it.jpg",
+"family": "taupe",
+"h": 25.9,
+"s": 0.174,
+"l": 0.278,
+"rgb": [
+83,
+69,
+59
+],
+"thumb": "assets/thumbs/taupe-hoodie-it.webp"
+},
+{
+"id": 157,
+"handle": "yellow-hoodie-it",
+"title": "Yellow Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/yellow-hoodie-it.jpg",
+"family": "yellow",
+"h": 41.7,
+"s": 0.484,
+"l": 0.698,
+"rgb": [
+215,
+192,
+141
+],
+"thumb": "assets/thumbs/yellow-hoodie-it.webp"
+},
+{
+"id": 158,
+"handle": "khaki-hoodie-it",
+"title": "Khaki Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/khaki-hoodie-it.jpg",
+"family": "khaki",
+"h": 63.5,
+"s": 0.126,
+"l": 0.212,
+"rgb": [
+60,
+61,
+47
+],
+"thumb": "assets/thumbs/khaki-hoodie-it.webp"
+},
+{
+"id": 159,
+"handle": "faded-green-hoodie-it",
+"title": "Faded Green Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/faded-green-hoodie-it.jpg",
+"family": "green",
+"h": 86.4,
+"s": 0.11,
+"l": 0.27,
+"rgb": [
+70,
+76,
+61
+],
+"thumb": "assets/thumbs/faded-green-hoodie-it.webp"
+},
+{
+"id": 160,
+"handle": "dark-red-hoodie-it",
+"title": "Dark Red Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/dark-red-hoodie-it.jpg",
+"family": "red",
+"h": 354.3,
+"s": 0.211,
+"l": 0.295,
+"rgb": [
+91,
+59,
+62
+],
+"thumb": "assets/thumbs/dark-red-hoodie-it.webp"
+},
+{
+"id": 161,
+"handle": "red-hoodie-it",
+"title": "Red Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/red-hoodie-it.jpg",
+"family": "red",
+"h": 355.4,
+"s": 0.458,
+"l": 0.371,
+"rgb": [
+138,
+51,
+58
+],
+"thumb": "assets/thumbs/red-hoodie-it.webp"
+},
+{
+"id": 162,
+"handle": "pink-hoodie-it",
+"title": "Pink Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/pink-hoodie-it.jpg",
+"family": "pink",
+"h": 0.2,
+"s": 0.27,
+"l": 0.867,
+"rgb": [
+230,
+212,
+212
+],
+"thumb": "assets/thumbs/pink-hoodie-it.webp"
+},
+{
+"id": 163,
+"handle": "light-grey-hoodie-it",
+"title": "Light Grey Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/light-grey-hoodie-it.jpg",
+"family": "light_grey",
+"h": 16.4,
+"s": 0.173,
+"l": 0.77,
+"rgb": [
+206,
+192,
+186
+],
+"thumb": "assets/thumbs/light-grey-hoodie-it.webp"
+},
+{
+"id": 164,
+"handle": "light-brown-hoodie",
+"title": "Light Brown Hoodie",
+"type": "Hoodie",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/light-brown-hoodie.jpg",
+"family": "brown",
+"h": 30.0,
+"s": 0.219,
+"l": 0.388,
+"rgb": [
+121,
+99,
+77
+],
+"thumb": "assets/thumbs/light-brown-hoodie.webp"
+},
+{
+"id": 165,
+"handle": "black-zip-hoodie-it",
+"title": "Black Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/black-zip-hoodie-it.jpg",
+"family": "black",
+"h": 204.0,
+"s": 0.051,
+"l": 0.111,
+"rgb": [
+27,
+29,
+30
+],
+"thumb": "assets/thumbs/black-zip-hoodie-it.webp"
+},
+{
+"id": 166,
+"handle": "anthracite-zip-hoodie-it",
+"title": "Anthracite Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-zip-hoodie-it.jpg",
+"family": "anthracite",
+"h": 221.6,
+"s": 0.08,
+"l": 0.204,
+"rgb": [
+48,
+50,
+56
+],
+"thumb": "assets/thumbs/anthracite-zip-hoodie-it.webp"
+},
+{
+"id": 167,
+"handle": "grey-zip-hoodie-it",
+"title": "Grey Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/grey-zip-hoodie-it.jpg",
+"family": "grey",
+"h": 3.5,
+"s": 0.021,
+"l": 0.545,
+"rgb": [
+142,
+137,
+137
+],
+"thumb": "assets/thumbs/grey-zip-hoodie-it.webp"
+},
+{
+"id": 168,
+"handle": "beige-zip-hoodie-it",
+"title": "Beige Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/beige-zip-hoodie-it.jpg",
+"family": "beige",
+"h": 31.6,
+"s": 0.35,
+"l": 0.626,
+"rgb": [
+193,
+161,
+126
+],
+"thumb": "assets/thumbs/beige-zip-hoodie-it.webp"
+},
+{
+"id": 169,
+"handle": "brown-zip-hoodie-it",
+"title": "Brown Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/brown-zip-hoodie-it.jpg",
+"family": "brown",
+"h": 17.8,
+"s": 0.278,
+"l": 0.167,
+"rgb": [
+54,
+38,
+31
+],
+"thumb": "assets/thumbs/brown-zip-hoodie-it.webp"
+},
+{
+"id": 170,
+"handle": "grey-melange-zip-hoodie-it",
+"title": "Grey Melange Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/grey-melange-zip-hoodie-it.jpg",
+"family": "grey",
+"h": 233.2,
+"s": 0.104,
+"l": 0.77,
+"rgb": [
+190,
+192,
+202
+],
+"thumb": "assets/thumbs/grey-melange-zip-hoodie-it.webp"
+},
+{
+"id": 171,
+"handle": "navy-zip-hoodie-it",
+"title": "Royal Blue Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/navy-zip-hoodie-it.jpg",
+"family": "royal_blue",
+"h": 210.9,
+"s": 0.618,
+"l": 0.503,
+"rgb": [
+50,
+126,
+207
+],
+"thumb": "assets/thumbs/navy-zip-hoodie-it.webp"
+},
+{
+"id": 172,
+"handle": "navy-zip-hoodie-it-1",
+"title": "Navy Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/navy-zip-hoodie-it-1.jpg",
+"family": "navy",
+"h": 215.3,
+"s": 0.288,
+"l": 0.159,
+"rgb": [
+29,
+38,
+52
+],
+"thumb": "assets/thumbs/navy-zip-hoodie-it-1.webp"
+},
+{
+"id": 173,
+"handle": "khaki-zip-hoodie-it",
+"title": "Khaki Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/khaki-zip-hoodie-it.jpg",
+"family": "khaki",
+"h": 62.8,
+"s": 0.124,
+"l": 0.214,
+"rgb": [
+61,
+61,
+48
+],
+"thumb": "assets/thumbs/khaki-zip-hoodie-it.webp"
+},
+{
+"id": 174,
+"handle": "pink-zip-hoodie-it",
+"title": "Pink Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/pink-zip-hoodie-it.jpg",
+"family": "pink",
+"h": 0.7,
+"s": 0.274,
+"l": 0.866,
+"rgb": [
+230,
+212,
+212
+],
+"thumb": "assets/thumbs/pink-zip-hoodie-it.webp"
+},
+{
+"id": 175,
+"handle": "light-grey-zip-hoodie",
+"title": "Light Grey Zip-Hoodie",
+"type": "Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/light-grey-zip-hoodie.jpg",
+"family": "light_grey",
+"h": 16.3,
+"s": 0.172,
+"l": 0.77,
+"rgb": [
+206,
+192,
+186
+],
+"thumb": "assets/thumbs/light-grey-zip-hoodie.webp"
+},
+{
+"id": 176,
+"handle": "black-jogger-it",
+"title": "Black Jogger",
+"type": "Jogger",
+"price": 51.0,
+"cur": "EUR",
+"img": "assets/products/black-jogger-it.jpg",
+"family": "black",
+"h": 182.1,
+"s": 0.018,
+"l": 0.11,
+"rgb": [
+28,
+29,
+29
+],
+"thumb": "assets/thumbs/black-jogger-it.webp"
+},
+{
+"id": 177,
+"handle": "anthracite-jogger-it",
+"title": "Anthracite Jogger",
+"type": "Jogger",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-jogger-it.jpg",
+"family": "anthracite",
+"h": 232.7,
+"s": 0.055,
+"l": 0.202,
+"rgb": [
+49,
+49,
+54
+],
+"thumb": "assets/thumbs/anthracite-jogger-it.webp"
+},
+{
+"id": 178,
+"handle": "grey-jogger-it",
+"title": "Grey Jogger",
+"type": "Jogger",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/grey-jogger-it.jpg",
+"family": "grey",
+"h": 1.6,
+"s": 0.021,
+"l": 0.476,
+"rgb": [
+124,
+119,
+119
+],
+"thumb": "assets/thumbs/grey-jogger-it.webp"
+},
+{
+"id": 179,
+"handle": "beige-jogger-it",
+"title": "Beige Jogger",
+"type": "Jogger",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/beige-jogger-it.jpg",
+"family": "beige",
+"h": 32.0,
+"s": 0.344,
+"l": 0.624,
+"rgb": [
+192,
+161,
+126
+],
+"thumb": "assets/thumbs/beige-jogger-it.webp"
+},
+{
+"id": 180,
+"handle": "brown-jogger-it",
+"title": "Brown Jogger",
+"type": "Jogger",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/brown-jogger-it.jpg",
+"family": "brown",
+"h": 18.7,
+"s": 0.292,
+"l": 0.166,
+"rgb": [
+55,
+38,
+30
+],
+"thumb": "assets/thumbs/brown-jogger-it.webp"
+},
+{
+"id": 181,
+"handle": "grey-melange-jogger-it",
+"title": "Grey Melange Jogger",
+"type": "Jogger",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/grey-melange-jogger-it.jpg",
+"family": "grey",
+"h": 248.3,
+"s": 0.049,
+"l": 0.733,
+"rgb": [
+184,
+183,
+190
+],
+"thumb": "assets/thumbs/grey-melange-jogger-it.webp"
+},
+{
+"id": 182,
+"handle": "navy-jogger-it",
+"title": "Navy Jogger",
+"type": "Jogger",
+"price": 64.0,
+"cur": "EUR",
+"img": "assets/products/navy-jogger-it.jpg",
+"family": "navy",
+"h": 215.1,
+"s": 0.275,
+"l": 0.16,
+"rgb": [
+30,
+39,
+52
+],
+"thumb": "assets/thumbs/navy-jogger-it.webp"
+},
+{
+"id": 183,
+"handle": "royal-blue-jogger-it",
+"title": "Royal Blue Jogger",
+"type": "Jogger",
+"price": 51.0,
+"cur": "EUR",
+"img": "assets/products/royal-blue-jogger-it.jpg",
+"family": "royal_blue",
+"h": 210.8,
+"s": 0.613,
+"l": 0.497,
+"rgb": [
+49,
+125,
+204
+],
+"thumb": "assets/thumbs/royal-blue-jogger-it.webp"
+},
+{
+"id": 184,
+"handle": "baby-blue-jogger-it",
+"title": "Baby Blue Jogger",
+"type": "Jogger",
+"price": 51.0,
+"cur": "EUR",
+"img": "assets/products/baby-blue-jogger-it.jpg",
+"family": "blue",
+"h": 210.5,
+"s": 0.14,
+"l": 0.708,
+"rgb": [
+170,
+180,
+191
+],
+"thumb": "assets/thumbs/baby-blue-jogger-it.webp"
+},
+{
+"id": 185,
+"handle": "yellow-jogger-it",
+"title": "Yellow Jogger",
+"type": "Jogger",
+"price": 51.0,
+"cur": "EUR",
+"img": "assets/products/yellow-jogger-it.jpg",
+"family": "yellow",
+"h": 41.7,
+"s": 0.447,
+"l": 0.677,
+"rgb": [
+209,
+187,
+136
+],
+"thumb": "assets/thumbs/yellow-jogger-it.webp"
+},
+{
+"id": 186,
+"handle": "khaki-jogger-it",
+"title": "Khaki Jogger",
+"type": "Jogger",
+"price": 51.0,
+"cur": "EUR",
+"img": "assets/products/khaki-jogger-it.jpg",
+"family": "khaki",
+"h": 63.2,
+"s": 0.126,
+"l": 0.216,
+"rgb": [
+61,
+62,
+48
+],
+"thumb": "assets/thumbs/khaki-jogger-it.webp"
+},
+{
+"id": 187,
+"handle": "faded-green-jogger-it",
+"title": "Faded Green Jogger",
+"type": "Jogger",
+"price": 51.0,
+"cur": "EUR",
+"img": "assets/products/faded-green-jogger-it.jpg",
+"family": "green",
+"h": 83.5,
+"s": 0.114,
+"l": 0.27,
+"rgb": [
+71,
+77,
+61
+],
+"thumb": "assets/thumbs/faded-green-jogger-it.webp"
+},
+{
+"id": 188,
+"handle": "dark-red-jogger-it",
+"title": "Dark Red Jogger",
+"type": "Jogger",
+"price": 51.0,
+"cur": "EUR",
+"img": "assets/products/dark-red-jogger-it.jpg",
+"family": "red",
+"h": 2.5,
+"s": 0.23,
+"l": 0.3,
+"rgb": [
+94,
+60,
+59
+],
+"thumb": "assets/thumbs/dark-red-jogger-it.webp"
+},
+{
+"id": 189,
+"handle": "pink-jogger-it",
+"title": "Pink Jogger",
+"type": "Jogger",
+"price": 51.0,
+"cur": "EUR",
+"img": "assets/products/pink-jogger-it.jpg",
+"family": "pink",
+"h": 1.2,
+"s": 0.251,
+"l": 0.864,
+"rgb": [
+229,
+212,
+212
+],
+"thumb": "assets/thumbs/pink-jogger-it.webp"
+},
+{
+"id": 190,
+"handle": "light-grey-jogger-it",
+"title": "Light Grey Jogger",
+"type": "Jogger",
+"price": 51.0,
+"cur": "EUR",
+"img": "assets/products/light-grey-jogger-it.jpg",
+"family": "light_grey",
+"h": 19.2,
+"s": 0.17,
+"l": 0.768,
+"rgb": [
+206,
+192,
+186
+],
+"thumb": "assets/thumbs/light-grey-jogger-it.webp"
+},
+{
+"id": 191,
+"handle": "black-raw-edges-hoodie-it",
+"title": "Black Raw Edges Hoodie",
+"type": "Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/black-raw-edges-hoodie-it.jpg",
+"family": "black",
+"h": 333.9,
+"s": 0.012,
+"l": 0.068,
+"rgb": [
+18,
+17,
+17
+],
+"thumb": "assets/thumbs/black-raw-edges-hoodie-it.webp"
+},
+{
+"id": 192,
+"handle": "melange-grey-raw-edges-hoodie-it",
+"title": "Melange Grey Raw Edges Hoodie",
+"type": "Hoodie",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/melange-grey-raw-edges-hoodie-it.jpg",
+"family": "grey",
+"h": 236.0,
+"s": 0.049,
+"l": 0.733,
+"rgb": [
+184,
+184,
+190
+],
+"thumb": "assets/thumbs/melange-grey-raw-edges-hoodie-it.webp"
+},
+{
+"id": 193,
+"handle": "black-raw-edges-jogger-it",
+"title": "Black Raw Edges Jogger",
+"type": "Jogger",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/black-raw-edges-jogger-it.jpg",
+"family": "black",
+"h": 330.3,
+"s": 0.011,
+"l": 0.072,
+"rgb": [
+19,
+18,
+18
+],
+"thumb": "assets/thumbs/black-raw-edges-jogger-it.webp"
+},
+{
+"id": 194,
+"handle": "melange-grey-raw-edges-jogger-it",
+"title": "Melange Grey Raw Edges Jogger",
+"type": "Jogger",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/melange-grey-raw-edges-jogger-it.jpg",
+"family": "grey",
+"h": 237.4,
+"s": 0.046,
+"l": 0.731,
+"rgb": [
+183,
+184,
+190
+],
+"thumb": "assets/thumbs/melange-grey-raw-edges-jogger-it.webp"
+},
+{
+"id": 195,
+"handle": "black-cargo-ripstop-jacket-it",
+"title": "Black Cargo Ripstop Jacket",
+"type": "Cargo Jacket",
+"price": 113.0,
+"cur": "EUR",
+"img": "assets/products/black-cargo-ripstop-jacket-it.jpg",
+"family": "black",
+"h": 29.3,
+"s": 0.031,
+"l": 0.126,
+"rgb": [
+33,
+32,
+31
+],
+"thumb": "assets/thumbs/black-cargo-ripstop-jacket-it.webp"
+},
+{
+"id": 196,
+"handle": "brown-cargo-ripstop-jacket-it",
+"title": "Brown Cargo Ripstop Jacket",
+"type": "Cargo Jacket",
+"price": 113.0,
+"cur": "EUR",
+"img": "assets/products/brown-cargo-ripstop-jacket-it.jpg",
+"family": "brown",
+"h": 28.7,
+"s": 0.26,
+"l": 0.303,
+"rgb": [
+97,
+76,
+57
+],
+"thumb": "assets/thumbs/brown-cargo-ripstop-jacket-it.webp"
+},
+{
+"id": 197,
+"handle": "pink-cargo-ripstop-jacket-it",
+"title": "Pink Cargo Ripstop Jacket",
+"type": "Cargo Jacket",
+"price": 113.0,
+"cur": "EUR",
+"img": "assets/products/pink-cargo-ripstop-jacket-it.jpg",
+"family": "pink",
+"h": 358.0,
+"s": 0.737,
+"l": 0.689,
+"rgb": [
+234,
+117,
+121
+],
+"thumb": "assets/thumbs/pink-cargo-ripstop-jacket-it.webp"
+},
+{
+"id": 198,
+"handle": "black-hooded-reversible-jacket-it",
+"title": "Black Hooded Reversible Jacket",
+"type": "Bomber Jacket",
+"price": 138.0,
+"cur": "EUR",
+"img": "assets/products/black-hooded-reversible-jacket-it.jpg",
+"family": "black",
+"h": 194.9,
+"s": 0.01,
+"l": 0.1,
+"rgb": [
+25,
+26,
+26
+],
+"thumb": "assets/thumbs/black-hooded-reversible-jacket-it.webp"
+},
+{
+"id": 199,
+"handle": "anthracite-hooded-reversible-jacket-it",
+"title": "Anthracite Hooded Reversible Jacket",
+"type": "Bomber Jacket",
+"price": 138.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-hooded-reversible-jacket-it.jpg",
+"family": "anthracite",
+"h": 217.2,
+"s": 0.026,
+"l": 0.198,
+"rgb": [
+49,
+50,
+52
+],
+"thumb": "assets/thumbs/anthracite-hooded-reversible-jacket-it.webp"
+},
+{
+"id": 200,
+"handle": "brown-hooded-reversible-jacket-it",
+"title": "Brown Hooded Reversible Jacket",
+"type": "Bomber Jacket",
+"price": 138.0,
+"cur": "EUR",
+"img": "assets/products/brown-hooded-reversible-jacket-it.jpg",
+"family": "brown",
+"h": 27.6,
+"s": 0.175,
+"l": 0.188,
+"rgb": [
+56,
+47,
+39
+],
+"thumb": "assets/thumbs/brown-hooded-reversible-jacket-it.webp"
+},
+{
+"id": 201,
+"handle": "black-borgo-ticino-longsleeve-it",
+"title": "Black Borgo Ticino Longsleeve",
+"type": "Longsleeve",
+"price": 33.0,
+"cur": "EUR",
+"img": "assets/products/black-borgo-ticino-longsleeve-it.jpg",
+"family": "black",
+"h": 211.1,
+"s": 0.045,
+"l": 0.128,
+"rgb": [
+31,
+33,
+34
+],
+"thumb": "assets/thumbs/black-borgo-ticino-longsleeve-it.webp"
+},
+{
+"id": 202,
+"handle": "black-borgo-ticino-t-shirt-it",
+"title": "Black Borgo-Ticino T-Shirt",
+"type": "T-Shirt",
+"price": 23.0,
+"cur": "EUR",
+"img": "assets/products/black-borgo-ticino-t-shirt-it.jpg",
+"family": "black",
+"h": 209.3,
+"s": 0.04,
+"l": 0.129,
+"rgb": [
+32,
+33,
+34
+],
+"thumb": "assets/thumbs/black-borgo-ticino-t-shirt-it.webp"
+},
+{
+"id": 203,
+"handle": "black-ripstop-bag-it",
+"title": "Black Ripstop Bag",
+"type": "Bag",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/black-ripstop-bag-it.jpg",
+"family": "black",
+"h": 28.7,
+"s": 0.073,
+"l": 0.106,
+"rgb": [
+29,
+27,
+25
+],
+"thumb": "assets/thumbs/black-ripstop-bag-it.webp"
+},
+{
+"id": 204,
+"handle": "anthracite-ripstop-bag-it",
+"title": "Anthracite Ripstop Bag",
+"type": "Bag",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-ripstop-bag-it.jpg",
+"family": "anthracite",
+"h": 23.4,
+"s": 0.044,
+"l": 0.135,
+"rgb": [
+36,
+34,
+33
+],
+"thumb": "assets/thumbs/anthracite-ripstop-bag-it.webp"
+},
+{
+"id": 205,
+"handle": "taupe-ripstop-bag-it",
+"title": "Taupe Ripstop Bag",
+"type": "Bag",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/taupe-ripstop-bag-it.jpg",
+"family": "taupe",
+"h": 232.8,
+"s": 0.009,
+"l": 0.125,
+"rgb": [
+32,
+32,
+32
+],
+"thumb": "assets/thumbs/taupe-ripstop-bag-it.webp"
+},
+{
+"id": 206,
+"handle": "camouflage-ripstop-bag-it",
+"title": "Camouflage Ripstop Bag",
+"type": "Bag",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/camouflage-ripstop-bag-it.jpg",
+"family": "olive",
+"h": 29.7,
+"s": 0.152,
+"l": 0.125,
+"rgb": [
+37,
+32,
+27
+],
+"thumb": "assets/thumbs/camouflage-ripstop-bag-it.webp"
+},
+{
+"id": 207,
+"handle": "pink-ripstop-bag-it",
+"title": "Pink Ripstop Bag",
+"type": "Bag",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/pink-ripstop-bag-it.jpg",
+"family": "pink",
+"h": 239.5,
+"s": 0.015,
+"l": 0.132,
+"rgb": [
+33,
+33,
+34
+],
+"thumb": "assets/thumbs/pink-ripstop-bag-it.webp"
+},
+{
+"id": 208,
+"handle": "light-brown-ripstop-bag-it",
+"title": "Light Brown Ripstop Bag",
+"type": "Bag",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/light-brown-ripstop-bag-it.jpg",
+"family": "brown",
+"h": 29.1,
+"s": 0.237,
+"l": 0.3,
+"rgb": [
+95,
+76,
+58
+],
+"thumb": "assets/thumbs/light-brown-ripstop-bag-it.webp"
+},
+{
+"id": 209,
+"handle": "black-mask-hoodie-it",
+"title": "Black Mask Hoodie",
+"type": "Mask Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/black-mask-hoodie-it.jpg",
+"family": "black",
+"h": 205.4,
+"s": 0.042,
+"l": 0.111,
+"rgb": [
+27,
+28,
+29
+],
+"thumb": "assets/thumbs/black-mask-hoodie-it.webp"
+},
+{
+"id": 210,
+"handle": "anthracite-mask-hoodie-it",
+"title": "Anthracite Mask Hoodie",
+"type": "Mask Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-mask-hoodie-it.jpg",
+"family": "anthracite",
+"h": 222.5,
+"s": 0.086,
+"l": 0.203,
+"rgb": [
+47,
+50,
+56
+],
+"thumb": "assets/thumbs/anthracite-mask-hoodie-it.webp"
+},
+{
+"id": 211,
+"handle": "grey-mask-hoodie-it",
+"title": "Grey Mask Hoodie",
+"type": "Mask Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/grey-mask-hoodie-it.jpg",
+"family": "grey",
+"h": 350.1,
+"s": 0.02,
+"l": 0.546,
+"rgb": [
+141,
+137,
+138
+],
+"thumb": "assets/thumbs/grey-mask-hoodie-it.webp"
+},
+{
+"id": 212,
+"handle": "beige-mask-hoodie-it",
+"title": "Beige Mask Hoodie",
+"type": "Mask Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/beige-mask-hoodie-it.jpg",
+"family": "beige",
+"h": 31.7,
+"s": 0.379,
+"l": 0.662,
+"rgb": [
+201,
+171,
+136
+],
+"thumb": "assets/thumbs/beige-mask-hoodie-it.webp"
+},
+{
+"id": 213,
+"handle": "brown-mask-hoodie-it",
+"title": "Brown Mask Hoodie",
+"type": "Mask Hoodie",
+"price": 41.0,
+"cur": "EUR",
+"img": "assets/products/brown-mask-hoodie-it.jpg",
+"family": "brown",
+"h": 17.9,
+"s": 0.279,
+"l": 0.168,
+"rgb": [
+55,
+38,
+31
+],
+"thumb": "assets/thumbs/brown-mask-hoodie-it.webp"
+},
+{
+"id": 214,
+"handle": "black-mask-hoodie-it-1",
+"title": "Black Mask Zip-Hoodie",
+"type": "Mask Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/black-mask-hoodie-it-1.jpg",
+"family": "black",
+"h": 206.9,
+"s": 0.049,
+"l": 0.112,
+"rgb": [
+27,
+29,
+30
+],
+"thumb": "assets/thumbs/black-mask-hoodie-it-1.webp"
+},
+{
+"id": 215,
+"handle": "anthracite-mask-zip-hoodie-it",
+"title": "Anthracite Mask Zip-Hoodie",
+"type": "Mask Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-mask-zip-hoodie-it.jpg",
+"family": "anthracite",
+"h": 221.6,
+"s": 0.071,
+"l": 0.205,
+"rgb": [
+48,
+51,
+56
+],
+"thumb": "assets/thumbs/anthracite-mask-zip-hoodie-it.webp"
+},
+{
+"id": 216,
+"handle": "grey-mask-zip-hoodie-it",
+"title": "Grey Mask Zip-Hoodie",
+"type": "Mask Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/grey-mask-zip-hoodie-it.jpg",
+"family": "grey",
+"h": 3.1,
+"s": 0.024,
+"l": 0.553,
+"rgb": [
+144,
+139,
+138
+],
+"thumb": "assets/thumbs/grey-mask-zip-hoodie-it.webp"
+},
+{
+"id": 217,
+"handle": "beige-mask-zip-hoodie-it",
+"title": "Beige Mask Zip-Hoodie",
+"type": "Mask Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/beige-mask-zip-hoodie-it.jpg",
+"family": "beige",
+"h": 32.1,
+"s": 0.374,
+"l": 0.659,
+"rgb": [
+201,
+170,
+136
+],
+"thumb": "assets/thumbs/beige-mask-zip-hoodie-it.webp"
+},
+{
+"id": 218,
+"handle": "brown-mask-zip-hoodie-it",
+"title": "Brown Mask Zip-Hoodie",
+"type": "Mask Zip-Hoodie",
+"price": 43.0,
+"cur": "EUR",
+"img": "assets/products/brown-mask-zip-hoodie-it.jpg",
+"family": "brown",
+"h": 18.1,
+"s": 0.28,
+"l": 0.167,
+"rgb": [
+55,
+38,
+31
+],
+"thumb": "assets/thumbs/brown-mask-zip-hoodie-it.webp"
+},
+{
+"id": 219,
+"handle": "melange-grey-track-suit-jacket-it",
+"title": "Grey Melange Tracksuit Jacket",
+"type": "Tracksuit Jacket",
+"price": 63.0,
+"cur": "EUR",
+"img": "assets/products/melange-grey-track-suit-jacket-it.jpg",
+"family": "grey",
+"h": 234.4,
+"s": 0.098,
+"l": 0.771,
+"rgb": [
+191,
+192,
+202
+],
+"thumb": "assets/thumbs/melange-grey-track-suit-jacket-it.webp"
+},
+{
+"id": 220,
+"handle": "baby-blue-wool-track-jacket-it",
+"title": "Baby Blue Wool Track Jacket",
+"type": "Tracksuit Jacket",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/baby-blue-wool-track-jacket-it.jpg",
+"family": "blue",
+"h": 214.9,
+"s": 0.362,
+"l": 0.74,
+"rgb": [
+165,
+185,
+213
+],
+"thumb": "assets/thumbs/baby-blue-wool-track-jacket-it.webp"
+},
+{
+"id": 221,
+"handle": "baby-blue-wool-track-pants-it",
+"title": "Baby Blue Wool Flared Pants",
+"type": "Tracksuit Pants",
+"price": 78.0,
+"cur": "EUR",
+"img": "assets/products/baby-blue-wool-track-pants-it.jpg",
+"family": "blue",
+"h": 215.0,
+"s": 0.346,
+"l": 0.725,
+"rgb": [
+161,
+181,
+209
+],
+"thumb": "assets/thumbs/baby-blue-wool-track-pants-it.webp"
+},
+{
+"id": 222,
+"handle": "beige-wool-track-pants-it",
+"title": "Beige Wool Flared Pants",
+"type": "Tracksuit Pants",
+"price": 78.0,
+"cur": "EUR",
+"img": "assets/products/beige-wool-track-pants-it.jpg",
+"family": "beige",
+"h": 26.5,
+"s": 0.364,
+"l": 0.682,
+"rgb": [
+203,
+170,
+144
+],
+"thumb": "assets/thumbs/beige-wool-track-pants-it.webp"
+},
+{
+"id": 223,
+"handle": "beige-wool-track-jacket-it",
+"title": "Beige Wool Track Jacket",
+"type": "Tracksuit Jacket",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/beige-wool-track-jacket-it.jpg",
+"family": "beige",
+"h": 28.5,
+"s": 0.386,
+"l": 0.736,
+"rgb": [
+214,
+186,
+162
+],
+"thumb": "assets/thumbs/beige-wool-track-jacket-it.webp"
+},
+{
+"id": 224,
+"handle": "navy-wool-track-jacket-it",
+"title": "Navy Wool Track Jacket",
+"type": "Tracksuit Jacket",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/navy-wool-track-jacket-it.jpg",
+"family": "navy",
+"h": 283.8,
+"s": 0.101,
+"l": 0.11,
+"rgb": [
+29,
+25,
+31
+],
+"thumb": "assets/thumbs/navy-wool-track-jacket-it.webp"
+},
+{
+"id": 225,
+"handle": "black-wool-track-jacket-it",
+"title": "Black Wool Track Jacket",
+"type": "Tracksuit Jacket",
+"price": 78.0,
+"cur": "EUR",
+"img": "assets/products/black-wool-track-jacket-it.jpg",
+"family": "black",
+"h": 281.3,
+"s": 0.034,
+"l": 0.108,
+"rgb": [
+28,
+27,
+29
+],
+"thumb": "assets/thumbs/black-wool-track-jacket-it.webp"
+},
+{
+"id": 226,
+"handle": "navy-wool-track-pants-it",
+"title": "Navy Wool Flared Pants",
+"type": "Tracksuit Pants",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/navy-wool-track-pants-it.jpg",
+"family": "navy",
+"h": 278.6,
+"s": 0.099,
+"l": 0.109,
+"rgb": [
+29,
+25,
+30
+],
+"thumb": "assets/thumbs/navy-wool-track-pants-it.webp"
+},
+{
+"id": 227,
+"handle": "black-wool-track-pants-it",
+"title": "Black Wool Flared Pants",
+"type": "Tracksuit Pants",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/black-wool-track-pants-it.jpg",
+"family": "black",
+"h": 278.0,
+"s": 0.034,
+"l": 0.105,
+"rgb": [
+27,
+26,
+28
+],
+"thumb": "assets/thumbs/black-wool-track-pants-it.webp"
+},
+{
+"id": 228,
+"handle": "khaki-wool-track-jacket-it",
+"title": "Khaki Wool Track Jacket",
+"type": "Tracksuit Jacket",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/khaki-wool-track-jacket-it.jpg",
+"family": "khaki",
+"h": 63.0,
+"s": 0.229,
+"l": 0.124,
+"rgb": [
+38,
+39,
+24
+],
+"thumb": "assets/thumbs/khaki-wool-track-jacket-it.webp"
+},
+{
+"id": 229,
+"handle": "khaki-wool-track-pants-it",
+"title": "Khaki Wool Flared Pants",
+"type": "Tracksuit Pants",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/khaki-wool-track-pants-it.jpg",
+"family": "khaki",
+"h": 61.7,
+"s": 0.228,
+"l": 0.122,
+"rgb": [
+38,
+38,
+24
+],
+"thumb": "assets/thumbs/khaki-wool-track-pants-it.webp"
+},
+{
+"id": 230,
+"handle": "beige-hooded-sherpa-jacket-it",
+"title": "Beige Hooded Sherpa Jacket",
+"type": "Mask Zip-Hoodie",
+"price": 81.0,
+"cur": "EUR",
+"img": "assets/products/beige-hooded-sherpa-jacket-it.jpg",
+"family": "beige",
+"h": 31.1,
+"s": 0.189,
+"l": 0.54,
+"rgb": [
+160,
+139,
+115
+],
+"thumb": "assets/thumbs/beige-hooded-sherpa-jacket-it.webp"
+},
+{
+"id": 231,
+"handle": "mustard-hooded-sherpa-jacket-it",
+"title": "Mustard Hooded Sherpa Jacket",
+"type": "Mask Zip-Hoodie",
+"price": 81.0,
+"cur": "EUR",
+"img": "assets/products/mustard-hooded-sherpa-jacket-it.jpg",
+"family": "mustard",
+"h": 41.9,
+"s": 0.945,
+"l": 0.423,
+"rgb": [
+210,
+148,
+6
+],
+"thumb": "assets/thumbs/mustard-hooded-sherpa-jacket-it.webp"
+},
+{
+"id": 232,
+"handle": "pink-hooded-sherpa-jacket-it",
+"title": "Pink Hooded Sherpa Jacket",
+"type": "Mask Zip-Hoodie",
+"price": 81.0,
+"cur": "EUR",
+"img": "assets/products/pink-hooded-sherpa-jacket-it.jpg",
+"family": "pink",
+"h": 221.8,
+"s": 0.021,
+"l": 0.187,
+"rgb": [
+47,
+47,
+49
+],
+"thumb": "assets/thumbs/pink-hooded-sherpa-jacket-it.webp"
+},
+{
+"id": 233,
+"handle": "brown-flared-canvas-pants-it",
+"title": "Brown Flared Canvas Pants",
+"type": "Canvas Pants",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/brown-flared-canvas-pants-it.jpg",
+"family": "brown",
+"h": 26.8,
+"s": 0.176,
+"l": 0.186,
+"rgb": [
+56,
+47,
+39
+],
+"thumb": "assets/thumbs/brown-flared-canvas-pants-it.webp"
+},
+{
+"id": 234,
+"handle": "black-flared-canvas-pants-it",
+"title": "Black Flared Canvas Pants",
+"type": "Canvas Pants",
+"price": 78.0,
+"cur": "EUR",
+"img": "assets/products/black-flared-canvas-pants-it.jpg",
+"family": "black",
+"h": 111.8,
+"s": 0.005,
+"l": 0.095,
+"rgb": [
+24,
+24,
+24
+],
+"thumb": "assets/thumbs/black-flared-canvas-pants-it.webp"
+},
+{
+"id": 235,
+"handle": "brown-cargo-ripstop-pants-it",
+"title": "Brown Cargo Ripstop Pants",
+"type": "Ripstop Cargo",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/brown-cargo-ripstop-pants-it.jpg",
+"family": "brown",
+"h": 28.9,
+"s": 0.268,
+"l": 0.297,
+"rgb": [
+96,
+75,
+55
+],
+"thumb": "assets/thumbs/brown-cargo-ripstop-pants-it.webp"
+},
+{
+"id": 236,
+"handle": "black-cargo-ripstop-pants-it",
+"title": "Black Cargo Ripstop Pants",
+"type": "Ripstop Cargo",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/black-cargo-ripstop-pants-it.jpg",
+"family": "black",
+"h": 19.6,
+"s": 0.001,
+"l": 0.114,
+"rgb": [
+29,
+29,
+29
+],
+"thumb": "assets/thumbs/black-cargo-ripstop-pants-it.webp"
+},
+{
+"id": 237,
+"handle": "pink-cargo-ripstop-pants-it",
+"title": "Pink Cargo Ripstop Pants",
+"type": "Jogger",
+"price": 138.0,
+"cur": "EUR",
+"img": "assets/products/pink-cargo-ripstop-pants-it.jpg",
+"family": "pink",
+"h": 358.3,
+"s": 0.731,
+"l": 0.688,
+"rgb": [
+234,
+117,
+121
+],
+"thumb": "assets/thumbs/pink-cargo-ripstop-pants-it.webp"
+},
+{
+"id": 238,
+"handle": "beige-fitted-ripstop-jacket-it",
+"title": "Beige Fitted Ripstop Jacket",
+"type": "Fitted Jacket",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/beige-fitted-ripstop-jacket-it.jpg",
+"family": "beige",
+"h": 26.9,
+"s": 0.179,
+"l": 0.19,
+"rgb": [
+57,
+48,
+40
+],
+"thumb": "assets/thumbs/beige-fitted-ripstop-jacket-it.webp"
+},
+{
+"id": 239,
+"handle": "camouflage-cargo-ripstop-jacket-it",
+"title": "Camouflage Cargo Ripstop Jacket",
+"type": "Cargo Jacket",
+"price": 115.0,
+"cur": "EUR",
+"img": "assets/products/camouflage-cargo-ripstop-jacket-it.jpg",
+"family": "olive",
+"h": 51.0,
+"s": 0.346,
+"l": 0.616,
+"rgb": [
+191,
+181,
+123
+],
+"thumb": "assets/thumbs/camouflage-cargo-ripstop-jacket-it.webp"
+},
+{
+"id": 240,
+"handle": "camouflage-cargo-ripstop-pants-it",
+"title": "Camouflage Cargo Ripstop Pants",
+"type": "Ripstop Cargo",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/camouflage-cargo-ripstop-pants-it.jpg",
+"family": "olive",
+"h": 51.5,
+"s": 0.344,
+"l": 0.612,
+"rgb": [
+190,
+181,
+122
+],
+"thumb": "assets/thumbs/camouflage-cargo-ripstop-pants-it.webp"
+},
+{
+"id": 241,
+"handle": "anthracite-flared-canvas-pants-it",
+"title": "Anthracite Flared Canvas Pants",
+"type": "Canvas Pants",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-flared-canvas-pants-it.jpg",
+"family": "anthracite",
+"h": 215.9,
+"s": 0.023,
+"l": 0.192,
+"rgb": [
+48,
+49,
+50
+],
+"thumb": "assets/thumbs/anthracite-flared-canvas-pants-it.webp"
+},
+{
+"id": 242,
+"handle": "anthracite-knit-hood",
+"title": "Anthracite Knit Hood",
+"type": "Knit Hood",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-knit-hood.jpg",
+"family": "anthracite",
+"h": 49.8,
+"s": 0.028,
+"l": 0.127,
+"rgb": [
+33,
+33,
+31
+],
+"thumb": "assets/thumbs/anthracite-knit-hood.webp"
+},
+{
+"id": 243,
+"handle": "silver-swirl-bracelet",
+"title": "SILVER SWIRL BRACELET",
+"type": "Accessoires",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/silver-swirl-bracelet.jpg",
+"family": "grey",
+"h": 70.9,
+"s": 0.028,
+"l": 0.467,
+"rgb": [
+121,
+122,
+116
+],
+"thumb": "assets/thumbs/silver-swirl-bracelet.webp"
+},
+{
+"id": 244,
+"handle": "black-bracelet",
+"title": "BLACK BRACELET",
+"type": "Accessoires",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/black-bracelet.jpg",
+"family": "black",
+"h": 215.6,
+"s": 0.09,
+"l": 0.122,
+"rgb": [
+28,
+31,
+34
+],
+"thumb": "assets/thumbs/black-bracelet.webp"
+},
+{
+"id": 245,
+"handle": "black-wide-macan-pants",
+"title": "Black Wide Macan Pants",
+"type": "Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/black-wide-macan-pants.jpg",
+"family": "black",
+"h": 303.2,
+"s": 0.048,
+"l": 0.058,
+"rgb": [
+16,
+14,
+15
+],
+"thumb": "assets/thumbs/black-wide-macan-pants.webp"
+},
+{
+"id": 246,
+"handle": "raw-denim-jacket",
+"title": "Raw Denim Jacket",
+"type": "Denim Jacket",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/raw-denim-jacket.jpg",
+"family": "denim",
+"h": 229.8,
+"s": 0.192,
+"l": 0.17,
+"rgb": [
+35,
+38,
+52
+],
+"thumb": "assets/thumbs/raw-denim-jacket.webp"
+},
+{
+"id": 247,
+"handle": "khaki-oil-zip-hoodie",
+"title": "Khaki Oil Zip Hoodie",
+"type": "",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/khaki-oil-zip-hoodie.jpg",
+"family": "khaki",
+"h": 78.1,
+"s": 0.139,
+"l": 0.269,
+"rgb": [
+72,
+78,
+59
+],
+"thumb": "assets/thumbs/khaki-oil-zip-hoodie.webp"
+},
+{
+"id": 248,
+"handle": "khaki-oil-t-shirt",
+"title": "Khaki Oil T-Shirt",
+"type": "",
+"price": 25.0,
+"cur": "EUR",
+"img": "assets/products/khaki-oil-t-shirt.jpg",
+"family": "khaki",
+"h": 68.9,
+"s": 0.165,
+"l": 0.269,
+"rgb": [
+76,
+80,
+57
+],
+"thumb": "assets/thumbs/khaki-oil-t-shirt.webp"
+},
+{
+"id": 249,
+"handle": "khaki-oil-jogger",
+"title": "Khaki Oil Jogger",
+"type": "",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/khaki-oil-jogger.jpg",
+"family": "khaki",
+"h": 74.4,
+"s": 0.149,
+"l": 0.266,
+"rgb": [
+73,
+78,
+58
+],
+"thumb": "assets/thumbs/khaki-oil-jogger.webp"
+},
+{
+"id": 250,
+"handle": "black-jogger-wsdh-tr",
+"title": "Black Jogger 1.0",
+"type": "",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/black-jogger-wsdh-tr.jpg",
+"family": "black",
+"h": 243.0,
+"s": 0.03,
+"l": 0.114,
+"rgb": [
+28,
+28,
+30
+],
+"thumb": "assets/thumbs/black-jogger-wsdh-tr.webp"
+},
+{
+"id": 251,
+"handle": "black-jogger-wsdh-pl",
+"title": "Black Jogger 2.0",
+"type": "",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/black-jogger-wsdh-pl.jpg",
+"family": "black",
+"h": 185.8,
+"s": 0.026,
+"l": 0.057,
+"rgb": [
+14,
+15,
+15
+],
+"thumb": "assets/thumbs/black-jogger-wsdh-pl.webp"
+},
+{
+"id": 252,
+"handle": "raw-denim-baggy-pants-2",
+"title": "Raw Denim Baggy Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/raw-denim-baggy-pants-2.jpg",
+"family": "denim",
+"h": 226.9,
+"s": 0.345,
+"l": 0.153,
+"rgb": [
+26,
+31,
+52
+],
+"thumb": "assets/thumbs/raw-denim-baggy-pants-2.webp"
+},
+{
+"id": 253,
+"handle": "melange-hoodie-pl",
+"title": "Melange Hoodie",
+"type": "Hoodie",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/melange-hoodie-pl.jpg",
+"family": "grey",
+"h": 226.2,
+"s": 0.152,
+"l": 0.766,
+"rgb": [
+186,
+190,
+204
+],
+"thumb": "assets/thumbs/melange-hoodie-pl.webp"
+},
+{
+"id": 254,
+"handle": "melange-jogger-pl",
+"title": "Melange Jogger",
+"type": "Jogger",
+"price": 40.0,
+"cur": "EUR",
+"img": "assets/products/melange-jogger-pl.jpg",
+"family": "grey",
+"h": 226.7,
+"s": 0.147,
+"l": 0.764,
+"rgb": [
+186,
+190,
+204
+],
+"thumb": "assets/thumbs/melange-jogger-pl.webp"
+},
+{
+"id": 255,
+"handle": "melange-baggy-jogger-pl",
+"title": "Melange Baggy Jogger",
+"type": "Jogger",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/melange-baggy-jogger-pl.jpg",
+"family": "grey",
+"h": 225.7,
+"s": 0.155,
+"l": 0.766,
+"rgb": [
+186,
+190,
+204
+],
+"thumb": "assets/thumbs/melange-baggy-jogger-pl.webp"
+},
+{
+"id": 256,
+"handle": "melange-jogger-shorts-pl-kopie",
+"title": "Melange Jogger Shorts",
+"type": "Jogger",
+"price": 35.0,
+"cur": "EUR",
+"img": "assets/products/melange-jogger-shorts-pl-kopie.jpg",
+"family": "grey",
+"h": 227.5,
+"s": 0.152,
+"l": 0.772,
+"rgb": [
+188,
+192,
+206
+],
+"thumb": "assets/thumbs/melange-jogger-shorts-pl-kopie.webp"
+},
+{
+"id": 257,
+"handle": "melange-t-shirt-pl",
+"title": "Melange T-Shirt",
+"type": "T-Shirt",
+"price": 25.0,
+"cur": "EUR",
+"img": "assets/products/melange-t-shirt-pl.jpg",
+"family": "grey",
+"h": 227.3,
+"s": 0.148,
+"l": 0.766,
+"rgb": [
+187,
+190,
+204
+],
+"thumb": "assets/thumbs/melange-t-shirt-pl.webp"
+},
+{
+"id": 258,
+"handle": "melange-longsleeve-pl",
+"title": "Melange Longsleeve",
+"type": "Longsleeve",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/melange-longsleeve-pl.jpg",
+"family": "grey",
+"h": 225.8,
+"s": 0.154,
+"l": 0.769,
+"rgb": [
+187,
+191,
+205
+],
+"thumb": "assets/thumbs/melange-longsleeve-pl.webp"
+},
+{
+"id": 259,
+"handle": "khaki-hoodie-pl",
+"title": "Khaki Hoodie",
+"type": "Hoodie",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/khaki-hoodie-pl.jpg",
+"family": "khaki",
+"h": 56.9,
+"s": 0.143,
+"l": 0.471,
+"rgb": [
+137,
+136,
+103
+],
+"thumb": "assets/thumbs/khaki-hoodie-pl.webp"
+},
+{
+"id": 260,
+"handle": "navy-hoodie-pl",
+"title": "Navy Hoodie",
+"type": "Hoodie",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/navy-hoodie-pl.jpg",
+"family": "navy",
+"h": 221.6,
+"s": 0.514,
+"l": 0.199,
+"rgb": [
+25,
+41,
+77
+],
+"thumb": "assets/thumbs/navy-hoodie-pl.webp"
+},
+{
+"id": 261,
+"handle": "dark-red-hoodie-pl",
+"title": "Dark Red Hoodie",
+"type": "Hoodie",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/dark-red-hoodie-pl.jpg",
+"family": "red",
+"h": 341.7,
+"s": 0.312,
+"l": 0.272,
+"rgb": [
+91,
+48,
+61
+],
+"thumb": "assets/thumbs/dark-red-hoodie-pl.webp"
+},
+{
+"id": 262,
+"handle": "black-hoodie-pl",
+"title": "Black Hoodie",
+"type": "Hoodie",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/black-hoodie-pl.jpg",
+"family": "black",
+"h": 328.6,
+"s": 0.093,
+"l": 0.109,
+"rgb": [
+30,
+25,
+28
+],
+"thumb": "assets/thumbs/black-hoodie-pl.webp"
+},
+{
+"id": 263,
+"handle": "khaki-jogger-pl",
+"title": "Khaki Jogger",
+"type": "Jogger",
+"price": 48.0,
+"cur": "EUR",
+"img": "assets/products/khaki-jogger-pl.jpg",
+"family": "khaki",
+"h": 53.3,
+"s": 0.164,
+"l": 0.431,
+"rgb": [
+128,
+124,
+92
+],
+"thumb": "assets/thumbs/khaki-jogger-pl.webp"
+},
+{
+"id": 264,
+"handle": "navy-jogger-pl",
+"title": "Navy Jogger",
+"type": "Jogger",
+"price": 48.0,
+"cur": "EUR",
+"img": "assets/products/navy-jogger-pl.jpg",
+"family": "navy",
+"h": 222.3,
+"s": 0.481,
+"l": 0.199,
+"rgb": [
+26,
+41,
+75
+],
+"thumb": "assets/thumbs/navy-jogger-pl.webp"
+},
+{
+"id": 265,
+"handle": "dark-red-jogger-pl",
+"title": "Dark Red Jogger",
+"type": "Jogger",
+"price": 48.0,
+"cur": "EUR",
+"img": "assets/products/dark-red-jogger-pl.jpg",
+"family": "red",
+"h": 342.3,
+"s": 0.31,
+"l": 0.277,
+"rgb": [
+93,
+49,
+62
+],
+"thumb": "assets/thumbs/dark-red-jogger-pl.webp"
+},
+{
+"id": 266,
+"handle": "black-jogger-pl-kopie",
+"title": "Black Jogger",
+"type": "Jogger",
+"price": 48.0,
+"cur": "EUR",
+"img": "assets/products/black-jogger-pl-kopie.jpg",
+"family": "black",
+"h": 341.3,
+"s": 0.112,
+"l": 0.109,
+"rgb": [
+31,
+25,
+27
+],
+"thumb": "assets/thumbs/black-jogger-pl-kopie.webp"
+},
+{
+"id": 267,
+"handle": "khaki-jogger-shorts-pl",
+"title": "Khaki Jogger Shorts",
+"type": "Jogger",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/khaki-jogger-shorts-pl.jpg",
+"family": "khaki",
+"h": 55.1,
+"s": 0.151,
+"l": 0.469,
+"rgb": [
+138,
+135,
+102
+],
+"thumb": "assets/thumbs/khaki-jogger-shorts-pl.webp"
+},
+{
+"id": 268,
+"handle": "navy-jogger-shorts-pl",
+"title": "Navy Jogger Shorts",
+"type": "Jogger",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/navy-jogger-shorts-pl.jpg",
+"family": "navy",
+"h": 222.2,
+"s": 0.494,
+"l": 0.201,
+"rgb": [
+26,
+41,
+77
+],
+"thumb": "assets/thumbs/navy-jogger-shorts-pl.webp"
+},
+{
+"id": 269,
+"handle": "dark-red-jogger-shorts-pl",
+"title": "Dark Red Jogger Shorts",
+"type": "Jogger",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/dark-red-jogger-shorts-pl.jpg",
+"family": "red",
+"h": 339.3,
+"s": 0.3,
+"l": 0.293,
+"rgb": [
+97,
+52,
+68
+],
+"thumb": "assets/thumbs/dark-red-jogger-shorts-pl.webp"
+},
+{
+"id": 270,
+"handle": "black-jogger-shorts-pl",
+"title": "Black Jogger Shorts",
+"type": "Jogger",
+"price": 36.0,
+"cur": "EUR",
+"img": "assets/products/black-jogger-shorts-pl.jpg",
+"family": "black",
+"h": 341.1,
+"s": 0.104,
+"l": 0.111,
+"rgb": [
+31,
+25,
+27
+],
+"thumb": "assets/thumbs/black-jogger-shorts-pl.webp"
+},
+{
+"id": 271,
+"handle": "khaki-t-shirt-pl",
+"title": "Khaki T-Shirt",
+"type": "T-Shirt",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/khaki-t-shirt-pl.jpg",
+"family": "khaki",
+"h": 56.2,
+"s": 0.149,
+"l": 0.47,
+"rgb": [
+138,
+136,
+102
+],
+"thumb": "assets/thumbs/khaki-t-shirt-pl.webp"
+},
+{
+"id": 272,
+"handle": "navy-t-shirt-pl",
+"title": "Navy T-Shirt",
+"type": "T-Shirt",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/navy-t-shirt-pl.jpg",
+"family": "navy",
+"h": 222.4,
+"s": 0.528,
+"l": 0.207,
+"rgb": [
+25,
+41,
+81
+],
+"thumb": "assets/thumbs/navy-t-shirt-pl.webp"
+},
+{
+"id": 273,
+"handle": "dark-red-t-shirt-pl",
+"title": "Dark Red T-Shirt",
+"type": "T-Shirt",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/dark-red-t-shirt-pl.jpg",
+"family": "red",
+"h": 336.6,
+"s": 0.301,
+"l": 0.289,
+"rgb": [
+96,
+52,
+69
+],
+"thumb": "assets/thumbs/dark-red-t-shirt-pl.webp"
+},
+{
+"id": 274,
+"handle": "black-t-shirt-pl",
+"title": "Black T-Shirt",
+"type": "T-Shirt",
+"price": 27.0,
+"cur": "EUR",
+"img": "assets/products/black-t-shirt-pl.jpg",
+"family": "black",
+"h": 334.6,
+"s": 0.088,
+"l": 0.104,
+"rgb": [
+29,
+24,
+26
+],
+"thumb": "assets/thumbs/black-t-shirt-pl.webp"
+},
+{
+"id": 275,
+"handle": "khaki-longsleeve-pl",
+"title": "Khaki Longsleeve",
+"type": "Longsleeve",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/khaki-longsleeve-pl.jpg",
+"family": "khaki",
+"h": 56.3,
+"s": 0.148,
+"l": 0.475,
+"rgb": [
+139,
+137,
+103
+],
+"thumb": "assets/thumbs/khaki-longsleeve-pl.webp"
+},
+{
+"id": 276,
+"handle": "navy-longsleeve-pl",
+"title": "Navy Longsleeve",
+"type": "Longsleeve",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/navy-longsleeve-pl.jpg",
+"family": "navy",
+"h": 222.2,
+"s": 0.53,
+"l": 0.206,
+"rgb": [
+25,
+41,
+80
+],
+"thumb": "assets/thumbs/navy-longsleeve-pl.webp"
+},
+{
+"id": 277,
+"handle": "dark-red-longsleeve-pl",
+"title": "Dark Red Longsleeve",
+"type": "Longsleeve",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/dark-red-longsleeve-pl.jpg",
+"family": "red",
+"h": 335.6,
+"s": 0.296,
+"l": 0.291,
+"rgb": [
+96,
+52,
+70
+],
+"thumb": "assets/thumbs/dark-red-longsleeve-pl.webp"
+},
+{
+"id": 278,
+"handle": "black-longsleeve-pl",
+"title": "Black Longsleeve",
+"type": "Longsleeve",
+"price": 30.0,
+"cur": "EUR",
+"img": "assets/products/black-longsleeve-pl.jpg",
+"family": "black",
+"h": 326.5,
+"s": 0.092,
+"l": 0.103,
+"rgb": [
+29,
+24,
+27
+],
+"thumb": "assets/thumbs/black-longsleeve-pl.webp"
+},
+{
+"id": 279,
+"handle": "light-blue-denim-pants-33",
+"title": "Light Blue Denim Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/light-blue-denim-pants-33.jpg",
+"family": "light_blue",
+"h": 77.6,
+"s": 0.023,
+"l": 0.385,
+"rgb": [
+99,
+100,
+96
+],
+"thumb": "assets/thumbs/light-blue-denim-pants-33.webp"
+},
+{
+"id": 280,
+"handle": "brown-waxed-denim-pants-33-kopie",
+"title": "Brown Waxed Denim Pants",
+"type": "Denim Pants",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/brown-waxed-denim-pants-33-kopie.jpg",
+"family": "brown",
+"h": 23.3,
+"s": 0.335,
+"l": 0.22,
+"rgb": [
+75,
+52,
+37
+],
+"thumb": "assets/thumbs/brown-waxed-denim-pants-33-kopie.webp"
+},
+{
+"id": 281,
+"handle": "dark-blue-denim-pants-33",
+"title": "Dark Blue Denim Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/dark-blue-denim-pants-33.jpg",
+"family": "denim",
+"h": 209.3,
+"s": 0.195,
+"l": 0.234,
+"rgb": [
+48,
+60,
+71
+],
+"thumb": "assets/thumbs/dark-blue-denim-pants-33.webp"
+},
+{
+"id": 282,
+"handle": "grey-denim-pants-33",
+"title": "Grey Denim Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/grey-denim-pants-33.jpg",
+"family": "grey",
+"h": 329.3,
+"s": 0.037,
+"l": 0.559,
+"rgb": [
+147,
+138,
+143
+],
+"thumb": "assets/thumbs/grey-denim-pants-33.webp"
+},
+{
+"id": 283,
+"handle": "faded-black-denim-pants-33",
+"title": "Faded Black Denim Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/faded-black-denim-pants-33.jpg",
+"family": "black",
+"h": 5.4,
+"s": 0.044,
+"l": 0.117,
+"rgb": [
+31,
+29,
+29
+],
+"thumb": "assets/thumbs/faded-black-denim-pants-33.webp"
+},
+{
+"id": 284,
+"handle": "brown-denim-pants-33",
+"title": "Brown Denim Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/brown-denim-pants-33.jpg",
+"family": "brown",
+"h": 22.9,
+"s": 0.351,
+"l": 0.225,
+"rgb": [
+78,
+53,
+37
+],
+"thumb": "assets/thumbs/brown-denim-pants-33.webp"
+},
+{
+"id": 285,
+"handle": "light-blue-denim-jacket-33",
+"title": "Light Blue Denim Jacket",
+"type": "Denim Jacket",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/light-blue-denim-jacket-33.jpg",
+"family": "light_blue",
+"h": 95.6,
+"s": 0.019,
+"l": 0.388,
+"rgb": [
+99,
+101,
+97
+],
+"thumb": "assets/thumbs/light-blue-denim-jacket-33.webp"
+},
+{
+"id": 286,
+"handle": "brown-waxed-denim-jacket-33",
+"title": "Brown Waxed Denim Jacket",
+"type": "Denim Jacket",
+"price": 78.0,
+"cur": "EUR",
+"img": "assets/products/brown-waxed-denim-jacket-33.jpg",
+"family": "brown",
+"h": 24.6,
+"s": 0.331,
+"l": 0.222,
+"rgb": [
+75,
+53,
+38
+],
+"thumb": "assets/thumbs/brown-waxed-denim-jacket-33.webp"
+},
+{
+"id": 287,
+"handle": "dark-blue-denim-jacket-33",
+"title": "Dark Blue Denim Jacket",
+"type": "Denim Jacket",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/dark-blue-denim-jacket-33.jpg",
+"family": "denim",
+"h": 173.9,
+"s": 0.02,
+"l": 0.38,
+"rgb": [
+95,
+99,
+99
+],
+"thumb": "assets/thumbs/dark-blue-denim-jacket-33.webp"
+},
+{
+"id": 288,
+"handle": "grey-denim-jacket-33",
+"title": "Grey Denim Jacket",
+"type": "Denim Jacket",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/grey-denim-jacket-33.jpg",
+"family": "grey",
+"h": 296.3,
+"s": 0.025,
+"l": 0.557,
+"rgb": [
+145,
+139,
+145
+],
+"thumb": "assets/thumbs/grey-denim-jacket-33.webp"
+},
+{
+"id": 289,
+"handle": "faded-black-denim-jacket-33",
+"title": "Faded Black Denim Jacket",
+"type": "Denim Jacket",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/faded-black-denim-jacket-33.jpg",
+"family": "black",
+"h": 322.1,
+"s": 0.027,
+"l": 0.112,
+"rgb": [
+29,
+28,
+29
+],
+"thumb": "assets/thumbs/faded-black-denim-jacket-33.webp"
+},
+{
+"id": 290,
+"handle": "brown-denim-jacket-33",
+"title": "Brown Denim Jacket",
+"type": "Denim Jacket",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/brown-denim-jacket-33.jpg",
+"family": "brown",
+"h": 24.2,
+"s": 0.343,
+"l": 0.224,
+"rgb": [
+77,
+53,
+38
+],
+"thumb": "assets/thumbs/brown-denim-jacket-33.webp"
+},
+{
+"id": 291,
+"handle": "light-blue-waxed-denim-pants-1",
+"title": "Light Blue Waxed Denim Pants",
+"type": "Denim Pants",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/light-blue-waxed-denim-pants-1.jpg",
+"family": "light_blue",
+"h": 178.7,
+"s": 0.028,
+"l": 0.38,
+"rgb": [
+94,
+100,
+99
+],
+"thumb": "assets/thumbs/light-blue-waxed-denim-pants-1.webp"
+},
+{
+"id": 292,
+"handle": "dirt-denim-pants",
+"title": "Dirt Denim Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/dirt-denim-pants.jpg",
+"family": "brown",
+"h": 212.1,
+"s": 0.073,
+"l": 0.132,
+"rgb": [
+31,
+33,
+36
+],
+"thumb": "assets/thumbs/dirt-denim-pants.webp"
+},
+{
+"id": 293,
+"handle": "vanilla-mug-kopie",
+"title": "Grey Box",
+"type": "Cup",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/vanilla-mug-kopie.jpg",
+"family": "grey",
+"h": 50.5,
+"s": 0.267,
+"l": 0.79,
+"rgb": [
+216,
+211,
+187
+],
+"thumb": "assets/thumbs/vanilla-mug-kopie.webp"
+},
+{
+"id": 294,
+"handle": "grey-box-kopie",
+"title": "Green Box",
+"type": "Cup",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/grey-box-kopie.jpg",
+"family": "green",
+"h": 73.0,
+"s": 0.287,
+"l": 0.593,
+"rgb": [
+168,
+181,
+121
+],
+"thumb": "assets/thumbs/grey-box-kopie.webp"
+},
+{
+"id": 295,
+"handle": "green-box-kopie",
+"title": "Red Box",
+"type": "Cup",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/green-box-kopie.jpg",
+"family": "red",
+"h": 359.1,
+"s": 0.547,
+"l": 0.723,
+"rgb": [
+223,
+146,
+147
+],
+"thumb": "assets/thumbs/green-box-kopie.webp"
+},
+{
+"id": 296,
+"handle": "brown-box",
+"title": "Brown Box",
+"type": "Cup",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/brown-box.jpg",
+"family": "brown",
+"h": 26.4,
+"s": 0.594,
+"l": 0.603,
+"rgb": [
+214,
+147,
+94
+],
+"thumb": "assets/thumbs/brown-box.webp"
+},
+{
+"id": 297,
+"handle": "brown-perfumed-candle",
+"title": "Brown perfumed Candle",
+"type": "Cup",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/brown-perfumed-candle.jpg",
+"family": "brown",
+"h": 30.9,
+"s": 0.547,
+"l": 0.62,
+"rgb": [
+211,
+160,
+105
+],
+"thumb": "assets/thumbs/brown-perfumed-candle.webp"
+},
+{
+"id": 298,
+"handle": "red-perfumed-candle",
+"title": "Red perfumed Candle",
+"type": "Cup",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/red-perfumed-candle.jpg",
+"family": "red",
+"h": 27.4,
+"s": 0.527,
+"l": 0.658,
+"rgb": [
+214,
+164,
+122
+],
+"thumb": "assets/thumbs/red-perfumed-candle.webp"
+},
+{
+"id": 299,
+"handle": "green-perfumed-candle",
+"title": "Green perfumed Candle",
+"type": "Cup",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/green-perfumed-candle.jpg",
+"family": "green",
+"h": 71.3,
+"s": 0.092,
+"l": 0.897,
+"rgb": [
+230,
+231,
+226
+],
+"thumb": "assets/thumbs/green-perfumed-candle.webp"
+},
+{
+"id": 300,
+"handle": "grey-perfumed-candle",
+"title": "Grey perfumed Candle",
+"type": "Cup",
+"price": 50.0,
+"cur": "EUR",
+"img": "assets/products/grey-perfumed-candle.jpg",
+"family": "grey",
+"h": 55.9,
+"s": 0.078,
+"l": 0.899,
+"rgb": [
+231,
+231,
+227
+],
+"thumb": "assets/thumbs/grey-perfumed-candle.webp"
+},
+{
+"id": 301,
+"handle": "red-incense-holder",
+"title": "Red Incense Holder",
+"type": "Cup",
+"price": 20.0,
+"cur": "EUR",
+"img": "assets/products/red-incense-holder.jpg",
+"family": "red",
+"h": 17.5,
+"s": 0.548,
+"l": 0.645,
+"rgb": [
+214,
+144,
+115
+],
+"thumb": "assets/thumbs/red-incense-holder.webp"
+},
+{
+"id": 302,
+"handle": "brown-incense-holder",
+"title": "Brown Incense Holder",
+"type": "Cup",
+"price": 20.0,
+"cur": "EUR",
+"img": "assets/products/brown-incense-holder.jpg",
+"family": "brown",
+"h": 33.8,
+"s": 0.507,
+"l": 0.602,
+"rgb": [
+205,
+160,
+102
+],
+"thumb": "assets/thumbs/brown-incense-holder.webp"
+},
+{
+"id": 303,
+"handle": "green-incense-holder",
+"title": "Green Incense Holder",
+"type": "Cup",
+"price": 20.0,
+"cur": "EUR",
+"img": "assets/products/green-incense-holder.jpg",
+"family": "green",
+"h": 53.5,
+"s": 0.346,
+"l": 0.61,
+"rgb": [
+190,
+183,
+121
+],
+"thumb": "assets/thumbs/green-incense-holder.webp"
+},
+{
+"id": 304,
+"handle": "grey-incense-holder",
+"title": "Grey Incense Holder",
+"type": "Cup",
+"price": 20.0,
+"cur": "EUR",
+"img": "assets/products/grey-incense-holder.jpg",
+"family": "grey",
+"h": 43.8,
+"s": 0.285,
+"l": 0.786,
+"rgb": [
+216,
+208,
+185
+],
+"thumb": "assets/thumbs/grey-incense-holder.webp"
+},
+{
+"id": 305,
+"handle": "khaki-flared-canvas-pants",
+"title": "Khaki Flared Canvas Pants",
+"type": "Canvas Pants",
+"price": 59.0,
+"cur": "EUR",
+"img": "assets/products/khaki-flared-canvas-pants.jpg",
+"family": "khaki",
+"h": 76.1,
+"s": 0.139,
+"l": 0.128,
+"rgb": [
+35,
+37,
+28
+],
+"thumb": "assets/thumbs/khaki-flared-canvas-pants.webp"
+},
+{
+"id": 306,
+"handle": "raw-denim-baggy-pants-1",
+"title": "Raw Denim Baggy Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/raw-denim-baggy-pants-1.jpg",
+"family": "denim",
+"h": 226.9,
+"s": 0.183,
+"l": 0.168,
+"rgb": [
+35,
+38,
+51
+],
+"thumb": "assets/thumbs/raw-denim-baggy-pants-1.webp"
+},
+{
+"id": 307,
+"handle": "black-raw-denim-baggy-pants",
+"title": "Black Raw Denim Baggy Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/black-raw-denim-baggy-pants.jpg",
+"family": "black",
+"h": 203.9,
+"s": 0.05,
+"l": 0.212,
+"rgb": [
+51,
+55,
+57
+],
+"thumb": "assets/thumbs/black-raw-denim-baggy-pants.webp"
+},
+{
+"id": 308,
+"handle": "raw-denim-regular-pants",
+"title": "Raw Denim Regular Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/raw-denim-regular-pants.jpg",
+"family": "denim",
+"h": 226.7,
+"s": 0.193,
+"l": 0.163,
+"rgb": [
+33,
+37,
+49
+],
+"thumb": "assets/thumbs/raw-denim-regular-pants.webp"
+},
+{
+"id": 309,
+"handle": "black-raw-denim-regular-pants",
+"title": "Black Raw Denim Regular Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/black-raw-denim-regular-pants.jpg",
+"family": "black",
+"h": 213.0,
+"s": 0.061,
+"l": 0.133,
+"rgb": [
+32,
+34,
+36
+],
+"thumb": "assets/thumbs/black-raw-denim-regular-pants.webp"
+},
+{
+"id": 310,
+"handle": "raw-denim-ultra-baggy-pants",
+"title": "Raw Denim Ultra Baggy Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/raw-denim-ultra-baggy-pants.jpg",
+"family": "denim",
+"h": 227.6,
+"s": 0.185,
+"l": 0.164,
+"rgb": [
+34,
+37,
+50
+],
+"thumb": "assets/thumbs/raw-denim-ultra-baggy-pants.webp"
+},
+{
+"id": 311,
+"handle": "black-raw-denim-ultra-baggy-pants",
+"title": "Black Raw Denim Ultra Baggy Pants",
+"type": "Denim Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/black-raw-denim-ultra-baggy-pants.jpg",
+"family": "black",
+"h": 211.9,
+"s": 0.052,
+"l": 0.134,
+"rgb": [
+32,
+34,
+36
+],
+"thumb": "assets/thumbs/black-raw-denim-ultra-baggy-pants.webp"
+},
+{
+"id": 312,
+"handle": "raw-denim-jacket-1",
+"title": "Raw Denim Jacket",
+"type": "Denim Pants",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/raw-denim-jacket-1.jpg",
+"family": "denim",
+"h": 224.1,
+"s": 0.216,
+"l": 0.163,
+"rgb": [
+33,
+37,
+51
+],
+"thumb": "assets/thumbs/raw-denim-jacket-1.webp"
+},
+{
+"id": 313,
+"handle": "black-raw-denim-jacket",
+"title": "Black Raw Denim Jacket",
+"type": "Denim Pants",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/black-raw-denim-jacket.jpg",
+"family": "black",
+"h": 207.6,
+"s": 0.078,
+"l": 0.133,
+"rgb": [
+31,
+34,
+36
+],
+"thumb": "assets/thumbs/black-raw-denim-jacket.webp"
+},
+{
+"id": 314,
+"handle": "beige-knit-pants",
+"title": "Beige Knit Pants",
+"type": "Knit Pants",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/beige-knit-pants.jpg",
+"family": "beige",
+"h": 27.9,
+"s": 0.191,
+"l": 0.563,
+"rgb": [
+165,
+142,
+122
+],
+"thumb": "assets/thumbs/beige-knit-pants.webp"
+},
+{
+"id": 315,
+"handle": "ocean-blue-knit-pants",
+"title": "Ocean Blue Knit Pants",
+"type": "Knit Pants",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/ocean-blue-knit-pants.jpg",
+"family": "blue",
+"h": 217.9,
+"s": 0.337,
+"l": 0.431,
+"rgb": [
+73,
+100,
+147
+],
+"thumb": "assets/thumbs/ocean-blue-knit-pants.webp"
+},
+{
+"id": 316,
+"handle": "red-knit-pants",
+"title": "Red Knit Pants",
+"type": "Knit Pants",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/red-knit-pants.jpg",
+"family": "red",
+"h": 350.3,
+"s": 0.503,
+"l": 0.603,
+"rgb": [
+205,
+103,
+119
+],
+"thumb": "assets/thumbs/red-knit-pants.webp"
+},
+{
+"id": 317,
+"handle": "pink-knit-pants",
+"title": "Pink Knit Pants",
+"type": "Knit Pants",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/pink-knit-pants.jpg",
+"family": "pink",
+"h": 349.0,
+"s": 0.521,
+"l": 0.655,
+"rgb": [
+213,
+121,
+138
+],
+"thumb": "assets/thumbs/pink-knit-pants.webp"
+},
+{
+"id": 318,
+"handle": "brown-knit-pants",
+"title": "Brown Knit Pants",
+"type": "Knit Pants",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/brown-knit-pants.jpg",
+"family": "brown",
+"h": 13.3,
+"s": 0.065,
+"l": 0.382,
+"rgb": [
+104,
+94,
+91
+],
+"thumb": "assets/thumbs/brown-knit-pants.webp"
+},
+{
+"id": 319,
+"handle": "anthracite-knit-pants",
+"title": "Anthracite Knit Pants",
+"type": "Knit Pants",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-knit-pants.jpg",
+"family": "anthracite",
+"h": 243.9,
+"s": 0.022,
+"l": 0.39,
+"rgb": [
+98,
+97,
+102
+],
+"thumb": "assets/thumbs/anthracite-knit-pants.webp"
+},
+{
+"id": 320,
+"handle": "navy-knit-pants",
+"title": "Navy Knit Pants",
+"type": "Knit Pants",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/navy-knit-pants.jpg",
+"family": "navy",
+"h": 211.8,
+"s": 0.129,
+"l": 0.416,
+"rgb": [
+92,
+105,
+120
+],
+"thumb": "assets/thumbs/navy-knit-pants.webp"
+},
+{
+"id": 321,
+"handle": "beige-knit-crewneck-2",
+"title": "Beige Knit Crewneck",
+"type": "Knit Crewneck",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/beige-knit-crewneck-2.jpg",
+"family": "beige",
+"h": 27.7,
+"s": 0.166,
+"l": 0.557,
+"rgb": [
+161,
+140,
+123
+],
+"thumb": "assets/thumbs/beige-knit-crewneck-2.webp"
+},
+{
+"id": 322,
+"handle": "ocean-blue-knit-crewneck",
+"title": "Ocean Blue Knit Crewneck",
+"type": "Knit Crewneck",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/ocean-blue-knit-crewneck.jpg",
+"family": "blue",
+"h": 217.4,
+"s": 0.351,
+"l": 0.426,
+"rgb": [
+71,
+99,
+147
+],
+"thumb": "assets/thumbs/ocean-blue-knit-crewneck.webp"
+},
+{
+"id": 323,
+"handle": "red-knit-crewneck-2",
+"title": "Red Knit Crewneck",
+"type": "Knit Crewneck",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/red-knit-crewneck-2.jpg",
+"family": "red",
+"h": 350.8,
+"s": 0.384,
+"l": 0.516,
+"rgb": [
+179,
+84,
+99
+],
+"thumb": "assets/thumbs/red-knit-crewneck-2.webp"
+},
+{
+"id": 324,
+"handle": "pink-knit-crewneck-1",
+"title": "Pink Knit Crewneck",
+"type": "Knit Crewneck",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/pink-knit-crewneck-1.jpg",
+"family": "pink",
+"h": 349.0,
+"s": 0.535,
+"l": 0.658,
+"rgb": [
+214,
+121,
+138
+],
+"thumb": "assets/thumbs/pink-knit-crewneck-1.webp"
+},
+{
+"id": 325,
+"handle": "brown-knit-crewneck-1",
+"title": "Brown Knit Crewneck",
+"type": "Knit Crewneck",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/brown-knit-crewneck-1.jpg",
+"family": "brown",
+"h": 16.6,
+"s": 0.069,
+"l": 0.338,
+"rgb": [
+92,
+84,
+80
+],
+"thumb": "assets/thumbs/brown-knit-crewneck-1.webp"
+},
+{
+"id": 326,
+"handle": "anthracite-knit-crewneck-1",
+"title": "Anthracite Knit Crewneck",
+"type": "Knit Crewneck",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-knit-crewneck-1.jpg",
+"family": "anthracite",
+"h": 240.6,
+"s": 0.027,
+"l": 0.31,
+"rgb": [
+77,
+77,
+81
+],
+"thumb": "assets/thumbs/anthracite-knit-crewneck-1.webp"
+},
+{
+"id": 327,
+"handle": "navy-knit-crewneck",
+"title": "Navy Knit Crewneck",
+"type": "Knit Crewneck",
+"price": 94.0,
+"cur": "EUR",
+"img": "assets/products/navy-knit-crewneck.jpg",
+"family": "navy",
+"h": 208.9,
+"s": 0.141,
+"l": 0.359,
+"rgb": [
+79,
+92,
+104
+],
+"thumb": "assets/thumbs/navy-knit-crewneck.webp"
+},
+{
+"id": 328,
+"handle": "beige-knit-zip-hoodie-1",
+"title": "Beige Knit Zip-Hoodie",
+"type": "Knit Zip-Hoodie",
+"price": 114.0,
+"cur": "EUR",
+"img": "assets/products/beige-knit-zip-hoodie-1.jpg",
+"family": "beige",
+"h": 27.7,
+"s": 0.175,
+"l": 0.557,
+"rgb": [
+162,
+141,
+122
+],
+"thumb": "assets/thumbs/beige-knit-zip-hoodie-1.webp"
+},
+{
+"id": 329,
+"handle": "ocean-blue-knit-zip-hoodie",
+"title": "Ocean Blue Knit Zip-Hoodie",
+"type": "Knit Zip-Hoodie",
+"price": 114.0,
+"cur": "EUR",
+"img": "assets/products/ocean-blue-knit-zip-hoodie.jpg",
+"family": "blue",
+"h": 217.3,
+"s": 0.35,
+"l": 0.424,
+"rgb": [
+70,
+99,
+146
+],
+"thumb": "assets/thumbs/ocean-blue-knit-zip-hoodie.webp"
+},
+{
+"id": 330,
+"handle": "red-knit-zip-hoodie-1",
+"title": "Red Knit Zip-Hoodie",
+"type": "Knit Zip-Hoodie",
+"price": 114.0,
+"cur": "EUR",
+"img": "assets/products/red-knit-zip-hoodie-1.jpg",
+"family": "red",
+"h": 351.1,
+"s": 0.419,
+"l": 0.571,
+"rgb": [
+191,
+100,
+113
+],
+"thumb": "assets/thumbs/red-knit-zip-hoodie-1.webp"
+},
+{
+"id": 331,
+"handle": "pink-knit-zip-hoodie-1",
+"title": "Pink Knit Zip-Hoodie",
+"type": "Knit Zip-Hoodie",
+"price": 114.0,
+"cur": "EUR",
+"img": "assets/products/pink-knit-zip-hoodie-1.jpg",
+"family": "pink",
+"h": 349.0,
+"s": 0.527,
+"l": 0.657,
+"rgb": [
+214,
+121,
+138
+],
+"thumb": "assets/thumbs/pink-knit-zip-hoodie-1.webp"
+},
+{
+"id": 332,
+"handle": "brown-knit-zip-hoodie-1",
+"title": "Brown Knit Zip-Hoodie",
+"type": "Knit Zip-Hoodie",
+"price": 114.0,
+"cur": "EUR",
+"img": "assets/products/brown-knit-zip-hoodie-1.jpg",
+"family": "brown",
+"h": 20.6,
+"s": 0.097,
+"l": 0.332,
+"rgb": [
+93,
+82,
+77
+],
+"thumb": "assets/thumbs/brown-knit-zip-hoodie-1.webp"
+},
+{
+"id": 333,
+"handle": "anthracite-knit-zip-hoodie-1",
+"title": "Anthracite Knit Zip-Hoodie",
+"type": "Knit Zip-Hoodie",
+"price": 114.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-knit-zip-hoodie-1.jpg",
+"family": "anthracite",
+"h": 24.2,
+"s": 0.032,
+"l": 0.388,
+"rgb": [
+102,
+98,
+96
+],
+"thumb": "assets/thumbs/anthracite-knit-zip-hoodie-1.webp"
+},
+{
+"id": 334,
+"handle": "navy-knit-zip-hoodie-1",
+"title": "Navy Knit Zip-Hoodie",
+"type": "Knit Zip-Hoodie",
+"price": 114.0,
+"cur": "EUR",
+"img": "assets/products/navy-knit-zip-hoodie-1.jpg",
+"family": "navy",
+"h": 211.9,
+"s": 0.13,
+"l": 0.416,
+"rgb": [
+92,
+105,
+120
+],
+"thumb": "assets/thumbs/navy-knit-zip-hoodie-1.webp"
+},
+{
+"id": 335,
+"handle": "beige-knit-hoodie-1",
+"title": "Beige Knit Hoodie",
+"type": "Knit Hoodie",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/beige-knit-hoodie-1.jpg",
+"family": "beige",
+"h": 27.8,
+"s": 0.171,
+"l": 0.557,
+"rgb": [
+161,
+141,
+123
+],
+"thumb": "assets/thumbs/beige-knit-hoodie-1.webp"
+},
+{
+"id": 336,
+"handle": "ocean-blue-knit-hoodie",
+"title": "Ocean Blue Knit Hoodie",
+"type": "Knit Hoodie",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/ocean-blue-knit-hoodie.jpg",
+"family": "blue",
+"h": 217.1,
+"s": 0.396,
+"l": 0.399,
+"rgb": [
+61,
+92,
+142
+],
+"thumb": "assets/thumbs/ocean-blue-knit-hoodie.webp"
+},
+{
+"id": 337,
+"handle": "red-knit-hoodie-1",
+"title": "Red Knit Hoodie",
+"type": "Knit Hoodie",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/red-knit-hoodie-1.jpg",
+"family": "red",
+"h": 351.1,
+"s": 0.411,
+"l": 0.545,
+"rgb": [
+187,
+91,
+106
+],
+"thumb": "assets/thumbs/red-knit-hoodie-1.webp"
+},
+{
+"id": 338,
+"handle": "pink-knit-hoodie-1",
+"title": "Pink Knit Hoodie",
+"type": "Knit Hoodie",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/pink-knit-hoodie-1.jpg",
+"family": "pink",
+"h": 351.5,
+"s": 0.551,
+"l": 0.642,
+"rgb": [
+214,
+113,
+128
+],
+"thumb": "assets/thumbs/pink-knit-hoodie-1.webp"
+},
+{
+"id": 339,
+"handle": "brown-knit-hoodie-1",
+"title": "Brown Knit Hoodie",
+"type": "Knit Hoodie",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/brown-knit-hoodie-1.jpg",
+"family": "brown",
+"h": 13.4,
+"s": 0.068,
+"l": 0.384,
+"rgb": [
+104,
+94,
+91
+],
+"thumb": "assets/thumbs/brown-knit-hoodie-1.webp"
+},
+{
+"id": 340,
+"handle": "anthracite-knit-hoodie-1",
+"title": "Anthracite Knit Hoodie",
+"type": "Knit Hoodie",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/anthracite-knit-hoodie-1.jpg",
+"family": "anthracite",
+"h": 235.3,
+"s": 0.023,
+"l": 0.391,
+"rgb": [
+97,
+98,
+102
+],
+"thumb": "assets/thumbs/anthracite-knit-hoodie-1.webp"
+},
+{
+"id": 341,
+"handle": "navy-knit-hoodie-1",
+"title": "Navy Knit Hoodie",
+"type": "Knit Hoodie",
+"price": 104.0,
+"cur": "EUR",
+"img": "assets/products/navy-knit-hoodie-1.jpg",
+"family": "navy",
+"h": 211.3,
+"s": 0.132,
+"l": 0.415,
+"rgb": [
+92,
+105,
+120
+],
+"thumb": "assets/thumbs/navy-knit-hoodie-1.webp"
+},
+{
+"id": 342,
+"handle": "washed-black-buttoned-cardigan",
+"title": "Washed Black Buttoned Hoodie",
+"type": "Cardigan",
+"price": 63.0,
+"cur": "EUR",
+"img": "assets/products/washed-black-buttoned-cardigan.jpg",
+"family": "black",
+"h": 309.7,
+"s": 0.031,
+"l": 0.192,
+"rgb": [
+51,
+48,
+50
+],
+"thumb": "assets/thumbs/washed-black-buttoned-cardigan.webp"
+},
+{
+"id": 343,
+"handle": "heavy-knit-overdyed-cardigan",
+"title": "Heavy Knit Overdyed Cardigan",
+"type": "Cardigan",
+"price": 96.0,
+"cur": "EUR",
+"img": "assets/products/heavy-knit-overdyed-cardigan.jpg",
+"family": "unknown",
+"h": 302.7,
+"s": 0.07,
+"l": 0.064,
+"rgb": [
+18,
+15,
+17
+],
+"thumb": "assets/thumbs/heavy-knit-overdyed-cardigan.webp"
+},
+{
+"id": 344,
+"handle": "washed-cargo-pants",
+"title": "Washed Cargo Pants",
+"type": "Cargo Pants",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/washed-cargo-pants.jpg",
+"family": "unknown",
+"h": 223.4,
+"s": 0.065,
+"l": 0.11,
+"rgb": [
+26,
+27,
+30
+],
+"thumb": "assets/thumbs/washed-cargo-pants.webp"
+},
+{
+"id": 345,
+"handle": "washed-black-minimalist-logo-hoodie",
+"title": "Washed Black Minimalist Logo Hoodie",
+"type": "Hoodie",
+"price": 57.0,
+"cur": "EUR",
+"img": "assets/products/washed-black-minimalist-logo-hoodie.jpg",
+"family": "black",
+"h": 277.0,
+"s": 0.043,
+"l": 0.228,
+"rgb": [
+59,
+56,
+61
+],
+"thumb": "assets/thumbs/washed-black-minimalist-logo-hoodie.webp"
+},
+{
+"id": 346,
+"handle": "washed-black-3-circle-hoodie",
+"title": "Washed Black 3 Circle Hoodie",
+"type": "Hoodie",
+"price": 60.0,
+"cur": "EUR",
+"img": "assets/products/washed-black-3-circle-hoodie.jpg",
+"family": "black",
+"h": 275.5,
+"s": 0.044,
+"l": 0.225,
+"rgb": [
+58,
+55,
+60
+],
+"thumb": "assets/thumbs/washed-black-3-circle-hoodie.webp"
+},
+{
+"id": 347,
+"handle": "washed-black-colors-chronicles-hoodie",
+"title": "Washed Black Colors Chronicles Hoodie",
+"type": "Hoodie",
+"price": 57.0,
+"cur": "EUR",
+"img": "assets/products/washed-black-colors-chronicles-hoodie.jpg",
+"family": "black",
+"h": 285.7,
+"s": 0.038,
+"l": 0.227,
+"rgb": [
+59,
+56,
+60
+],
+"thumb": "assets/thumbs/washed-black-colors-chronicles-hoodie.webp"
+},
+{
+"id": 348,
+"handle": "black-wool-collar-jacket",
+"title": "Black Wool Collar Jacket",
+"type": "Wool Collar Jacket",
+"price": 114.0,
+"cur": "EUR",
+"img": "assets/products/black-wool-collar-jacket.jpg",
+"family": "black",
+"h": 262.4,
+"s": 0.1,
+"l": 0.066,
+"rgb": [
+16,
+15,
+19
+],
+"thumb": "assets/thumbs/black-wool-collar-jacket.webp"
+},
+{
+"id": 349,
+"handle": "hybrid-knit-bomber-jacket",
+"title": "Hybrid Knit Bomber Jacket",
+"type": "Bomber Jacket",
+"price": 192.0,
+"cur": "EUR",
+"img": "assets/products/hybrid-knit-bomber-jacket.jpg",
+"family": "unknown",
+"h": 335.5,
+"s": 0.048,
+"l": 0.127,
+"rgb": [
+34,
+31,
+32
+],
+"thumb": "assets/thumbs/hybrid-knit-bomber-jacket.webp"
+},
+{
+"id": 350,
+"handle": "buttoned-wool-hybrid-jacket",
+"title": "Buttoned Wool Hybrid Jacket",
+"type": "Wool Hybrid Jacket",
+"price": 156.0,
+"cur": "EUR",
+"img": "assets/products/buttoned-wool-hybrid-jacket.jpg",
+"family": "unknown",
+"h": 282.7,
+"s": 0.033,
+"l": 0.217,
+"rgb": [
+56,
+53,
+57
+],
+"thumb": "assets/thumbs/buttoned-wool-hybrid-jacket.webp"
+},
+{
+"id": 351,
+"handle": "black-high-collar-raw-denim-jacket",
+"title": "Black High Collar Raw Denim Jacket",
+"type": "High Collar Raw Denim Jacket",
+"price": 132.0,
+"cur": "EUR",
+"img": "assets/products/black-high-collar-raw-denim-jacket.jpg",
+"family": "black",
+"h": 322.1,
+"s": 0.043,
+"l": 0.107,
+"rgb": [
+29,
+26,
+28
+],
+"thumb": "assets/thumbs/black-high-collar-raw-denim-jacket.webp"
+},
+{
+"id": 352,
+"handle": "slit-zip-jogger-pants",
+"title": "Slit Zip Jogger Pants",
+"type": "Jogger Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/slit-zip-jogger-pants.jpg",
+"family": "unknown",
+"h": 293.5,
+"s": 0.046,
+"l": 0.125,
+"rgb": [
+33,
+30,
+33
+],
+"thumb": "assets/thumbs/slit-zip-jogger-pants.webp"
+},
+{
+"id": 353,
+"handle": "asymetric-buttoned-jogger-pants",
+"title": "Asymetric Buttoned Jogger Pants",
+"type": "Jogger Pants",
+"price": 78.0,
+"cur": "EUR",
+"img": "assets/products/asymetric-buttoned-jogger-pants.jpg",
+"family": "unknown",
+"h": 298.6,
+"s": 0.049,
+"l": 0.108,
+"rgb": [
+29,
+26,
+29
+],
+"thumb": "assets/thumbs/asymetric-buttoned-jogger-pants.webp"
+},
+{
+"id": 354,
+"handle": "circle-line-dots-jogger-pants",
+"title": "Circle Line Dots Jogger Pants",
+"type": "Jogger Pants",
+"price": 66.0,
+"cur": "EUR",
+"img": "assets/products/circle-line-dots-jogger-pants.jpg",
+"family": "unknown",
+"h": 303.3,
+"s": 0.045,
+"l": 0.118,
+"rgb": [
+31,
+29,
+31
+],
+"thumb": "assets/thumbs/circle-line-dots-jogger-pants.webp"
+},
+{
+"id": 355,
+"handle": "colors-comforts-jogger-pants",
+"title": "Colors Comforts Jogger Pants",
+"type": "Jogger Pants",
+"price": 54.0,
+"cur": "EUR",
+"img": "assets/products/colors-comforts-jogger-pants.jpg",
+"family": "unknown",
+"h": 288.3,
+"s": 0.053,
+"l": 0.115,
+"rgb": [
+30,
+28,
+31
+],
+"thumb": "assets/thumbs/colors-comforts-jogger-pants.webp"
+},
+{
+"id": 356,
+"handle": "colors-comforts-longsleeve",
+"title": "Colors Comforts Longsleeve",
+"type": "Longsleeve",
+"price": 45.0,
+"cur": "EUR",
+"img": "assets/products/colors-comforts-longsleeve.jpg",
+"family": "unknown",
+"h": 287.3,
+"s": 0.057,
+"l": 0.137,
+"rgb": [
+36,
+33,
+37
+],
+"thumb": "assets/thumbs/colors-comforts-longsleeve.webp"
+},
+{
+"id": 357,
+"handle": "washed-flap-pants",
+"title": "Washed Flap Pants",
+"type": "Flap Pants",
+"price": 84.0,
+"cur": "EUR",
+"img": "assets/products/washed-flap-pants.jpg",
+"family": "unknown",
+"h": 222.7,
+"s": 0.066,
+"l": 0.105,
+"rgb": [
+25,
+26,
+28
+],
+"thumb": "assets/thumbs/washed-flap-pants.webp"
+},
+{
+"id": 358,
+"handle": "punk-black-raw-denim",
+"title": "Punk Black Raw Denim Pants",
+"type": "Raw Denim Pants",
+"price": 81.0,
+"cur": "EUR",
+"img": "assets/products/punk-black-raw-denim.jpg",
+"family": "black",
+"h": 334.9,
+"s": 0.037,
+"l": 0.114,
+"rgb": [
+30,
+28,
+29
+],
+"thumb": "assets/thumbs/punk-black-raw-denim.webp"
+},
+{
+"id": 359,
+"handle": "colors-sketch-tee",
+"title": "Colors Sketch Tee",
+"type": "T-Shirt",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/colors-sketch-tee.jpg",
+"family": "unknown",
+"h": 286.6,
+"s": 0.04,
+"l": 0.201,
+"rgb": [
+52,
+49,
+53
+],
+"thumb": "assets/thumbs/colors-sketch-tee.webp"
+},
+{
+"id": 360,
+"handle": "colors-stripe-tee",
+"title": "Colors Stripe Tee",
+"type": "T-Shirt",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/colors-stripe-tee.jpg",
+"family": "unknown",
+"h": 333.2,
+"s": 0.134,
+"l": 0.054,
+"rgb": [
+16,
+12,
+14
+],
+"thumb": "assets/thumbs/colors-stripe-tee.webp"
+},
+{
+"id": 361,
+"handle": "colors-chronicles-tee",
+"title": "Colors Chronicles Tee",
+"type": "T-Shirt",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/colors-chronicles-tee.jpg",
+"family": "unknown",
+"h": 312.3,
+"s": 0.034,
+"l": 0.203,
+"rgb": [
+54,
+50,
+53
+],
+"thumb": "assets/thumbs/colors-chronicles-tee.webp"
+},
+{
+"id": 362,
+"handle": "colors-spin-tee",
+"title": "Colors Spin Tee",
+"type": "T-Shirt",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/colors-spin-tee.jpg",
+"family": "unknown",
+"h": 311.8,
+"s": 0.034,
+"l": 0.203,
+"rgb": [
+53,
+50,
+53
+],
+"thumb": "assets/thumbs/colors-spin-tee.webp"
+},
+{
+"id": 363,
+"handle": "colors-circle-line-tee",
+"title": "Colors Circle Line Tee",
+"type": "T-Shirt",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/colors-circle-line-tee.jpg",
+"family": "unknown",
+"h": 306.5,
+"s": 0.032,
+"l": 0.205,
+"rgb": [
+54,
+51,
+54
+],
+"thumb": "assets/thumbs/colors-circle-line-tee.webp"
+},
+{
+"id": 364,
+"handle": "colors-spike-tee",
+"title": "Colors Spike Tee",
+"type": "T-Shirt",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/colors-spike-tee.jpg",
+"family": "unknown",
+"h": 311.7,
+"s": 0.033,
+"l": 0.203,
+"rgb": [
+53,
+50,
+53
+],
+"thumb": "assets/thumbs/colors-spike-tee.webp"
+},
+{
+"id": 365,
+"handle": "colors-light-symbol-tee",
+"title": "Colors Light Symbol Tee",
+"type": "T-Shirt",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/colors-light-symbol-tee.jpg",
+"family": "unknown",
+"h": 311.1,
+"s": 0.033,
+"l": 0.202,
+"rgb": [
+53,
+50,
+53
+],
+"thumb": "assets/thumbs/colors-light-symbol-tee.webp"
+},
+{
+"id": 366,
+"handle": "minimalist-logo-tee",
+"title": "Minimalist Logo Tee",
+"type": "T-Shirt",
+"price": 39.0,
+"cur": "EUR",
+"img": "assets/products/minimalist-logo-tee.jpg",
+"family": "unknown",
+"h": 311.5,
+"s": 0.033,
+"l": 0.202,
+"rgb": [
+53,
+50,
+52
+],
+"thumb": "assets/thumbs/minimalist-logo-tee.webp"
+},
+{
+"id": 367,
+"handle": "circle-line-dots-track-jacket",
+"title": "Circle Line Dots Track Jacket",
+"type": "Tracksuit Jacket",
+"price": 72.0,
+"cur": "EUR",
+"img": "assets/products/circle-line-dots-track-jacket.jpg",
+"family": "unknown",
+"h": 309.4,
+"s": 0.045,
+"l": 0.142,
+"rgb": [
+38,
+35,
+37
+],
+"thumb": "assets/thumbs/circle-line-dots-track-jacket.webp"
+},
+{
+"id": 368,
+"handle": "pleated-tailored-pants",
+"title": "Pleated Tailored Pants",
+"type": "Tailored Pants",
+"price": 84.0,
+"cur": "EUR",
+"img": "assets/products/pleated-tailored-pants.jpg",
+"family": "unknown",
+"h": 256.4,
+"s": 0.113,
+"l": 0.058,
+"rgb": [
+14,
+13,
+16
+],
+"thumb": "assets/thumbs/pleated-tailored-pants.webp"
+},
+{
+"id": 369,
+"handle": "washed-black-slit-cargo-pants",
+"title": "Washed Black Slit Cargo Pants",
+"type": "Cargo Pants",
+"price": 114.0,
+"cur": "EUR",
+"img": "assets/products/washed-black-slit-cargo-pants.jpg",
+"family": "black",
+"h": 243.5,
+"s": 0.106,
+"l": 0.056,
+"rgb": [
+13,
+13,
+16
+],
+"thumb": "assets/thumbs/washed-black-slit-cargo-pants.webp"
+},
+{
+"id": 370,
+"handle": "washed-black-slit-zip-hoodie",
+"title": "Washed Black Slit Zip Hoodie",
+"type": "Cargo Pants",
+"price": 63.0,
+"cur": "EUR",
+"img": "assets/products/washed-black-slit-zip-hoodie.jpg",
+"family": "black",
+"h": 285.4,
+"s": 0.055,
+"l": 0.134,
+"rgb": [
+35,
+32,
+36
+],
+"thumb": "assets/thumbs/washed-black-slit-zip-hoodie.webp"
+}
+]

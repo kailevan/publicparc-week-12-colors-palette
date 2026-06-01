@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>COLORS — Palette</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="phone">
+    <!-- top chrome -->
+    <header class="topbar">
+      <img class="logo" src="assets/logo.webp" alt="COLORS" />
+      <span class="count" id="count"></span>
+    </header>
+
+    <!-- the grid -->
+    <main class="stage" id="stage">
+      <div class="grid" id="grid"></div>
+    </main>
+
+    <!-- gooey filter menu -->
+    <div class="filterbar" id="filterbar">
+      <!-- liquid blob layer (gooey) -->
+      <div class="goo">
+        <span class="blob blob-main"></span>
+        <span class="blob blob-opt" style="--i:1"></span>
+        <span class="blob blob-opt" style="--i:2"></span>
+        <span class="blob blob-opt" style="--i:3"></span>
+      </div>
+      <!-- crisp label layer -->
+      <div class="caps">
+        <button class="cap cap-main" id="capMain">Filter</button>
+        <button class="cap cap-opt" data-sort="color"  style="--i:1">Color</button>
+        <button class="cap cap-opt" data-sort="fabric" style="--i:2">Fabric</button>
+        <button class="cap cap-opt" data-sort="type"   style="--i:3">Type</button>
+      </div>
+    </div>
+
+    <!-- active-filter selector (emerges after a choice) -->
+    <div class="selector" id="selector">
+      <button class="sel-back" id="selBack" aria-label="back">✕</button>
+      <span class="sel-label" id="selLabel">Colors</span>
+      <div class="sel-spectrum" id="selSpectrum">
+        <div class="sel-track" id="selTrack"></div>
+        <div class="sel-handle" id="selHandle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- gooey SVG filter -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

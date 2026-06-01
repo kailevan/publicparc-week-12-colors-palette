@@ -1,0 +1,248 @@
+/* ---- brand font ---- */
+@font-face {
+  font-family: "Colors";
+  src: url("../assets/fonts/colors-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Colors";
+  src: url("../assets/fonts/colors-medium.woff2") format("woff2");
+  font-weight: 500 700;
+  font-display: swap;
+}
+
+:root {
+  --cols: 10;
+  --bg: #ffffff;
+  --ink: #0a0a0a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: #ffffff;
+  font-family: "Colors", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--ink);
+  overscroll-behavior: none;
+}
+
+/* phone frame */
+.phone {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  height: 100dvh;
+  margin: 0 auto;
+  background: var(--bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- top chrome ---- */
+.topbar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
+  height: calc(50px + env(safe-area-inset-top));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: env(safe-area-inset-top) 16px 0;
+  background: linear-gradient(to bottom,
+    #ffffff 0,
+    #ffffff calc(38px + env(safe-area-inset-top)),
+    rgba(255,255,255,0));
+  pointer-events: none;
+}
+.logo { height: 13px; width: auto; display: block; }
+.count {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.4);
+}
+
+/* ---- scroll stage ---- */
+.stage {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.stage::-webkit-scrollbar { display: none; }
+
+/* ---- dense grid ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  column-gap: 0;
+  row-gap: 8px;
+  background: var(--bg);
+  padding-top: calc(54px + env(safe-area-inset-top));
+}
+.cell {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: var(--bg);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.55s cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.cell.in { opacity: 1; transform: none; }
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.cell img.loaded { opacity: 1; }
+
+/* =====================================================
+   GOOEY FILTER MENU  (centered vertically + horizontally)
+   ===================================================== */
+.filterbar {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 132px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  transition: opacity 0.45s ease, transform 0.5s cubic-bezier(0.22,0.61,0.36,1);
+}
+.filterbar.hidden {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.82);
+  pointer-events: none;
+}
+
+/* liquid blob layer — the gooey shapes */
+.goo {
+  position: absolute;
+  inset: 0;
+  filter: url(#goo);
+}
+.blob {
+  position: absolute;
+  left: 0; top: 0;
+  width: 132px;
+  height: 48px;
+  border-radius: 24px;
+  background: linear-gradient(rgba(255,255,255,0.92), rgba(243,243,243,0.8));
+}
+.blob-opt {
+  opacity: 0;
+  transform: translateY(0) scale(0.34);
+  transition: transform 0.5s cubic-bezier(0.34,1.3,0.5,1), opacity 0.35s ease;
+  transition-delay: calc((var(--i) - 1) * 35ms);
+}
+.filterbar.open .blob-opt {
+  opacity: 1;
+  transform: translateY(calc(var(--i) * -58px)) scale(1);
+}
+
+/* crisp label layer (not goo-filtered, so text stays sharp) */
+.caps { position: absolute; inset: 0; }
+.cap {
+  position: absolute;
+  left: 0; top: 0;
+  width: 132px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.cap-opt {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0) scale(0.34);
+  transition: transform 0.5s cubic-bezier(0.34,1.3,0.5,1), opacity 0.35s ease;
+  transition-delay: calc((var(--i) - 1) * 35ms);
+}
+.filterbar.open .cap-opt {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(calc(var(--i) * -58px)) scale(1);
+}
+
+/* =====================================================
+   ACTIVE-FILTER SELECTOR (liquid glass)
+   ===================================================== */
+.selector {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 31;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+  padding: 0 16px 0 12px;
+  border-radius: 24px;
+  background: rgba(248, 248, 248, 0.5);
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 10px 34px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22,0.61,0.36,1);
+}
+.selector.show { opacity: 1; transform: translate(-50%, -50%) scale(1); pointer-events: auto; }
+.sel-back {
+  width: 26px; height: 26px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.06);
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 26px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.sel-label {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.sel-spectrum { position: relative; width: 170px; height: 22px; }
+.selector.no-spectrum .sel-spectrum { display: none; }
+.sel-track {
+  position: absolute;
+  top: 50%; left: 0; right: 0;
+  height: 10px;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+}
+.sel-handle {
+  position: absolute;
+  top: 50%; left: 0;
+  width: 18px; height: 18px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(0,0,0,0.06);
+  pointer-events: none;
+}
