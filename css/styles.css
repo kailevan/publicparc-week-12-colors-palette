@@ -71,11 +71,18 @@ html, body {
   pointer-events: none;
 }
 .logo { height: 13px; width: auto; display: block; }
-.count {
-  font-size: 10px;
-  letter-spacing: 0.18em;
+/* top-right nav — brand "Colors" font, regular, full caps, tight tracking */
+.topnav {
+  display: flex;
+  gap: 16px;
+}
+.navlink {
+  font-family: "Colors", -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.4);
+  color: #0a0a0a;
 }
 
 /* ---- scroll stage ---- */
@@ -248,7 +255,7 @@ html, body {
 }
 .sel-handle {
   position: absolute;
-  top: 50%; left: 0;
+  top: 50%; left: 12px;     /* rest at the inset (= HR in JS) so it isn't clipped before first drag */
   width: 20px; height: 20px;
   transform: translate(-50%, -50%);
   border-radius: 50%;

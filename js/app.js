@@ -137,7 +137,6 @@ function paintSpectrum(track, buckets) {
 async function init() {
   const grid = document.getElementById("grid");
   const stage = document.getElementById("stage");
-  const countEl = document.getElementById("count");
   const island = document.getElementById("island");
   const selTrack = document.getElementById("selTrack");
   const selHandle = document.getElementById("selHandle");
@@ -153,7 +152,6 @@ async function init() {
   let cols = COLS;
   const setCols = (n) => { cols = n; document.documentElement.style.setProperty("--cols", n); };
   setCols(COLS);
-  countEl.textContent = products.length + " pieces";
 
   const mixed = shuffle(products, 20260601);
   const sortedColor = colorSorted(products);
@@ -273,22 +271,25 @@ async function init() {
 
   let cur = clone(layoutFor("closed"));
   let menuRaf = null;
-  function tweenTo(target, onDone, dur = 560) {
+  // bounce=true gives the elastic width overshoot + surface-tension squash (one
+  // satisfying bounce). Intermediate stages of a multi-step morph pass bounce=false
+  // so the bar doesn't bounce on every leg of the sequence.
+  function tweenTo(target, onDone, dur = 560, bounce = true) {
     const from = clone(cur);
     const start = performance.now();
     cancelAnimationFrame(menuRaf);
     function step(now) {
       const p = Math.min(1, (now - start) / dur);
-      const eb = easeOutBack(p);    // gentle elastic overshoot — glass width only
-      const es = easeOutCubic(p);   // clean settle — labels, opacity, selector (no overshoot/snap)
-      cur.w = lerp(from.w, target.w, eb);
+      const es = easeOutCubic(p);
+      const ew = bounce ? easeOutBack(p) : es;   // overshoot only when bounce is on
+      cur.w = lerp(from.w, target.w, ew);
       for (const k of ["filter", "color", "fabric", "type", "spectrum"]) {
         cur[k].left = lerp(from[k].left, target[k].left, es);
         cur[k].op = lerp(from[k].op, target[k].op, es);
       }
       cur.spectrum.w = lerp(from.spectrum.w || 0, target.spectrum.w || 0, es);
       cur.divOp = lerp(from.divOp, target.divOp, es);
-      const squash = 1 - 0.05 * Math.sin(Math.PI * p);   // surface-tension pinch mid-morph
+      const squash = bounce ? 1 - 0.05 * Math.sin(Math.PI * p) : 1;
       applyLayout(cur, squash);
       if (p < 1) menuRaf = requestAnimationFrame(step);
       else { cur = clone(target); applyLayout(cur, 1); if (onDone) onDone(); }
@@ -350,19 +351,29 @@ async function init() {
     };
     if (!staged) { morphTo("sel", cat, recluster); return; }
     // staged choreography: 1) others fade out -> 2) chosen word slides left + bar
-    // resizes -> 3) the colour selector unfurls. Each step waits for the last.
+    // resizes (this is where the bar reaches its FINAL shape). Recluster fires
+    // HERE — the instant the bar settles, no dead time. For COLOR the spectrum
+    // then unfurls in parallel (compositor-only, doesn't fight the grid relayout);
+    // Fabric/Type are already final, so there's no extra leg.
     state = "sel"; selCat = cat;
     tweenTo(fadeOthersLayout(cat), () =>
-      tweenTo(noSpectrumLayout(cat), () =>
-        tweenTo(layoutFor("sel", cat), recluster, 320), 300), 190);
+      tweenTo(noSpectrumLayout(cat), () => {
+        recluster();
+        if (cat === "color") tweenTo(layoutFor("sel", cat), null, 320, false);
+      }, 300, true), 190, false);
   }
 
   function onCategory(cat) {
     if (state === "sel" && selCat === cat) {        // tap the active category -> back to the list
       clearTimers();
-      const keep = cat;
-      morphTo("open", null, () => unzoom());        // un-zoom (returns to top) once the bar settles
-      setBold(keep);                                // keep the selected category bold on reopen
+      setBold(cat);                                 // keep the selected category bold on reopen
+      const reopen = () => morphTo("open", null, () => unzoom());   // expand back, then un-zoom on settle
+      if (cat === "color") {
+        // mirror the entrance: 1) furl the colour picker first, 2) then the bar expands
+        tweenTo(noSpectrumLayout(cat), reopen, 240, false);
+      } else {
+        reopen();
+      }
       return;
     }
     selectCategory(cat, state === "open");          // staged when coming from the open list
