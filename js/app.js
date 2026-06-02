@@ -40,7 +40,14 @@ function byRank(rankFn) {
     });
 }
 
-const colorSorted = byRank(colorRank);
+// colour grid is GROUPED into clean colour blocks (one per bucket), in spectrum
+// order; within a block, light -> dark. So every colour is one contiguous section.
+const BUCKET_ORDER = ["white","ecru","beige","brown","khaki","green","yellow",
+                      "red","pink","light_blue","blue","navy","grey","anthracite","black"];
+const bIdx = (p) => { const i = BUCKET_ORDER.indexOf(p.bucket); return i < 0 ? 99 : i; };
+function colorSorted(list) {
+  return list.slice().sort((a, b) => (bIdx(a) - bIdx(b)) || (b.l - a.l));
+}
 
 const FABRIC_ORDER = ["Knit", "Fleece", "Jersey", "Woven", "Denim", "Other"];
 function fabricOf(p) {
@@ -102,14 +109,29 @@ function flipTo(orderHandles, duration = 900) {
   );
 }
 
-function paintSpectrum(track, sortedProducts) {
-  const stops = [];
-  const N = 26;
-  for (let i = 0; i < N; i++) {
-    const p = sortedProducts[Math.floor((i / (N - 1)) * (sortedProducts.length - 1))];
-    const [r, g, b] = p.rgb;
-    stops.push(`rgb(${r},${g},${b}) ${((i / (N - 1)) * 100).toFixed(1)}%`);
-  }
+// Build the contiguous colour blocks from the grouped order: each block knows
+// where its section starts in the grid and its representative (average) colour.
+function buildBuckets(sortedProducts) {
+  const out = [];
+  sortedProducts.forEach((p, i) => {
+    const last = out[out.length - 1];
+    if (last && last.key === p.bucket) {
+      last.count++; last._r += p.rgb[0]; last._g += p.rgb[1]; last._b += p.rgb[2];
+    } else {
+      out.push({ key: p.bucket, start: i, count: 1, _r: p.rgb[0], _g: p.rgb[1], _b: p.rgb[2] });
+    }
+  });
+  out.forEach((b) => { b.rgb = [Math.round(b._r / b.count), Math.round(b._g / b.count), Math.round(b._b / b.count)]; });
+  return out;
+}
+
+// Equal-width segment per colour (NOT proportional to how many items it has).
+function paintSpectrum(track, buckets) {
+  const n = buckets.length, stops = [];
+  buckets.forEach((b, i) => {
+    const c = `rgb(${b.rgb[0]},${b.rgb[1]},${b.rgb[2]})`;
+    stops.push(`${c} ${(i / n * 100).toFixed(2)}%`, `${c} ${((i + 1) / n * 100).toFixed(2)}%`);
+  });
   track.style.background = `linear-gradient(to right, ${stops.join(", ")})`;
 }
 
@@ -140,7 +162,8 @@ async function init() {
   orders.color = sortedColor.map((p) => p.handle);
   orders.fabric = fabricSorted(products).map((p) => p.handle);
   orders.type = typeSorted(products).map((p) => p.handle);
-  paintSpectrum(selTrack, sortedColor);
+  const buckets = buildBuckets(sortedColor);   // contiguous colour blocks + section starts
+  paintSpectrum(selTrack, buckets);
 
   // build grid (mixed)
   const ROW_STEP = 45;
@@ -251,7 +274,7 @@ async function init() {
 
   let cur = clone(layoutFor("closed"));
   let menuRaf = null;
-  function tweenTo(target) {
+  function tweenTo(target, onDone) {
     const from = clone(cur);
     const dur = 560;
     const start = performance.now();
@@ -270,7 +293,7 @@ async function init() {
       const squash = 1 - 0.05 * Math.sin(Math.PI * p);   // surface-tension pinch mid-morph
       applyLayout(cur, squash);
       if (p < 1) menuRaf = requestAnimationFrame(step);
-      else { cur = clone(target); applyLayout(cur, 1); }
+      else { cur = clone(target); applyLayout(cur, 1); if (onDone) onDone(); }
     }
     menuRaf = requestAnimationFrame(step);
   }
@@ -283,24 +306,27 @@ async function init() {
   let timers = [];
   const clearTimers = () => { timers.forEach(clearTimeout); timers = []; };
   const later = (fn, ms) => { timers.push(setTimeout(fn, ms)); };
-  const setBold = (cat) =>
+  const setBold = (cat) => {
     ["color", "fabric", "type"].forEach((c) => labEl[c].classList.toggle("selected", c === cat));
-  function morphTo(to, cat) { state = to; selCat = cat || null; tweenTo(layoutFor(to, cat)); }
+    labFilter.classList.toggle("dimmed", !!cat);   // Filter recedes to regular once a category is active
+  };
+  function morphTo(to, cat, onDone) { state = to; selCat = cat || null; tweenTo(layoutFor(to, cat), onDone); }
 
   applyLayout(cur, 1); // initial closed state
 
-  const MORPH = 600;   // bar-morph duration window
   const BOLD = 280;    // bold-in-place beat before the bar morphs on select
 
-  // FILTER: closed -> open list; open/sel -> closed (and reset grid to mixed)
+  // FILTER: closed -> open list; open/sel -> closed (and reset grid to mixed).
+  // The grid recluster fires on morph-settle so it never stutters the bar.
   labFilter.addEventListener("click", () => {
     clearTimers();
     if (state === "closed") { morphTo("open"); return; }
     setBold(null);
-    morphTo("closed");
     if (mode !== "mixed" || zoomed) {
       mode = "mixed";
-      later(() => unzoom(orders.mixed), Math.round(MORPH * 0.55));
+      morphTo("closed", null, () => unzoom(orders.mixed));
+    } else {
+      morphTo("closed");
     }
   });
 
@@ -309,19 +335,18 @@ async function init() {
     setBold(cat);                                   // 1) bold in place immediately
     const wasZoomed = zoomed;
     mode = cat;
-    later(() => morphTo("sel", cat), BOLD);         // 2) then the bar morphs
-    later(() => {                                   // 3) then recluster the grid
-      if (wasZoomed) { flipZoom(COLS, orders[cat]); zoomed = false; }
-      else flipTo(orders[cat]);
-    }, BOLD + 300);
+    later(() => morphTo("sel", cat, () => {         // 2) bar morphs, then…
+      if (wasZoomed) { zoomed = false; punchZoom(COLS, 0, orders[cat]); }  // 3) recluster ON SETTLE
+      else flipTo(orders[cat]);                     //    (no contention -> no stutter)
+    }), BOLD);
   }
 
   function onCategory(cat) {
-    if (state === "sel" && selCat === cat) {        // tap the active category -> back to list
+    if (state === "sel" && selCat === cat) {        // tap the active category -> back to the list
       clearTimers();
-      setBold(null);
-      morphTo("open");
-      later(() => unzoom(), Math.round(MORPH * 0.55));   // un-zoom but keep this clustering
+      const keep = cat;
+      morphTo("open", null, () => unzoom());        // un-zoom (returns to top) once the bar settles
+      setBold(keep);                                // keep the selected category bold on reopen
       return;
     }
     selectCategory(cat);                            // from open, or switch category while selected
@@ -331,43 +356,44 @@ async function init() {
   labType.addEventListener("click", () => onCategory("type"));
 
   // ---- zoom + colour slider ----------------------------------------------
-  // FLIP that also scales each cell, so a column-count change animates; can
-  // simultaneously re-order. Viewport-limited so it stays cheap on the phone.
-  function flipZoom(newCols, orderHandles, dur = 700) {
-    const vh = window.innerHeight;
-    const first = new Map();
-    cellMap.forEach((c, h) => first.set(h, c.getBoundingClientRect()));
+  const ROW_GAP = 8;
+  function rowTop(idx, c) { return Math.floor(idx / c) * (grid.clientWidth / c + ROW_GAP); }
+
+  // SCALE PUNCH zoom: instantly commit the new column count + scroll position
+  // (hidden under the animation), then scale the grid from the *previous tile
+  // size* up/down to the new one around the viewport centre — so it reads as a
+  // camera punch, never a scroll. The start scale = oldCols/newCols makes the
+  // first frame's tiles match the size you were just looking at = seamless.
+  function punchZoom(toCols, targetScrollTop, orderHandles) {
+    const fromCols = cols;
     if (orderHandles) orderHandles.forEach((h, i) => { const c = cellMap.get(h); if (c) c.style.order = i; });
-    setCols(newCols);
-    const anim = [];
-    cellMap.forEach((c, h) => {
-      const f = first.get(h), l = c.getBoundingClientRect();
-      if (!l.width || !f.width) return;
-      const seen = (f.bottom > -40 && f.top < vh + 40) || (l.bottom > -40 && l.top < vh + 40);
-      c.style.transition = "none";
-      c.style.transitionDelay = "0ms";
-      c.style.transformOrigin = "top left";
-      if (seen) {
-        c.style.transform =
-          `translate(${f.left - l.left}px, ${f.top - l.top}px) scale(${f.width / l.width}, ${f.height / l.height})`;
-        anim.push(c);
-      } else {
-        c.style.transform = "";
-      }
-    });
+    cellMap.forEach((c) => { c.style.transition = "none"; c.style.transitionDelay = "0ms"; c.style.transform = ""; });
+    setCols(toCols);
+    stage.scrollTop = Math.max(0, targetScrollTop);
+
+    const startScale = toCols / fromCols;                 // tiles keep their size on the first frame
+    const oy = stage.scrollTop + stage.clientHeight / 2;  // anchor the zoom on the viewport centre
+    grid.style.willChange = "transform, opacity";
+    grid.style.transformOrigin = `50% ${oy}px`;
+    grid.style.transition = "none";
+    grid.style.transform = `scale(${startScale})`;
+    grid.style.opacity = "0.45";
     requestAnimationFrame(() =>
       requestAnimationFrame(() => {
-        anim.forEach((c) => {
-          c.style.transition = `transform ${dur}ms cubic-bezier(0.22,0.61,0.36,1)`;
-          c.style.transform = "";
-        });
+        grid.style.transition = "transform 500ms cubic-bezier(0.22,0.61,0.36,1), opacity 280ms ease";
+        grid.style.transform = "scale(1)";
+        grid.style.opacity = "1";
       })
     );
-    if (newCols === ZOOM_COLS) later(upgradeVisible, 80);   // pull in HD images for the zoom
+    later(() => {
+      grid.style.transition = ""; grid.style.transform = "";
+      grid.style.transformOrigin = ""; grid.style.willChange = "";
+    }, 560);
+    if (toCols === ZOOM_COLS) later(upgradeVisible, 120);
   }
 
   function unzoom(orderHandles) {     // back to the overview grid; optional new order
-    if (zoomed) { flipZoom(COLS, orderHandles); zoomed = false; }
+    if (zoomed) { zoomed = false; punchZoom(COLS, 0, orderHandles); }   // punch-out, lands at top
     else if (orderHandles) flipTo(orderHandles);
   }
 
@@ -395,41 +421,34 @@ async function init() {
     upgRaf = requestAnimationFrame(upgradeVisible);
   }, { passive: true });
 
-  const ROW_GAP = 8;
-  let dragging = false, lastF = 0;
+  let dragging = false, lastF = 0, lastBucket = -1;
   function scrollToIndex(idx, c, smooth) {
-    const top = Math.floor(idx / c) * (grid.clientWidth / c + ROW_GAP);
-    stage.scrollTo({ top: Math.max(0, top), behavior: smooth ? "smooth" : "auto" });
+    stage.scrollTo({ top: Math.max(0, rowTop(idx, c)), behavior: smooth ? "smooth" : "auto" });
   }
-  function sectionStart(f) {
-    const N = sortedColor.length;
-    let i = Math.round(clamp01(f) * (N - 1));
-    const fam = sortedColor[i].family;
-    while (i > 0 && sortedColor[i - 1].family === fam) i--;   // back up to the colour block's start
-    return i;
-  }
-  function fToHandle(f) { selHandle.style.left = (f * selSpectrum.clientWidth) + "px"; }
+  function fToHandle(f) { selHandle.style.left = (clamp01(f) * selSpectrum.clientWidth) + "px"; }
+  // equal-width segments: fraction -> which colour block
+  function bucketAtF(f) { return Math.min(buckets.length - 1, Math.max(0, Math.floor(clamp01(f) * buckets.length))); }
+  function paintHandle(b) { selHandle.style.background = `rgb(${b.rgb[0]},${b.rgb[1]},${b.rgb[2]})`; }
 
   function onSlide(clientX) {
     const r = selSpectrum.getBoundingClientRect();
     lastF = clamp01((clientX - r.left) / r.width);
-    fToHandle(lastF);
-    scrollToIndex(Math.round(lastF * (sortedColor.length - 1)), cols, false); // live preview
+    fToHandle(lastF);                                 // handle rides the finger
+    const bi = bucketAtF(lastF);
+    paintHandle(buckets[bi]);                          // handle takes that colour's hue
+    if (bi !== lastBucket) {                           // crossed into a new colour -> jump its section to row 1
+      lastBucket = bi;
+      scrollToIndex(buckets[bi].start, cols, false);
+    }
   }
   function endSlide() {
     if (!dragging) return;
     dragging = false;
-    const start = sectionStart(lastF);
-    fToHandle(start / (sortedColor.length - 1));
-    if (!zoomed) {
-      zoomed = true;
-      flipZoom(ZOOM_COLS);
-      later(() => scrollToIndex(start, ZOOM_COLS, true), 340); // zoom in place, then glide to section
-      later(upgradeVisible, 720);
-    } else {
-      scrollToIndex(start, ZOOM_COLS, true);
-      later(upgradeVisible, 360);
-    }
+    const b = buckets[bucketAtF(lastF)];
+    fToHandle((lastBucket + 0.5) / buckets.length);    // settle the handle to the segment centre
+    paintHandle(b);
+    if (!zoomed) zoomed = true;
+    punchZoom(ZOOM_COLS, rowTop(b.start, ZOOM_COLS));  // punch-in (or re-punch) to the colour section start
   }
   selSpectrum.addEventListener("pointerdown", (e) => {
     if (state !== "sel" || selCat !== "color") return;

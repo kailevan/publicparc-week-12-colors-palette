@@ -181,22 +181,23 @@ html, body {
   font-size: 12px;
   will-change: left, opacity;
 }
-/* Filter — distinct typeface, bold, full ink */
+/* Filter — distinct typeface, the parent/title. Bold when it's "home"
+   (nothing selected); crossfades to Regular once a category is chosen. */
 .lab-main {
   width: 88px;
   font-family: "Cosmos Oracle", "Colors", sans-serif;
-  font-weight: 700;
   letter-spacing: 0.02em;
   color: #0a0a0a;
 }
-/* categories — Cosmos Oracle Regular; crossfades to Bold when selected */
+/* categories — UPPERCASE (inherits .lab), Cosmos Oracle Regular; crossfade to Bold when selected */
 .lab-opt {
   width: 84px;
   font-family: "Cosmos Oracle", sans-serif;
   letter-spacing: 0.02em;
   color: #0a0a0a;
 }
-.lab-opt .t {
+/* shared two-span weight crossfade (static fonts can't tween weight) */
+.lab .t {
   position: absolute;
   inset: 0;
   display: flex;
@@ -206,8 +207,14 @@ html, body {
 }
 .t-reg  { font-weight: 400; opacity: 1; }
 .t-bold { font-weight: 700; opacity: 0; }
+/* categories: regular -> bold on select */
 .lab-opt.selected .t-reg  { opacity: 0; }
 .lab-opt.selected .t-bold { opacity: 1; }
+/* Filter: bold by default (home); dims to regular when a category is active */
+.lab-main .t-reg  { opacity: 0; }
+.lab-main .t-bold { opacity: 1; }
+.lab-main.dimmed .t-reg  { opacity: 1; }
+.lab-main.dimmed .t-bold { opacity: 0; }
 /* hairline dividers between sections of the open bar */
 .divider {
   position: absolute;
@@ -242,10 +249,12 @@ html, body {
 .sel-handle {
   position: absolute;
   top: 50%; left: 0;
-  width: 18px; height: 18px;
+  width: 20px; height: 20px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(0,0,0,0.06);
+  border: 2.5px solid #fff;               /* white ring so the colour core reads on any track */
+  box-shadow: 0 2px 7px rgba(0,0,0,0.3), inset 0 0 0 0.5px rgba(0,0,0,0.12);
   pointer-events: none;
+  transition: background 0.08s linear;
 }
