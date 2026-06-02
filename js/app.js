@@ -218,6 +218,18 @@ async function init() {
   const divLeft = [88, 172, 256];
   dividers.forEach((d, k) => (d.style.left = divLeft[k] + "px"));
 
+  // measure each category word's real rendered width so the +/× sits a constant
+  // gap after the word (FABRIC/TYPE matched the FILTER spacing) regardless of length
+  const meas = document.createElement("span");
+  meas.style.cssText = "position:absolute;left:-9999px;top:-9999px;visibility:hidden;white-space:nowrap;" +
+    "font-family:'Cosmos Oracle',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.02em;text-transform:uppercase;";
+  document.body.appendChild(meas);
+  const measure = (t) => { meas.textContent = t; return meas.getBoundingClientRect().width; };
+  const wW = { fabric: measure("Fabric"), type: measure("Type") };
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => {
+    wW.fabric = measure("Fabric"); wW.type = measure("Type");
+  });
+
   // a layout = target width + each element's {left, op}; spectrum also {w} (unfurl)
   const SP_X = 92;
   const spHidden = () => ({ left: SP_X, op: 0, w: 0 });
@@ -242,10 +254,13 @@ async function init() {
       return { w, color: { left: 8, op: 1 }, spectrum: { left: SP_X, op: 1, w: SPW },
         filter: hide(w, W_F), fabric: hide(w, W_C), type: hide(w, W_C), icon: ICN(w), divOp: 0 };
     }
-    const w = 132;  // fabric / type — label pill + icon
+    // fabric / type — word + a constant 22px gap to the icon, unit centred (mirrors FILTER's spacing)
+    const ww = wW[cat] || 50;
+    const w = ww + 57;
     const L = { w, filter: hide(w, W_F), color: hide(w, W_C),
-      fabric: hide(w, W_C), type: hide(w, W_C), spectrum: spHidden(), icon: ICN(w), divOp: 0 };
-    L[cat] = { left: (w - W_C) / 2 - 12, op: 1 };   // nudge left to leave room for the icon
+      fabric: hide(w, W_C), type: hide(w, W_C), spectrum: spHidden(),
+      icon: { left: ww + 34, op: 1 }, divOp: 0 };
+    L[cat] = { left: ww / 2 - 30, op: 1 };          // centres the (84-wide) label box on the word
     return L;
   }
 
@@ -365,8 +380,8 @@ async function init() {
     state = "sel"; selCat = cat; setIcon();
     tweenTo(noSpectrumLayout(cat), () => {
       recluster();
-      if (cat === "color") later(() => tweenTo(layoutFor("sel", cat), null, 300, false), 120);
-    }, 400, true);
+      if (cat === "color") later(() => tweenTo(layoutFor("sel", cat), null, 280, false), 40);
+    }, 340, true);
   }
 
   function onCategory(cat) {
