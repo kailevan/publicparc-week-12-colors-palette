@@ -125,13 +125,12 @@ function buildBuckets(sortedProducts) {
   return out;
 }
 
-// Equal-width segment per colour (NOT proportional to how many items it has).
+// Equal-width segment per colour (NOT proportional to count), but each colour
+// sits at its segment CENTRE and the gradient blends smoothly between them.
 function paintSpectrum(track, buckets) {
-  const n = buckets.length, stops = [];
-  buckets.forEach((b, i) => {
-    const c = `rgb(${b.rgb[0]},${b.rgb[1]},${b.rgb[2]})`;
-    stops.push(`${c} ${(i / n * 100).toFixed(2)}%`, `${c} ${((i + 1) / n * 100).toFixed(2)}%`);
-  });
+  const n = buckets.length;
+  const stops = buckets.map((b, i) =>
+    `rgb(${b.rgb[0]},${b.rgb[1]},${b.rgb[2]}) ${((i + 0.5) / n * 100).toFixed(2)}%`);
   track.style.background = `linear-gradient(to right, ${stops.join(", ")})`;
 }
 
@@ -274,9 +273,8 @@ async function init() {
 
   let cur = clone(layoutFor("closed"));
   let menuRaf = null;
-  function tweenTo(target, onDone) {
+  function tweenTo(target, onDone, dur = 560) {
     const from = clone(cur);
-    const dur = 560;
     const start = performance.now();
     cancelAnimationFrame(menuRaf);
     function step(now) {
@@ -314,7 +312,18 @@ async function init() {
 
   applyLayout(cur, 1); // initial closed state
 
-  const BOLD = 280;    // bold-in-place beat before the bar morphs on select
+  // staged-select intermediate layouts (for the smooth choreography)
+  function fadeOthersLayout(cat) {                 // keep open list, fade everything but the chosen word
+    const L = clone(layoutFor("open"));
+    ["filter", "color", "fabric", "type"].forEach((k) => { if (k !== cat) L[k].op = 0; });
+    L.divOp = 0;
+    return L;
+  }
+  function noSpectrumLayout(cat) {                  // final selected layout, but spectrum still furled
+    const L = clone(layoutFor("sel", cat));
+    L.spectrum = { left: L.spectrum.left, op: 0, w: 0 };
+    return L;
+  }
 
   // FILTER: closed -> open list; open/sel -> closed (and reset grid to mixed).
   // The grid recluster fires on morph-settle so it never stutters the bar.
@@ -330,15 +339,22 @@ async function init() {
     }
   });
 
-  function selectCategory(cat) {
+  function selectCategory(cat, staged) {
     clearTimers();
-    setBold(cat);                                   // 1) bold in place immediately
+    setBold(cat);                                   // bold-in-place crossfade (runs alongside the fade)
     const wasZoomed = zoomed;
     mode = cat;
-    later(() => morphTo("sel", cat, () => {         // 2) bar morphs, then…
-      if (wasZoomed) { zoomed = false; punchZoom(COLS, 0, orders[cat]); }  // 3) recluster ON SETTLE
-      else flipTo(orders[cat]);                     //    (no contention -> no stutter)
-    }), BOLD);
+    const recluster = () => {
+      if (wasZoomed) { zoomed = false; punchZoom(COLS, 0, orders[cat]); }
+      else flipTo(orders[cat]);
+    };
+    if (!staged) { morphTo("sel", cat, recluster); return; }
+    // staged choreography: 1) others fade out -> 2) chosen word slides left + bar
+    // resizes -> 3) the colour selector unfurls. Each step waits for the last.
+    state = "sel"; selCat = cat;
+    tweenTo(fadeOthersLayout(cat), () =>
+      tweenTo(noSpectrumLayout(cat), () =>
+        tweenTo(layoutFor("sel", cat), recluster, 320), 300), 190);
   }
 
   function onCategory(cat) {
@@ -349,7 +365,7 @@ async function init() {
       setBold(keep);                                // keep the selected category bold on reopen
       return;
     }
-    selectCategory(cat);                            // from open, or switch category while selected
+    selectCategory(cat, state === "open");          // staged when coming from the open list
   }
   labColor.addEventListener("click", () => onCategory("color"));
   labFabric.addEventListener("click", () => onCategory("fabric"));
@@ -425,7 +441,11 @@ async function init() {
   function scrollToIndex(idx, c, smooth) {
     stage.scrollTo({ top: Math.max(0, rowTop(idx, c)), behavior: smooth ? "smooth" : "auto" });
   }
-  function fToHandle(f) { selHandle.style.left = (clamp01(f) * selSpectrum.clientWidth) + "px"; }
+  const HR = 12;   // inset the handle travel by its radius so it isn't clipped at either end
+  function fToHandle(f) {
+    const w = selSpectrum.clientWidth;
+    selHandle.style.left = (HR + clamp01(f) * (w - 2 * HR)) + "px";
+  }
   // equal-width segments: fraction -> which colour block
   function bucketAtF(f) { return Math.min(buckets.length - 1, Math.max(0, Math.floor(clamp01(f) * buckets.length))); }
   function paintHandle(b) { selHandle.style.background = `rgb(${b.rgb[0]},${b.rgb[1]},${b.rgb[2]})`; }
