@@ -254,13 +254,14 @@ async function init() {
       return { w, color: { left: 8, op: 1 }, spectrum: { left: SP_X, op: 1, w: SPW },
         filter: hide(w, W_F), fabric: hide(w, W_C), type: hide(w, W_C), icon: ICN(w), divOp: 0 };
     }
-    // fabric / type — word + a constant 22px gap to the icon, unit centred (mirrors FILTER's spacing)
+    // fabric / type — mirror FILTER exactly: 22px pad before the word, 22px gap
+    // after it to the icon, ~9px right margin (so left padding matches FILTER).
     const ww = wW[cat] || 50;
-    const w = ww + 57;
+    const w = ww + 64;
     const L = { w, filter: hide(w, W_F), color: hide(w, W_C),
       fabric: hide(w, W_C), type: hide(w, W_C), spectrum: spHidden(),
-      icon: { left: ww + 34, op: 1 }, divOp: 0 };
-    L[cat] = { left: ww / 2 - 30, op: 1 };          // centres the (84-wide) label box on the word
+      icon: { left: ww + 44, op: 1 }, divOp: 0 };
+    L[cat] = { left: ww / 2 - 20, op: 1 };          // word-left = 22 (matches FILTER's left pad)
     return L;
   }
 
@@ -364,7 +365,7 @@ async function init() {
     setIcon();
   }
 
-  function selectCategory(cat, staged) {
+  function selectCategory(cat) {
     clearTimers();
     setBold(cat);
     const wasZoomed = zoomed;
@@ -373,20 +374,17 @@ async function init() {
       if (wasZoomed) { zoomed = false; flipZoom(COLS, 0, orders[cat]); setIcon(); }
       else flipTo(orders[cat]);
     };
-    if (!staged) { morphTo("sel", cat, recluster); return; }
-    // one motion: others fade + chosen word slides left + bar resizes (one bounce);
-    // recluster fires the instant the bar settles. For COLOR the picker then
-    // unfurls on a SLIGHT delay (so it reads "after the word has moved left").
+    // ONE morph straight to the colour state — the slider unfurls AS the bar
+    // remorphs (it's part of this tween). The grid only reclusters once the morph
+    // is fully done (recluster = onDone), so the heavy relayout never fights the
+    // unfurl. Fabric/Type have no slider, so it's just the bar resize.
     state = "sel"; selCat = cat; setIcon();
-    tweenTo(noSpectrumLayout(cat), () => {
-      recluster();
-      if (cat === "color") later(() => tweenTo(layoutFor("sel", cat), null, 280, false), 40);
-    }, 340, true);
+    tweenTo(layoutFor("sel", cat), recluster, 440, true);
   }
 
   function onCategory(cat) {
     if (state === "sel" && selCat === cat) { backToCategories(); return; }   // tap active -> back to list
-    selectCategory(cat, state === "open");
+    selectCategory(cat);
   }
 
   labFilter.addEventListener("click", () => { if (state === "closed") openMenu(); else closeMenu(); });
