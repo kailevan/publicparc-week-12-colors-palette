@@ -140,6 +140,7 @@ async function init() {
   const island = document.getElementById("island");
   const selTrack = document.getElementById("selTrack");
   const selHandle = document.getElementById("selHandle");
+  const selClose = document.getElementById("selClose");
 
   let products = [];
   try {
@@ -332,6 +333,7 @@ async function init() {
     clearTimers();
     if (state === "closed") { morphTo("open"); return; }
     setBold(null);
+    selClose.classList.remove("show");              // hide the detail × right away on exit
     if (mode !== "mixed" || zoomed) {
       mode = "mixed";
       morphTo("closed", null, () => unzoom(orders.mixed));
@@ -346,7 +348,7 @@ async function init() {
     const wasZoomed = zoomed;
     mode = cat;
     const recluster = () => {
-      if (wasZoomed) { zoomed = false; punchZoom(COLS, 0, orders[cat]); }
+      if (wasZoomed) { zoomed = false; flipZoom(COLS, 0, orders[cat]); setZoomUI(); }
       else flipTo(orders[cat]);
     };
     if (!staged) { morphTo("sel", cat, recluster); return; }
@@ -367,6 +369,7 @@ async function init() {
     if (state === "sel" && selCat === cat) {        // tap the active category -> back to the list
       clearTimers();
       setBold(cat);                                 // keep the selected category bold on reopen
+      selClose.classList.remove("show");            // hide the detail × right away on exit
       const reopen = () => morphTo("open", null, () => unzoom());   // expand back, then un-zoom on settle
       if (cat === "color") {
         // mirror the entrance: 1) furl the colour picker first, 2) then the bar expands
@@ -386,41 +389,56 @@ async function init() {
   const ROW_GAP = 8;
   function rowTop(idx, c) { return Math.floor(idx / c) * (grid.clientWidth / c + ROW_GAP); }
 
-  // SCALE PUNCH zoom: instantly commit the new column count + scroll position
-  // (hidden under the animation), then scale the grid from the *previous tile
-  // size* up/down to the new one around the viewport centre — so it reads as a
-  // camera punch, never a scroll. The start scale = oldCols/newCols makes the
-  // first frame's tiles match the size you were just looking at = seamless.
-  function punchZoom(toCols, targetScrollTop, orderHandles) {
-    const fromCols = cols;
+  // CONTINUOUS column-collapse zoom: a FLIP that ALSO scales each cell, so you
+  // watch the columns morph (8 <-> 3) in one motion and the target tile travels
+  // to the top-left and grows — never a jump or a separate scroll. We commit the
+  // new column count + scroll instantly, then invert every cell back to where it
+  // just was and let it animate to its new home.
+  function flipZoom(toCols, targetScrollTop, orderHandles, dur = 640) {
+    const vh = window.innerHeight;
+    const first = new Map();
+    cellMap.forEach((c, h) => first.set(h, c.getBoundingClientRect()));
     if (orderHandles) orderHandles.forEach((h, i) => { const c = cellMap.get(h); if (c) c.style.order = i; });
-    cellMap.forEach((c) => { c.style.transition = "none"; c.style.transitionDelay = "0ms"; c.style.transform = ""; });
     setCols(toCols);
     stage.scrollTop = Math.max(0, targetScrollTop);
-
-    const startScale = toCols / fromCols;                 // tiles keep their size on the first frame
-    const oy = stage.scrollTop + stage.clientHeight / 2;  // anchor the zoom on the viewport centre
-    grid.style.willChange = "transform, opacity";
-    grid.style.transformOrigin = `50% ${oy}px`;
-    grid.style.transition = "none";
-    grid.style.transform = `scale(${startScale})`;
-    grid.style.opacity = "0.45";
+    const anim = [];
+    cellMap.forEach((c, h) => {
+      const f = first.get(h), l = c.getBoundingClientRect();
+      if (!l.width || !f.width) return;
+      const seen = (f.bottom > -60 && f.top < vh + 60) || (l.bottom > -60 && l.top < vh + 60);
+      c.style.transition = "none"; c.style.transitionDelay = "0ms"; c.style.transformOrigin = "top left";
+      if (seen) {
+        c.style.transform =
+          `translate(${f.left - l.left}px, ${f.top - l.top}px) scale(${f.width / l.width}, ${f.height / l.height})`;
+        anim.push(c);
+      } else { c.style.transform = ""; }
+    });
     requestAnimationFrame(() =>
       requestAnimationFrame(() => {
-        grid.style.transition = "transform 500ms cubic-bezier(0.22,0.61,0.36,1), opacity 280ms ease";
-        grid.style.transform = "scale(1)";
-        grid.style.opacity = "1";
+        anim.forEach((c) => {
+          c.style.transition = `transform ${dur}ms cubic-bezier(0.22,0.61,0.36,1)`;
+          c.style.transform = "";
+        });
       })
     );
-    later(() => {
-      grid.style.transition = ""; grid.style.transform = "";
-      grid.style.transformOrigin = ""; grid.style.willChange = "";
-    }, 560);
-    if (toCols === ZOOM_COLS) later(upgradeVisible, 120);
+    if (toCols === ZOOM_COLS) later(upgradeVisible, dur * 0.45);
   }
 
-  function unzoom(orderHandles) {     // back to the overview grid; optional new order
-    if (zoomed) { zoomed = false; punchZoom(COLS, 0, orderHandles); }   // punch-out, lands at top
+  // first column-0 index at/after a bucket's start, so the top row is ALL that
+  // colour (the 1-2 items that'd sit in the previous row are scrolled just above).
+  function landIndex(b) {
+    const end = b.start + b.count - 1;
+    let li = Math.ceil(b.start / ZOOM_COLS) * ZOOM_COLS;
+    if (li + ZOOM_COLS - 1 > end) li = Math.floor(b.start / ZOOM_COLS) * ZOOM_COLS; // tiny-bucket guard
+    return Math.min(Math.max(0, li), sortedColor.length - 1);
+  }
+
+  function setZoomUI() {                       // the × shows only in the zoomed colour-detail state
+    selClose.classList.toggle("show", zoomed && state === "sel" && selCat === "color");
+  }
+
+  function unzoom(orderHandles) {     // back to the 8-col overview; optional new order
+    if (zoomed) { zoomed = false; flipZoom(COLS, 0, orderHandles); setZoomUI(); }
     else if (orderHandles) flipTo(orderHandles);
   }
 
@@ -467,9 +485,9 @@ async function init() {
     fToHandle(lastF);                                 // handle rides the finger
     const bi = bucketAtF(lastF);
     paintHandle(buckets[bi]);                          // handle takes that colour's hue
-    if (bi !== lastBucket) {                           // crossed into a new colour -> jump its section to row 1
+    if (bi !== lastBucket) {                           // crossed into a new colour -> bring its clean row to top
       lastBucket = bi;
-      scrollToIndex(buckets[bi].start, cols, false);
+      scrollToIndex(landIndex(buckets[bi]), cols, false);
     }
   }
   function endSlide() {
@@ -478,8 +496,14 @@ async function init() {
     const b = buckets[bucketAtF(lastF)];
     fToHandle((lastBucket + 0.5) / buckets.length);    // settle the handle to the segment centre
     paintHandle(b);
-    if (!zoomed) zoomed = true;
-    punchZoom(ZOOM_COLS, rowTop(b.start, ZOOM_COLS));  // punch-in (or re-punch) to the colour section start
+    const li = landIndex(b);
+    if (!zoomed) {
+      zoomed = true;
+      flipZoom(ZOOM_COLS, rowTop(li, ZOOM_COLS));      // continuous 8 -> 3 collapse, target lands top-left
+      setZoomUI();
+    } else {
+      scrollToIndex(li, ZOOM_COLS, true);              // already zoomed: glide to the new colour section
+    }
   }
   selSpectrum.addEventListener("pointerdown", (e) => {
     if (state !== "sel" || selCat !== "color") return;
@@ -491,6 +515,14 @@ async function init() {
   selSpectrum.addEventListener("pointermove", (e) => { if (dragging) onSlide(e.clientX); });
   selSpectrum.addEventListener("pointerup", endSlide);
   selSpectrum.addEventListener("pointercancel", endSlide);
+
+  // × — drop from the 3-col detail back to the 8-col colour overview, picker stays open
+  selClose.addEventListener("click", () => {
+    if (!zoomed) return;
+    zoomed = false;
+    flipZoom(COLS, 0);            // continuous 3 -> 8 expand, back to the colour map
+    setZoomUI();
+  });
 }
 
 init();

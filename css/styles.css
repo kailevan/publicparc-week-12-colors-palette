@@ -265,3 +265,27 @@ html, body {
   pointer-events: none;
   transition: background 0.08s linear;
 }
+
+/* detail-state close button — small glass circle just right of the picker */
+.sel-close {
+  position: absolute;
+  top: 50%; left: 314px;                 /* island-local: just right of the 250-wide detail bar */
+  width: 34px; height: 34px;
+  transform: translate(-50%, -50%) scale(0.6);
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.34);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  backdrop-filter: blur(20px) saturate(190%);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.16), inset 0 1px 1px rgba(255,255,255,0.9);
+  color: #0a0a0a;
+  font-family: "Cosmos Oracle", -apple-system, sans-serif;
+  font-size: 17px; line-height: 1; padding-bottom: 2px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.22,0.61,0.36,1);
+}
+.sel-close.show { opacity: 1; transform: translate(-50%, -50%) scale(1); pointer-events: auto; }
