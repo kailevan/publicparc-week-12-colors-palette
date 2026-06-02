@@ -104,8 +104,9 @@ function paintSpectrum(track, sortedProducts) {
 async function init() {
   const grid = document.getElementById("grid");
   const countEl = document.getElementById("count");
-  const filterbar = document.getElementById("filterbar");
-  const capMain = document.getElementById("capMain");
+  const island = document.getElementById("island");
+  const pillMain = document.getElementById("pillMain");
+  const gooLayer = document.getElementById("gooLayer");
   const selector = document.getElementById("selector");
   const selLabel = document.getElementById("selLabel");
   const selBack = document.getElementById("selBack");
@@ -168,31 +169,41 @@ async function init() {
     requestAnimationFrame(() => cells.forEach((c) => c.classList.add("in")))
   );
 
+  // goo flashes on for the liquid stretch, then fades out to reveal the glass pills
+  let gooT = null;
+  function flashGoo() {
+    gooLayer.classList.add("on");
+    clearTimeout(gooT);
+    gooT = setTimeout(() => gooLayer.classList.remove("on"), 470);
+  }
+
   // ---- menu open/close ----
-  capMain.addEventListener("click", () => {
+  pillMain.addEventListener("click", () => {
     if (busy) return;
-    filterbar.classList.toggle("open");
+    flashGoo();
+    island.classList.toggle("open");
   });
 
   // ---- choose a filter ----
   const LABELS = { color: "Colors", fabric: "Fabric", type: "Type" };
-  document.querySelectorAll(".cap-opt").forEach((btn) => {
+  document.querySelectorAll(".pill-opt").forEach((btn) => {
     btn.addEventListener("click", () => {
       if (busy) return;
       const sort = btn.dataset.sort;
       busy = true;
       mode = sort;
 
-      filterbar.classList.remove("open");
+      flashGoo();
+      island.classList.remove("open");
       flipTo(orders[sort]);
 
-      // hand off filter pill -> selector
-      setTimeout(() => filterbar.classList.add("hidden"), 120);
+      // hand off island -> selector
+      setTimeout(() => island.classList.add("hidden"), 200);
       setTimeout(() => {
         selLabel.textContent = LABELS[sort];
         selector.classList.toggle("no-spectrum", sort !== "color");
         selector.classList.add("show");
-      }, 380);
+      }, 440);
 
       setTimeout(() => (busy = false), 1000);
     });
@@ -205,7 +216,7 @@ async function init() {
     mode = "mixed";
     selector.classList.remove("show");
     flipTo(orders.mixed);
-    setTimeout(() => filterbar.classList.remove("hidden"), 380);
+    setTimeout(() => island.classList.remove("hidden"), 380);
     setTimeout(() => (busy = false), 1000);
   });
 }
