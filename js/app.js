@@ -140,7 +140,7 @@ async function init() {
   const island = document.getElementById("island");
   const selTrack = document.getElementById("selTrack");
   const selHandle = document.getElementById("selHandle");
-  const selClose = document.getElementById("selClose");
+  const pmIcon = document.getElementById("pmIcon");
 
   let products = [];
   try {
@@ -222,29 +222,30 @@ async function init() {
   const SP_X = 92;
   const spHidden = () => ({ left: SP_X, op: 0, w: 0 });
   function hide(w, lw) { return { left: (w - lw) / 2, op: 0 }; }
+  const ICN = (w) => ({ left: w - 20, op: 1 });   // +/× icon rides the right edge of the bar
   function layoutFor(st, cat) {
     if (st === "closed") {
-      const w = 88;
-      return { w, filter: { left: 0, op: 1 },
+      const w = 110;
+      return { w, filter: { left: 2, op: 1 },
         color: hide(w, W_C), fabric: hide(w, W_C), type: hide(w, W_C),
-        spectrum: spHidden(), divOp: 0 };
+        spectrum: spHidden(), icon: ICN(w), divOp: 0 };
     }
     if (st === "open") {
-      const w = 340;
+      const w = 380;
       return { w, filter: { left: 0, op: 1 },
         color: { left: 88, op: 1 }, fabric: { left: 172, op: 1 }, type: { left: 256, op: 1 },
-        spectrum: spHidden(), divOp: 0.5 };
+        spectrum: spHidden(), icon: ICN(w), divOp: 0.5 };
     }
     // sel
     if (cat === "color") {
-      const w = 250;
+      const w = 288;
       return { w, color: { left: 8, op: 1 }, spectrum: { left: SP_X, op: 1, w: SPW },
-        filter: hide(w, W_F), fabric: hide(w, W_C), type: hide(w, W_C), divOp: 0 };
+        filter: hide(w, W_F), fabric: hide(w, W_C), type: hide(w, W_C), icon: ICN(w), divOp: 0 };
     }
-    const w = 104;  // fabric / type (no selector yet) — just the label pill
+    const w = 132;  // fabric / type — label pill + icon
     const L = { w, filter: hide(w, W_F), color: hide(w, W_C),
-      fabric: hide(w, W_C), type: hide(w, W_C), spectrum: spHidden(), divOp: 0 };
-    L[cat] = { left: (w - W_C) / 2, op: 1 };
+      fabric: hide(w, W_C), type: hide(w, W_C), spectrum: spHidden(), icon: ICN(w), divOp: 0 };
+    L[cat] = { left: (w - W_C) / 2 - 12, op: 1 };   // nudge left to leave room for the icon
     return L;
   }
 
@@ -261,6 +262,8 @@ async function init() {
     selSpectrum.style.width = (L.spectrum.w || 0) + "px";
     selSpectrum.style.opacity = L.spectrum.op;
     selSpectrum.style.pointerEvents = L.spectrum.op > 0.6 ? "auto" : "none";
+    pmIcon.style.left = L.icon.left + "px";
+    pmIcon.style.opacity = L.icon.op;
     dividers.forEach((d) => (d.style.opacity = L.divOp));
   }
 
@@ -284,7 +287,7 @@ async function init() {
       const es = easeOutCubic(p);
       const ew = bounce ? easeOutBack(p) : es;   // overshoot only when bounce is on
       cur.w = lerp(from.w, target.w, ew);
-      for (const k of ["filter", "color", "fabric", "type", "spectrum"]) {
+      for (const k of ["filter", "color", "fabric", "type", "spectrum", "icon"]) {
         cur[k].left = lerp(from[k].left, target[k].left, es);
         cur[k].op = lerp(from[k].op, target[k].op, es);
       }
@@ -310,77 +313,73 @@ async function init() {
     ["color", "fabric", "type"].forEach((c) => labEl[c].classList.toggle("selected", c === cat));
     labFilter.classList.toggle("dimmed", !!cat);   // Filter recedes to regular once a category is active
   };
-  function morphTo(to, cat, onDone) { state = to; selCat = cat || null; tweenTo(layoutFor(to, cat), onDone); }
-
-  applyLayout(cur, 1); // initial closed state
-
-  // staged-select intermediate layouts (for the smooth choreography)
-  function fadeOthersLayout(cat) {                 // keep open list, fade everything but the chosen word
-    const L = clone(layoutFor("open"));
-    ["filter", "color", "fabric", "type"].forEach((k) => { if (k !== cat) L[k].op = 0; });
-    L.divOp = 0;
-    return L;
+  // +/× icon: + (collapsed/browsing levels) vs × (drilled-in: open list, or zoomed detail)
+  function setIcon() {
+    pmIcon.classList.toggle("x", state === "open" || (state === "sel" && zoomed));
   }
+  function morphTo(to, cat, onDone) { state = to; selCat = cat || null; setIcon(); tweenTo(layoutFor(to, cat), onDone); }
+
+  applyLayout(cur, 1); setIcon(); // initial closed state
+
   function noSpectrumLayout(cat) {                  // final selected layout, but spectrum still furled
     const L = clone(layoutFor("sel", cat));
     L.spectrum = { left: L.spectrum.left, op: 0, w: 0 };
     return L;
   }
 
-  // FILTER: closed -> open list; open/sel -> closed (and reset grid to mixed).
-  // The grid recluster fires on morph-settle so it never stutters the bar.
-  labFilter.addEventListener("click", () => {
+  // ---- actions (shared by the labels and the +/× icon) ----
+  function openMenu() { clearTimers(); morphTo("open"); }            // closed -> categories  (+ -> ×)
+  function closeMenu() {                                             // open/sel -> closed    (× -> +)
+    clearTimers(); setBold(null);
+    if (mode !== "mixed" || zoomed) { mode = "mixed"; morphTo("closed", null, () => unzoom(orders.mixed)); }
+    else morphTo("closed");
+  }
+  function backToCategories() {                                      // a selected category -> open list
     clearTimers();
-    if (state === "closed") { morphTo("open"); return; }
-    setBold(null);
-    selClose.classList.remove("show");              // hide the detail × right away on exit
-    if (mode !== "mixed" || zoomed) {
-      mode = "mixed";
-      morphTo("closed", null, () => unzoom(orders.mixed));
-    } else {
-      morphTo("closed");
-    }
-  });
+    const cat = selCat; setBold(cat);
+    const reopen = () => morphTo("open", null, () => unzoom());
+    if (cat === "color") tweenTo(noSpectrumLayout(cat), reopen, 240, false);   // furl the picker first
+    else reopen();
+  }
+  function unzoomInPlace() {                                         // detail × -> 8-col colour grid, anchored
+    if (!zoomed) return;
+    const b = buckets[lastBucket >= 0 ? lastBucket : 0];
+    zoomed = false;
+    flipZoom(COLS, rowTop(landIndex(b), COLS), undefined, 760);      // organic 3->8 in place (no scroll-to-top)
+    setIcon();
+  }
 
   function selectCategory(cat, staged) {
     clearTimers();
-    setBold(cat);                                   // bold-in-place crossfade (runs alongside the fade)
+    setBold(cat);
     const wasZoomed = zoomed;
     mode = cat;
     const recluster = () => {
-      if (wasZoomed) { zoomed = false; flipZoom(COLS, 0, orders[cat]); setZoomUI(); }
+      if (wasZoomed) { zoomed = false; flipZoom(COLS, 0, orders[cat]); setIcon(); }
       else flipTo(orders[cat]);
     };
     if (!staged) { morphTo("sel", cat, recluster); return; }
-    // staged choreography: 1) others fade out -> 2) chosen word slides left + bar
-    // resizes (this is where the bar reaches its FINAL shape). Recluster fires
-    // HERE — the instant the bar settles, no dead time. For COLOR the spectrum
-    // then unfurls in parallel (compositor-only, doesn't fight the grid relayout);
-    // Fabric/Type are already final, so there's no extra leg.
-    state = "sel"; selCat = cat;
-    tweenTo(fadeOthersLayout(cat), () =>
-      tweenTo(noSpectrumLayout(cat), () => {
-        recluster();
-        if (cat === "color") tweenTo(layoutFor("sel", cat), null, 320, false);
-      }, 300, true), 190, false);
+    // one motion: others fade + chosen word slides left + bar resizes (one bounce);
+    // recluster fires the instant the bar settles. For COLOR the picker then
+    // unfurls on a SLIGHT delay (so it reads "after the word has moved left").
+    state = "sel"; selCat = cat; setIcon();
+    tweenTo(noSpectrumLayout(cat), () => {
+      recluster();
+      if (cat === "color") later(() => tweenTo(layoutFor("sel", cat), null, 300, false), 120);
+    }, 400, true);
   }
 
   function onCategory(cat) {
-    if (state === "sel" && selCat === cat) {        // tap the active category -> back to the list
-      clearTimers();
-      setBold(cat);                                 // keep the selected category bold on reopen
-      selClose.classList.remove("show");            // hide the detail × right away on exit
-      const reopen = () => morphTo("open", null, () => unzoom());   // expand back, then un-zoom on settle
-      if (cat === "color") {
-        // mirror the entrance: 1) furl the colour picker first, 2) then the bar expands
-        tweenTo(noSpectrumLayout(cat), reopen, 240, false);
-      } else {
-        reopen();
-      }
-      return;
-    }
-    selectCategory(cat, state === "open");          // staged when coming from the open list
+    if (state === "sel" && selCat === cat) { backToCategories(); return; }   // tap active -> back to list
+    selectCategory(cat, state === "open");
   }
+
+  labFilter.addEventListener("click", () => { if (state === "closed") openMenu(); else closeMenu(); });
+  pmIcon.addEventListener("click", () => {
+    if (state === "closed") openMenu();
+    else if (state === "open") closeMenu();
+    else if (state === "sel") { if (zoomed) unzoomInPlace(); else backToCategories(); }
+  });
   labColor.addEventListener("click", () => onCategory("color"));
   labFabric.addEventListener("click", () => onCategory("fabric"));
   labType.addEventListener("click", () => onCategory("type"));
@@ -416,7 +415,7 @@ async function init() {
     requestAnimationFrame(() =>
       requestAnimationFrame(() => {
         anim.forEach((c) => {
-          c.style.transition = `transform ${dur}ms cubic-bezier(0.22,0.61,0.36,1)`;
+          c.style.transition = `transform ${dur}ms cubic-bezier(0.62,0.02,0.2,1)`;  // ease-in-out: watch it move
           c.style.transform = "";
         });
       })
@@ -433,12 +432,8 @@ async function init() {
     return Math.min(Math.max(0, li), sortedColor.length - 1);
   }
 
-  function setZoomUI() {                       // the × shows only in the zoomed colour-detail state
-    selClose.classList.toggle("show", zoomed && state === "sel" && selCat === "color");
-  }
-
   function unzoom(orderHandles) {     // back to the 8-col overview; optional new order
-    if (zoomed) { zoomed = false; flipZoom(COLS, 0, orderHandles); setZoomUI(); }
+    if (zoomed) { zoomed = false; flipZoom(COLS, 0, orderHandles); setIcon(); }
     else if (orderHandles) flipTo(orderHandles);
   }
 
@@ -499,8 +494,8 @@ async function init() {
     const li = landIndex(b);
     if (!zoomed) {
       zoomed = true;
-      flipZoom(ZOOM_COLS, rowTop(li, ZOOM_COLS));      // continuous 8 -> 3 collapse, target lands top-left
-      setZoomUI();
+      flipZoom(ZOOM_COLS, rowTop(li, ZOOM_COLS), undefined, 900);  // slow, continuous 8->3 collapse + zoom-in
+      setIcon();                                       // + -> ×
     } else {
       scrollToIndex(li, ZOOM_COLS, true);              // already zoomed: glide to the new colour section
     }
@@ -515,14 +510,6 @@ async function init() {
   selSpectrum.addEventListener("pointermove", (e) => { if (dragging) onSlide(e.clientX); });
   selSpectrum.addEventListener("pointerup", endSlide);
   selSpectrum.addEventListener("pointercancel", endSlide);
-
-  // × — drop from the 3-col detail back to the 8-col colour overview, picker stays open
-  selClose.addEventListener("click", () => {
-    if (!zoomed) return;
-    zoomed = false;
-    flipZoom(COLS, 0);            // continuous 3 -> 8 expand, back to the colour map
-    setZoomUI();
-  });
 }
 
 init();
