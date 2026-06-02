@@ -11,6 +11,18 @@
   font-weight: 500 700;
   font-display: swap;
 }
+@font-face {
+  font-family: "Cosmos Oracle";
+  src: url("../assets/fonts/CosmosOracle-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cosmos Oracle";
+  src: url("../assets/fonts/CosmosOracle-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
 
 :root {
   --cols: 10;
@@ -107,155 +119,118 @@ html, body {
 .cell img.loaded { opacity: 1; }
 
 /* =====================================================
-   LIQUID-GLASS FILTER ISLAND
-   Closed = single "Filter" pill, centred.
-   Open   = options goo-stretch to the RIGHT, then settle
-            into real glass pills; whole row recentres.
+   LIQUID-GLASS FILTER ISLAND  (single stretching glass bar)
+   - one real backdrop-filter glass bar (no mask -> iOS-safe,
+     stays see-through + frosted the whole time)
+   - width tweened from the Filter pill into a continuous bar,
+     with an elastic overshoot + surface-tension squash = liquid
+   - crisp labels ride on top, driven by the same JS tween, so
+     text never lags behind or appears at the end.
+   Container is fixed at the OPEN size (340x46); the bar grows
+   inside it and everything stays centred.
    ===================================================== */
 .island {
-  --pillW: 82px;
-  --pillH: 44px;
-  --pitch: 90px;            /* pillW + 8px gap */
   position: absolute;
   left: 50%; top: 50%;
-  width: var(--pillW);
-  height: var(--pillH);
+  width: 340px;
+  height: 46px;
   transform: translate(-50%, -50%);
   z-index: 30;
-  transition: width 0.52s cubic-bezier(0.22,0.61,0.36,1),
-              opacity 0.4s ease,
-              transform 0.5s cubic-bezier(0.22,0.61,0.36,1);
+  pointer-events: none;                 /* only the labels are tappable */
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22,0.61,0.36,1);
 }
-/* open width = Filter + 3 option slots, recentred by the -50% translate */
-.island.open { width: calc(var(--pillW) + 3 * var(--pitch)); }
 .island.hidden {
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.82);
-  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.84);
 }
 
-/* --- glass pills: the resting state --- */
-.pills { position: absolute; inset: 0; z-index: 2; }
-.pill {
+/* the one glass bar — width is set by JS each frame */
+.lg-glass {
   position: absolute;
-  top: 0;
-  left: calc(var(--i) * var(--pitch));
-  width: var(--pillW);
-  height: var(--pillH);
+  left: 50%; top: 50%;
+  height: 46px;
+  width: 88px;
+  transform: translate(-50%, -50%);
+  border-radius: 23px;
+  overflow: hidden;                     /* clip morphing labels to the pill silhouette */
+  background: rgba(255,255,255,0.34);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.16),
+              0 1px 2px rgba(0,0,0,0.08),          /* faint hairline so it reads on white */
+              inset 0 1px 1px rgba(255,255,255,0.9),
+              inset 0 -3px 8px rgba(255,255,255,0.22);
+  will-change: width, transform;
+}
+
+/* crisp labels + dividers + embedded selector ride on top of the glass.
+   Position (left) + opacity are driven by JS; widths fixed here. */
+.lab {
+  position: absolute;
+  top: 0; left: 0;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255,255,255,0.5);
-  border-radius: calc(var(--pillH) / 2);
+  border: 0;
+  background: transparent;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 0.02em;            /* tightened from 0.16em */
   text-transform: uppercase;
-  color: var(--ink);
-  /* real liquid glass — refracts the colourful grid behind, dark hairline so it reads on white */
-  background: rgba(255,255,255,0.5);
-  backdrop-filter: blur(16px) saturate(185%);
-  -webkit-backdrop-filter: blur(16px) saturate(185%);
-  border-color: rgba(0,0,0,0.07);
-  box-shadow: 0 8px 26px rgba(0,0,0,0.16), inset 0 1px 0 rgba(255,255,255,0.85);
+  font-size: 12px;
+  will-change: left, opacity;
 }
-.pill-main { font-weight: 700; }   /* "Filter" bold */
-.pill-opt {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(calc(var(--i) * -1 * var(--pitch))) scale(0.6);
-  transition: transform 0.46s cubic-bezier(0.34,1.25,0.45,1),
-              opacity 0.3s ease;
-  transition-delay: calc((var(--i) - 1) * 45ms);
+/* Filter — distinct typeface, bold, full ink */
+.lab-main {
+  width: 88px;
+  font-family: "Cosmos Oracle", "Colors", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #0a0a0a;
 }
-.island.open .pill-opt {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(0) scale(1);
-  transition-delay: calc(170ms + (var(--i) - 1) * 55ms);  /* fade in after the goo has stretched */
+/* categories — Cosmos Oracle Regular; crossfades to Bold when selected */
+.lab-opt {
+  width: 84px;
+  font-family: "Cosmos Oracle", sans-serif;
+  letter-spacing: 0.02em;
+  color: #0a0a0a;
 }
-
-/* --- goo morph layer: liquid stretch during open/close only --- */
-.goo-layer {
+.lab-opt .t {
   position: absolute;
   inset: 0;
-  z-index: 3;
-  filter: url(#goo);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.22s ease 0.04s;   /* fade OUT to reveal glass */
-}
-.goo-layer.on {
-  opacity: 1;
-  transition: opacity 0.1s ease;          /* snap IN at the start of the morph */
-}
-.g-blob {
-  position: absolute;
-  top: 0;
-  left: calc(var(--i) * var(--pitch));
-  width: var(--pillW);
-  height: var(--pillH);
-  border-radius: calc(var(--pillH) / 2);
-  background: rgba(216,217,222,0.98);   /* soft grey so the liquid stretch reads on white */
-}
-.g-opt {
-  transform: translateX(calc(var(--i) * -1 * var(--pitch))) scale(0.5);
-  transition: transform 0.48s cubic-bezier(0.34,1.28,0.42,1);
-  transition-delay: calc((var(--i) - 1) * 45ms);
-}
-.island.open .g-opt {
-  transform: translateX(0) scale(1);
-  transition-delay: calc((var(--i) - 1) * 45ms);
-}
-
-/* =====================================================
-   ACTIVE-FILTER SELECTOR (liquid glass)
-   ===================================================== */
-.selector {
-  position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  z-index: 31;
   display: flex;
   align-items: center;
-  gap: 12px;
-  height: 48px;
-  padding: 0 16px 0 12px;
-  border-radius: 24px;
-  background: rgba(248, 248, 248, 0.5);
-  backdrop-filter: blur(22px) saturate(180%);
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow: 0 10px 34px rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.7);
+  justify-content: center;
+  transition: opacity 0.35s ease;
+}
+.t-reg  { font-weight: 400; opacity: 1; }
+.t-bold { font-weight: 700; opacity: 0; }
+.lab-opt.selected .t-reg  { opacity: 0; }
+.lab-opt.selected .t-bold { opacity: 1; }
+/* hairline dividers between sections of the open bar */
+.divider {
+  position: absolute;
+  top: 13px;
+  width: 1px;
+  height: 20px;
+  background: rgba(0,0,0,0.12);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22,0.61,0.36,1);
 }
-.selector.show { opacity: 1; transform: translate(-50%, -50%) scale(1); pointer-events: auto; }
-.sel-back {
-  width: 26px; height: 26px;
-  flex: 0 0 auto;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.06);
-  color: var(--ink);
-  font-size: 12px;
-  line-height: 26px;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+
+/* embedded color selector — lives inside the bar in the 'sel' state.
+   JS unfurls its width 0 -> 150 so it expands out from beside the label. */
+.sel-spectrum {
+  position: absolute;
+  top: 12px;
+  width: 0;
+  height: 22px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  touch-action: none;          /* drag the handle without scrolling the page */
 }
-.sel-label {
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.sel-spectrum { position: relative; width: 170px; height: 22px; }
-.selector.no-spectrum .sel-spectrum { display: none; }
 .sel-track {
   position: absolute;
   top: 50%; left: 0; right: 0;

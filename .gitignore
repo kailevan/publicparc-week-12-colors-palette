@@ -2,3 +2,6 @@
 .playwright-mcp/
 *.log
 node_modules/
+
+# local backups
+data/products.backup-*.json

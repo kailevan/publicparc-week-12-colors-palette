@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>COLORS — Palette</title>
-  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <link rel="stylesheet" href="css/styles.css?v=12" />
 </head>
 <body>
   <div class="phone">
@@ -19,47 +19,26 @@
       <div class="grid" id="grid"></div>
     </main>
 
-    <!-- liquid-glass filter island -->
+    <!-- liquid-glass filter island — ONE morphing glass button -->
+    <!-- closed: "Filter"  <->  open: Filter | Color | Fabric | Type
+         <->  selected: <category> + its embedded selector -->
     <div class="island" id="island">
-      <!-- glass pills (resting state) -->
-      <div class="pills" id="pills">
-        <button class="pill pill-main" id="pillMain" style="--i:0">Filter</button>
-        <button class="pill pill-opt" data-sort="color"  style="--i:1">Color</button>
-        <button class="pill pill-opt" data-sort="fabric" style="--i:2">Fabric</button>
-        <button class="pill pill-opt" data-sort="type"   style="--i:3">Type</button>
-      </div>
-      <!-- goo morph layer (liquid stretch during open/close only) -->
-      <div class="goo-layer" id="gooLayer" aria-hidden="true">
-        <span class="g-blob g-main" style="--i:0"></span>
-        <span class="g-blob g-opt"  style="--i:1"></span>
-        <span class="g-blob g-opt"  style="--i:2"></span>
-        <span class="g-blob g-opt"  style="--i:3"></span>
-      </div>
-    </div>
-
-    <!-- active-filter selector (emerges after a choice) -->
-    <div class="selector" id="selector">
-      <button class="sel-back" id="selBack" aria-label="back">✕</button>
-      <span class="sel-label" id="selLabel">Colors</span>
-      <div class="sel-spectrum" id="selSpectrum">
-        <div class="sel-track" id="selTrack"></div>
-        <div class="sel-handle" id="selHandle"></div>
+      <div class="lg-glass" id="lgGlass">
+        <span class="divider"></span>
+        <span class="divider"></span>
+        <span class="divider"></span>
+        <button class="lab lab-main" id="labFilter">Filter</button>
+        <button class="lab lab-opt" id="labColor"  data-sort="color"><span class="t t-reg">Color</span><span class="t t-bold">Color</span></button>
+        <button class="lab lab-opt" id="labFabric" data-sort="fabric"><span class="t t-reg">Fabric</span><span class="t t-bold">Fabric</span></button>
+        <button class="lab lab-opt" id="labType"   data-sort="type"><span class="t t-reg">Type</span><span class="t t-bold">Type</span></button>
+        <div class="sel-spectrum" id="selSpectrum">
+          <div class="sel-track" id="selTrack"></div>
+          <div class="sel-handle" id="selHandle"></div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- gooey SVG filter -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <filter id="goo">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
-        <feColorMatrix in="blur" mode="matrix"
-          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-      </filter>
-    </defs>
-  </svg>
-
-  <script src="js/app.js?v=2"></script>
+  <script src="js/app.js?v=12"></script>
 </body>
 </html>
