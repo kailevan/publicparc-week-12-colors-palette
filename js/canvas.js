@@ -323,6 +323,8 @@ async function init() {
       cur.spectrum.w = spFadeIn ? (target.spectrum.w || 0) : lerp(from.spectrum.w || 0, target.spectrum.w || 0, es);
       cur.divOp = lerp(from.divOp, target.divOp, es);
       if (target.color.op < from.color.op) cur.color.op = lerp(from.color.op, target.color.op, easeOutCubic(Math.min(1, p * 2.2)));
+      // swatch fading out (e.g. to the category menu) just fades where it is, fast — no slide to the pill spot
+      if (target.swatch.op < from.swatch.op) { cur.swatch.left = from.swatch.left; cur.swatch.op = lerp(from.swatch.op, target.swatch.op, easeOutCubic(Math.min(1, p * 2.4))); }
       applyLayout(cur, bounce ? 1 - 0.05 * Math.sin(Math.PI * p) : 1);
       if (p < 1) menuRaf = requestAnimationFrame(step); else { cur = clone(target); applyLayout(cur, 1); if (onDone) onDone(); }
     })(performance.now());
