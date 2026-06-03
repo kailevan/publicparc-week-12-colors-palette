@@ -5,3 +5,6 @@ node_modules/
 
 # local backups
 data/products.backup-*.json
+
+# local QA screenshots
+wk12-*.png
