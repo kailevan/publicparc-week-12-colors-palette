@@ -541,16 +541,28 @@ async function init() {
       tweenTo(colorPillLayout(), null, 520, false);    // re-collapse the re-opened spectrum back to the pill
     }
   }
+  // Drag tracking via window listeners (added on down, removed on up) instead of
+  // setPointerCapture: iOS Safari doesn't reliably release pointer capture, so a
+  // lingering capture on the spectrum would swallow the FIRST tap on the × after
+  // a scrub (it got redirected back to the now-collapsed track). No capture -> no
+  // lingering -> the × responds on the first tap.
+  function onSpectrumMove(e) { if (dragging) onSlide(e.clientX); }
+  function onSpectrumUp(e) {
+    window.removeEventListener("pointermove", onSpectrumMove);
+    window.removeEventListener("pointerup", onSpectrumUp);
+    window.removeEventListener("pointercancel", onSpectrumUp);
+    endSlide();
+  }
   selSpectrum.addEventListener("pointerdown", (e) => {
     if (state !== "sel" || selCat !== "color") return;
+    if (cur.spectrum.op < 0.6) return;   // ignore taps while the track is collapsed/invisible (the pill)
     dragging = true;
-    try { selSpectrum.setPointerCapture(e.pointerId); } catch (_) {}
     onSlide(e.clientX);
+    window.addEventListener("pointermove", onSpectrumMove);
+    window.addEventListener("pointerup", onSpectrumUp);
+    window.addEventListener("pointercancel", onSpectrumUp);
     e.preventDefault();
   });
-  selSpectrum.addEventListener("pointermove", (e) => { if (dragging) onSlide(e.clientX); });
-  selSpectrum.addEventListener("pointerup", endSlide);
-  selSpectrum.addEventListener("pointercancel", endSlide);
 
   // tap the collapsed pill's swatch -> the bar unfurls back to the full spectrum
   // (still zoomed) so you can re-scrub; releasing the scrub re-collapses it.
