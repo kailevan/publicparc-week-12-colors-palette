@@ -321,7 +321,7 @@ async function init() {
   }
 
   // ---- state machine ----
-  let state = "closed", selCat = null, timers = [];
+  let state = "closed", selCat = null, activeCat = null, timers = [];   // activeCat = the filter currently applied (stays bold in the open menu)
   const clearTimers = () => { timers.forEach(clearTimeout); timers = []; };
   const later = (fn, ms) => { timers.push(setTimeout(fn, ms)); };
   const setBold = (cat) => { ["color", "fabric", "type"].forEach((c) => labEl[c].classList.toggle("selected", c === cat)); labFilter.classList.toggle("dimmed", !!cat); };
@@ -329,15 +329,15 @@ async function init() {
   function morphTo(to, cat, onDone) { state = to; selCat = cat || null; setIcon(); tweenTo(layoutFor(to, cat), onDone); }
   const fToHandle = (f) => { cur.swatch.left = swatchSelLeft(f); selSwatch.style.left = cur.swatch.left + "px"; };
 
-  function openMenu() { clearTimers(); morphTo("open"); }
+  function openMenu() { clearTimers(); setBold(activeCat); morphTo("open"); }
   function closeMenu() {
-    clearTimers(); setBold(null);
+    clearTimers(); setBold(null); activeCat = null;
     if (posMode !== "mixed") { zoomed = false; morphTo("closed", null, () => reclusterTo("mixed")); }
     else morphTo("closed");
   }
-  function backToCategories() { clearTimers(); setBold(null); if (selCat === "color") tweenTo(noSpectrumLayout("color"), () => morphTo("open"), 240, false); else morphTo("open"); }
+  function backToCategories() { clearTimers(); setBold(activeCat); if (selCat === "color") tweenTo(noSpectrumLayout("color"), () => morphTo("open"), 240, false); else morphTo("open"); }
   function selectCategory(cat) {
-    clearTimers(); setBold(cat); state = "sel"; selCat = cat; setIcon();
+    clearTimers(); setBold(cat); activeCat = cat; state = "sel"; selCat = cat; setIcon();
     if (cat === "color") tweenTo(layoutFor("sel", "color"), () => { zoomed = false; lastBucket = 0; curBucket = 0; if (posMode === "map") frameMap(0); else reclusterTo("map"); }, 440, true);
     else tweenTo(layoutFor("sel", cat), () => { zoomed = false; reclusterTo(cat); }, 440, true);
   }
