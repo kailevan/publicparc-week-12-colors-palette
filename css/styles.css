@@ -266,6 +266,26 @@ html, body {
   transition: background 0.08s linear;
 }
 
+/* collapsed-pill swatch: same look as the spectrum handle, but a standalone
+   layer in the bar so it survives the spectrum furling to zero width. JS sets
+   `left`/`opacity`; the colour core is painted from the selected bucket. */
+.sel-swatch {
+  position: absolute;
+  top: 50%; left: 22px;
+  width: 20px; height: 20px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid #fff;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.3), inset 0 0 0 0.5px rgba(0,0,0,0.12);
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.08s linear;
+}
+
 /* +/× toggle integrated on the right of the glass bar. JS sets `left`; the glyph
    is drawn from two bars and rotates 45° (.x) to morph the + into an ×. */
 .pm-icon {

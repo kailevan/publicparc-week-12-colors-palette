@@ -2,7 +2,7 @@
 // Mixed grid -> gooey "Filter" menu -> recluster (color / fabric / type).
 
 const COLS = 8;        // dense overview grid
-const ZOOM_COLS = 3;   // snapped-in colour-section view
+const ZOOM_COLS = 2;   // snapped-in colour-section view
 
 function mulberry32(a) {
   return function () {
@@ -140,6 +140,7 @@ async function init() {
   const island = document.getElementById("island");
   const selTrack = document.getElementById("selTrack");
   const selHandle = document.getElementById("selHandle");
+  const selSwatch = document.getElementById("selSwatch");
   const pmIcon = document.getElementById("pmIcon");
 
   let products = [];
@@ -235,7 +236,20 @@ async function init() {
   const spHidden = () => ({ left: SP_X, op: 0, w: 0 });
   function hide(w, lw) { return { left: (w - lw) / 2, op: 0 }; }
   const ICN = (w) => ({ left: w - 20, op: 1 });   // +/× icon rides the right edge of the bar
+  const SWX = 22;                                  // swatch centre in the collapsed colour pill
+  // Zoomed colour state: the whole bar shrinks to a tiny glass pill holding just
+  // the selected-colour swatch (left) + the × (right). Spectrum + labels fade out.
+  function colorPillLayout() {
+    const w = 64;
+    return { w, filter: hide(w, W_F), color: hide(w, W_C), fabric: hide(w, W_C), type: hide(w, W_C),
+      spectrum: spHidden(), swatch: { left: SWX, op: 1 }, icon: ICN(w), divOp: 0 };
+  }
   function layoutFor(st, cat) {
+    const L = rawLayout(st, cat);
+    if (!L.swatch) L.swatch = { left: SWX, op: 0 };   // swatch only shows in the collapsed pill
+    return L;
+  }
+  function rawLayout(st, cat) {
     if (st === "closed") {
       const w = 110;
       return { w, filter: { left: 2, op: 1 },
@@ -278,6 +292,9 @@ async function init() {
     selSpectrum.style.width = (L.spectrum.w || 0) + "px";
     selSpectrum.style.opacity = L.spectrum.op;
     selSpectrum.style.pointerEvents = L.spectrum.op > 0.6 ? "auto" : "none";
+    selSwatch.style.left = L.swatch.left + "px";
+    selSwatch.style.opacity = L.swatch.op;
+    selSwatch.style.pointerEvents = L.swatch.op > 0.6 ? "auto" : "none";
     pmIcon.style.left = L.icon.left + "px";
     pmIcon.style.opacity = L.icon.op;
     dividers.forEach((d) => (d.style.opacity = L.divOp));
@@ -303,7 +320,7 @@ async function init() {
       const es = easeOutCubic(p);
       const ew = bounce ? easeOutBack(p) : es;   // overshoot only when bounce is on
       cur.w = lerp(from.w, target.w, ew);
-      for (const k of ["filter", "color", "fabric", "type", "spectrum", "icon"]) {
+      for (const k of ["filter", "color", "fabric", "type", "spectrum", "swatch", "icon"]) {
         cur[k].left = lerp(from[k].left, target[k].left, es);
         cur[k].op = lerp(from[k].op, target[k].op, es);
       }
@@ -361,7 +378,9 @@ async function init() {
     if (!zoomed) return;
     const b = buckets[lastBucket >= 0 ? lastBucket : 0];
     zoomed = false;
-    flipZoom(COLS, rowTop(landIndex(b), COLS), undefined, 760);      // organic 3->8 in place (no scroll-to-top)
+    flipZoom(COLS, rowTop(landIndex(b), COLS), undefined, 760);      // organic 2->8 in place (no scroll-to-top)
+    tweenTo(layoutFor("sel", "color"), null, 760, true);             // pill (or open picker) unfurls back to the full bar
+    fToHandle((lastBucket + 0.5) / buckets.length); paintHandle(b);  // restore the handle to its colour segment
     setIcon();
   }
 
@@ -485,7 +504,11 @@ async function init() {
   }
   // equal-width segments: fraction -> which colour block
   function bucketAtF(f) { return Math.min(buckets.length - 1, Math.max(0, Math.floor(clamp01(f) * buckets.length))); }
-  function paintHandle(b) { selHandle.style.background = `rgb(${b.rgb[0]},${b.rgb[1]},${b.rgb[2]})`; }
+  function paintHandle(b) {
+    const c = `rgb(${b.rgb[0]},${b.rgb[1]},${b.rgb[2]})`;
+    selHandle.style.background = c;
+    selSwatch.style.background = c;   // the collapsed pill's swatch shows the same colour
+  }
 
   function onSlide(clientX) {
     const r = selSpectrum.getBoundingClientRect();
@@ -507,10 +530,12 @@ async function init() {
     const li = landIndex(b);
     if (!zoomed) {
       zoomed = true;
-      flipZoom(ZOOM_COLS, rowTop(li, ZOOM_COLS), undefined, 900);  // slow, continuous 8->3 collapse + zoom-in
+      flipZoom(ZOOM_COLS, rowTop(li, ZOOM_COLS), undefined, 900);  // slow, continuous 8->2 collapse + zoom-in
+      tweenTo(colorPillLayout(), null, 900, false);    // bar shrinks to the swatch pill in the SAME motion
       setIcon();                                       // + -> ×
     } else {
       scrollToIndex(li, ZOOM_COLS, true);              // already zoomed: glide to the new colour section
+      tweenTo(colorPillLayout(), null, 520, false);    // re-collapse the re-opened spectrum back to the pill
     }
   }
   selSpectrum.addEventListener("pointerdown", (e) => {
@@ -523,6 +548,15 @@ async function init() {
   selSpectrum.addEventListener("pointermove", (e) => { if (dragging) onSlide(e.clientX); });
   selSpectrum.addEventListener("pointerup", endSlide);
   selSpectrum.addEventListener("pointercancel", endSlide);
+
+  // tap the collapsed pill's swatch -> the bar unfurls back to the full spectrum
+  // (still zoomed) so you can re-scrub; releasing the scrub re-collapses it.
+  selSwatch.addEventListener("click", () => {
+    if (state !== "sel" || selCat !== "color" || !zoomed) return;
+    tweenTo(layoutFor("sel", "color"), null, 440, true);
+    fToHandle((lastBucket >= 0 ? lastBucket + 0.5 : 0.5) / buckets.length);
+    if (lastBucket >= 0) paintHandle(buckets[lastBucket]);
+  });
 }
 
 init();

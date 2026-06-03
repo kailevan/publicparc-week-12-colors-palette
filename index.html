@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>COLORS — Palette</title>
-  <link rel="stylesheet" href="css/styles.css?v=24" />
+  <link rel="stylesheet" href="css/styles.css?v=25" />
 </head>
 <body>
   <div class="phone">
@@ -38,12 +38,14 @@
           <div class="sel-track" id="selTrack"></div>
           <div class="sel-handle" id="selHandle"></div>
         </div>
+        <!-- collapsed-pill swatch: shows the selected colour when zoomed in; tap to re-open the spectrum -->
+        <button class="sel-swatch" id="selSwatch" aria-label="Pick colour"></button>
         <!-- +/× toggle on the right of the button: + opens/expands, × collapses one level -->
         <button class="pm-icon" id="pmIcon" aria-label="Toggle"><span class="pm-bar pm-h"></span><span class="pm-bar pm-v"></span></button>
       </div>
     </div>
   </div>
 
-  <script src="js/app.js?v=24"></script>
+  <script src="js/app.js?v=25"></script>
 </body>
 </html>
