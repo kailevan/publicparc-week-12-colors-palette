@@ -312,8 +312,16 @@ async function init() {
     (function step(now) {
       const p = Math.min(1, (now - start) / dur), es = easeOutCubic(p), ew = bounce ? easeOutBack(p) : es;
       cur.w = lerp(from.w, target.w, ew);
-      for (const k of ["filter", "color", "fabric", "type", "spectrum", "swatch", "icon"]) { cur[k].left = lerp(from[k].left, target[k].left, es); cur[k].op = lerp(from[k].op, target[k].op, es); }
-      cur.spectrum.w = lerp(from.spectrum.w || 0, target.spectrum.w || 0, es); cur.divOp = lerp(from.divOp, target.divOp, es);
+      // elements that FADE IN appear directly at their destination (animate only
+      // opacity) instead of sliding in from the centred hidden position.
+      for (const k of ["filter", "color", "fabric", "type", "spectrum", "swatch", "icon"]) {
+        const fadeIn = from[k].op < 0.5 && target[k].op > 0.5;
+        cur[k].left = fadeIn ? target[k].left : lerp(from[k].left, target[k].left, es);
+        cur[k].op = lerp(from[k].op, target[k].op, es);
+      }
+      const spFadeIn = from.spectrum.op < 0.5 && target.spectrum.op > 0.5;   // slider appears at full width, not unfurling
+      cur.spectrum.w = spFadeIn ? (target.spectrum.w || 0) : lerp(from.spectrum.w || 0, target.spectrum.w || 0, es);
+      cur.divOp = lerp(from.divOp, target.divOp, es);
       if (target.color.op < from.color.op) cur.color.op = lerp(from.color.op, target.color.op, easeOutCubic(Math.min(1, p * 2.2)));
       applyLayout(cur, bounce ? 1 - 0.05 * Math.sin(Math.PI * p) : 1);
       if (p < 1) menuRaf = requestAnimationFrame(step); else { cur = clone(target); applyLayout(cur, 1); if (onDone) onDone(); }
