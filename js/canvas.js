@@ -77,11 +77,14 @@ async function init() {
   try { products = await (await fetch("data/products.json")).json(); }
   catch (e) { stage.innerHTML = '<p style="padding:20px;font-size:12px">data/products.json missing.</p>'; return; }
 
-  const mixedOrder = shuffle(products, 20260601).map((p) => p.handle);
-  const fabricOrder = fabricSorted(products).map((p) => p.handle);
-  const typeOrder = typeSorted(products).map((p) => p.handle);
   const sortedColor = colorSorted(products);
   const { list: evenList, dropped } = evenColorList(sortedColor);
+  // the items trimmed to make the colour grid even are dropped from EVERY order,
+  // so the catalogue is the same set in all states (no strays fading on switch).
+  const keep = (p) => !dropped.has(p.handle);
+  const mixedOrder = shuffle(products, 20260601).filter(keep).map((p) => p.handle);
+  const fabricOrder = fabricSorted(products).filter(keep).map((p) => p.handle);
+  const typeOrder = typeSorted(products).filter(keep).map((p) => p.handle);
   const buckets = buildBuckets(evenList);
   paintSpectrum(selTrack, buckets);
   const bucketIndexOf = new Map();
@@ -123,7 +126,7 @@ async function init() {
     posMaps.map = map; posMaps.detail = det;
     detPlaneH = totalRows * STEP;
     mapPlaneH = Math.max.apply(null, foldEnd.map((e, l) => e - foldStart[l])) * STEP;
-    gridPlaneH = Math.ceil(products.length / COLS) * STEP;
+    gridPlaneH = Math.ceil(mixedOrder.length / COLS) * STEP;
   }
 
   // ---- camera + render ----
