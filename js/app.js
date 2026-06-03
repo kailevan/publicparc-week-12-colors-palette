@@ -406,15 +406,25 @@ async function init() {
     selectCategory(cat);
   }
 
-  labFilter.addEventListener("click", () => { if (state === "closed") openMenu(); else closeMenu(); });
-  pmIcon.addEventListener("click", () => {
+  // Tap on POINTERDOWN, not click. The bar morphs (and the +/× slides ~109px)
+  // right after a touch-drag on the spectrum, which made the FIRST click on the ×
+  // disappear on iOS: a `click` needs pointerdown+pointerup on the SAME element, so
+  // the moving × slipped out from under the finger; iOS also suppresses the synthetic
+  // click that follows a touch gesture. pointerdown fires the instant the finger lands
+  // on whatever element is there — no same-element-up requirement, not gesture-suppressed.
+  // preventDefault stops the trailing ghost click from double-firing the handler.
+  function bindTap(el, fn) {
+    el.addEventListener("pointerdown", (e) => { e.preventDefault(); fn(e); });
+  }
+  bindTap(labFilter, () => { if (state === "closed") openMenu(); else closeMenu(); });
+  bindTap(pmIcon, () => {
     if (state === "closed") openMenu();
     else if (state === "open") closeMenu();
     else if (state === "sel") { if (zoomed) unzoomInPlace(); else backToCategories(); }
   });
-  labColor.addEventListener("click", () => onCategory("color"));
-  labFabric.addEventListener("click", () => onCategory("fabric"));
-  labType.addEventListener("click", () => onCategory("type"));
+  bindTap(labColor, () => onCategory("color"));
+  bindTap(labFabric, () => onCategory("fabric"));
+  bindTap(labType, () => onCategory("type"));
 
   // ---- zoom + colour slider ----------------------------------------------
   const ROW_GAP = 8;
@@ -566,7 +576,7 @@ async function init() {
 
   // tap the collapsed pill's swatch -> the bar unfurls back to the full spectrum
   // (still zoomed) so you can re-scrub; releasing the scrub re-collapses it.
-  selSwatch.addEventListener("click", () => {
+  bindTap(selSwatch, () => {
     if (state !== "sel" || selCat !== "color" || !zoomed) return;
     tweenTo(layoutFor("sel", "color"), null, 440, true);
     fToHandle((lastBucket >= 0 ? lastBucket + 0.5 : 0.5) / buckets.length);

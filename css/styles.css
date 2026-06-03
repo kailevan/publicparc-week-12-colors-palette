@@ -184,6 +184,7 @@ html, body {
   background: transparent;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   text-transform: uppercase;
   font-size: 12px;
   will-change: left, opacity;
@@ -283,6 +284,7 @@ html, body {
   pointer-events: none;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   transition: background 0.08s linear;
 }
 
@@ -297,6 +299,7 @@ html, body {
   cursor: pointer;
   pointer-events: auto;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;   /* no 300ms tap delay / double-tap zoom swallowing the first tap */
   will-change: left;
 }
 .pm-icon .pm-bar {
