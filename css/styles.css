@@ -115,6 +115,26 @@ html, body {
               transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .cell.in { opacity: 1; transform: none; }
+
+/* ---- plane mode (the colour MAP): grid becomes one transform-driven plane ---- */
+body[data-plane] .stage { overflow: hidden; }
+body[data-plane] .grid {
+  display: block;
+  position: relative;
+  padding: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+body[data-plane] .cell {
+  position: absolute;
+  aspect-ratio: auto;          /* width/height are set explicitly in JS */
+  transition-delay: 0ms !important;
+  /* only render cells near the viewport -> the giant transformed plane stops
+     re-rasterising 344 images every scroll frame. width/height are explicit so
+     skipped cells keep their box. */
+  content-visibility: auto;
+}
+
 .cell img {
   width: 100%;
   height: 100%;
