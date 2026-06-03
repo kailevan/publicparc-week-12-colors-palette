@@ -240,9 +240,9 @@ async function init() {
   // Zoomed colour state: the whole bar shrinks to a tiny glass pill holding just
   // the selected-colour swatch (left) + the × (right). Spectrum + labels fade out.
   function colorPillLayout() {
-    const w = 64;
+    const w = 74;                                  // a touch wider so swatch + × don't share a tap seam
     return { w, filter: hide(w, W_F), color: hide(w, W_C), fabric: hide(w, W_C), type: hide(w, W_C),
-      spectrum: spHidden(), swatch: { left: SWX, op: 1 }, icon: ICN(w), divOp: 0 };
+      spectrum: spHidden(), swatch: { left: SWX, op: 1 }, icon: { left: w - 22, op: 1 }, divOp: 0 };
   }
   function layoutFor(st, cat) {
     const L = rawLayout(st, cat);
@@ -499,7 +499,10 @@ async function init() {
   }
   const HR = 12;   // inset the handle travel by its radius so it isn't clipped at either end
   function fToHandle(f) {
-    const w = selSpectrum.clientWidth;
+    // when the bar is collapsed to the pill the spectrum is 0-wide; fall back to
+    // its full track width (SPW) so the handle lands at its real spot, not slammed
+    // against the left edge while it unfurls back open.
+    const w = selSpectrum.clientWidth || SPW;
     selHandle.style.left = (HR + clamp01(f) * (w - 2 * HR)) + "px";
   }
   // equal-width segments: fraction -> which colour block
