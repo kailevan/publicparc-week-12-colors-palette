@@ -276,7 +276,7 @@ async function init() {
   const divLeft = [88, 172, 256]; dividers.forEach((d, k) => (d.style.left = divLeft[k] + "px"));
   selHandle.style.opacity = "0";   // the swatch is the single morphing circle
   const meas = document.createElement("span");
-  meas.style.cssText = "position:absolute;left:-9999px;top:-9999px;visibility:hidden;white-space:nowrap;font-family:'Cosmos Oracle',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.02em;text-transform:uppercase;";
+  meas.style.cssText = "position:absolute;left:-9999px;top:-9999px;visibility:hidden;white-space:nowrap;font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.02em;text-transform:uppercase;";
   document.body.appendChild(meas);
   const measure = (t) => { meas.textContent = t; return meas.getBoundingClientRect().width; };
   const wW = { fabric: measure("Fabric"), type: measure("Type") };
@@ -287,7 +287,7 @@ async function init() {
   const spHidden = () => ({ left: SP_X, op: 0, w: 0 });
   const hide = (w, lw) => ({ left: (w - lw) / 2, op: 0 });
   const ICN = (w) => ({ left: w - 20, op: 1 });
-  function colorPillLayout() { const w = 74; return { w, filter: hide(w, W_F), color: hide(w, W_C), fabric: hide(w, W_C), type: hide(w, W_C), spectrum: spHidden(), swatch: { left: SWX, op: 1, tap: true }, icon: { left: w - 22, op: 1 }, divOp: 0 }; }
+  function colorPillLayout() { const w = 63; return { w, filter: hide(w, W_F), color: hide(w, W_C), fabric: hide(w, W_C), type: hide(w, W_C), spectrum: spHidden(), swatch: { left: SWX, op: 1, tap: true }, icon: { left: 45, op: 1 }, divOp: 0 }; }
   function layoutFor(st, cat) { const L = rawLayout(st, cat); if (!L.swatch) L.swatch = { left: SWX, op: 0, tap: false }; return L; }
   function rawLayout(st, cat) {
     if (st === "closed") { const w = 110; return { w, filter: { left: 2, op: 1 }, color: hide(w, W_C), fabric: hide(w, W_C), type: hide(w, W_C), spectrum: spHidden(), icon: ICN(w), divOp: 0 }; }
@@ -351,7 +351,7 @@ async function init() {
   function backToCategories() { clearTimers(); setBold(activeCat); if (selCat === "color") tweenTo(noSpectrumLayout("color"), () => morphTo("open"), 240, false); else morphTo("open"); }
   function selectCategory(cat) {
     clearTimers(); setBold(cat); activeCat = cat; state = "sel"; selCat = cat; setIcon();
-    if (cat === "color") tweenTo(layoutFor("sel", "color"), () => { zoomed = false; lastBucket = 0; curBucket = 0; if (posMode === "map") frameMap(0); else reclusterTo("map"); }, 440, true);
+    if (cat === "color") { curBucket = 0; lastBucket = 0; paintHandle(buckets[0]); /* handle starts on the first real colour, never white */ tweenTo(layoutFor("sel", "color"), () => { zoomed = false; if (posMode === "map") frameMap(0); else reclusterTo("map"); }, 440, true); }
     else tweenTo(layoutFor("sel", cat), () => { zoomed = false; reclusterTo(cat); }, 440, true);
   }
   function onCategory(cat) { if (state === "sel" && selCat === cat) { backToCategories(); return; } selectCategory(cat); }

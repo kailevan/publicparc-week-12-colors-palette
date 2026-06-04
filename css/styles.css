@@ -83,7 +83,7 @@ html, body {
   gap: 16px;
 }
 .navlink {
-  font-family: "Colors", -apple-system, sans-serif;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   font-size: 11px;
   letter-spacing: -0.01em;
@@ -189,11 +189,7 @@ body[data-plane] .cell {
   background: rgba(255,255,255,0.34);
   backdrop-filter: blur(20px) saturate(190%);
   -webkit-backdrop-filter: blur(20px) saturate(190%);
-  border: 1px solid rgba(255,255,255,0.5);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.16),
-              0 1px 2px rgba(0,0,0,0.08),          /* faint hairline so it reads on white */
-              inset 0 1px 1px rgba(255,255,255,0.9),
-              inset 0 -3px 8px rgba(255,255,255,0.22);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.16);   /* clean single drop shadow, no white inset edge — matches Figma */
   will-change: width, transform;
 }
 
@@ -219,14 +215,14 @@ body[data-plane] .cell {
    (nothing selected); crossfades to Regular once a category is chosen. */
 .lab-main {
   width: 88px;
-  font-family: "Cosmos Oracle", "Colors", sans-serif;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.02em;
   color: #0a0a0a;
 }
-/* categories — UPPERCASE (inherits .lab), Cosmos Oracle Regular; crossfade to Bold when selected */
+/* categories — UPPERCASE (inherits .lab), Helvetica Regular; crossfade to Bold when selected */
 .lab-opt {
   width: 84px;
-  font-family: "Cosmos Oracle", sans-serif;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.02em;
   color: #0a0a0a;
 }
@@ -286,9 +282,8 @@ body[data-plane] .cell {
   width: 20px; height: 20px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: #fff;
-  border: 2.5px solid #fff;               /* white ring so the colour core reads on any track */
-  box-shadow: 0 2px 7px rgba(0,0,0,0.3), inset 0 0 0 0.5px rgba(0,0,0,0.12);
+  background: #fff;                        /* JS paints the selected colour here */
+  box-shadow: 0 2px 7px rgba(0,0,0,0.3);  /* no white ring — handle is fully the colour, soft shadow lifts it off the track */
   pointer-events: none;
   transition: background 0.08s linear;
 }
@@ -302,9 +297,9 @@ body[data-plane] .cell {
   width: 20px; height: 20px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: #fff;
-  border: 2.5px solid #fff;
-  box-shadow: 0 2px 7px rgba(0,0,0,0.3), inset 0 0 0 0.5px rgba(0,0,0,0.12);
+  background: #fff;                        /* JS paints the selected colour here */
+  border: 0;                               /* kill default <button> border */
+  box-shadow: 0 2px 7px rgba(0,0,0,0.3);  /* no white ring — fully the colour, soft shadow lifts it off the track */
   padding: 0;
   opacity: 0;
   pointer-events: none;
@@ -333,8 +328,8 @@ body[data-plane] .cell {
   background: #0a0a0a; border-radius: 1px;
   transition: transform 0.42s cubic-bezier(0.22,0.61,0.36,1);
 }
-.pm-icon .pm-h { width: 13px; height: 1.6px; transform: translate(-50%, -50%) rotate(0deg); }
-.pm-icon .pm-v { width: 1.6px; height: 13px; transform: translate(-50%, -50%) rotate(0deg); }
+.pm-icon .pm-h { width: 12px; height: 0.7px; transform: translate(-50%, -50%) rotate(0deg); }
+.pm-icon .pm-v { width: 0.7px; height: 12px; transform: translate(-50%, -50%) rotate(0deg); }
 /* rotate both bars 45° -> the + reads as × */
 .pm-icon.x .pm-h { transform: translate(-50%, -50%) rotate(45deg); }
 .pm-icon.x .pm-v { transform: translate(-50%, -50%) rotate(45deg); }

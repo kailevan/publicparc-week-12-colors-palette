@@ -439,7 +439,7 @@ async function init() {
   dividers.forEach((d, k) => (d.style.left = divLeft[k] + "px"));
   const meas = document.createElement("span");
   meas.style.cssText = "position:absolute;left:-9999px;top:-9999px;visibility:hidden;white-space:nowrap;" +
-    "font-family:'Cosmos Oracle',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.02em;text-transform:uppercase;";
+    "font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:0.02em;text-transform:uppercase;";
   document.body.appendChild(meas);
   const measure = (t) => { meas.textContent = t; return meas.getBoundingClientRect().width; };
   const wW = { fabric: measure("Fabric"), type: measure("Type") };
@@ -451,9 +451,9 @@ async function init() {
   const ICN = (w) => ({ left: w - 20, op: 1 });
   const SWX = 22;
   function colorPillLayout() {
-    const w = 74;
+    const w = 63;
     return { w, filter: hide(w, W_F), color: hide(w, W_C), fabric: hide(w, W_C), type: hide(w, W_C),
-      spectrum: spHidden(), swatch: { left: SWX, op: 1 }, icon: { left: w - 22, op: 1 }, divOp: 0 };
+      spectrum: spHidden(), swatch: { left: SWX, op: 1 }, icon: { left: 45, op: 1 }, divOp: 0 };
   }
   function layoutFor(st, cat) { const L = rawLayout(st, cat); if (!L.swatch) L.swatch = { left: SWX, op: 0 }; return L; }
   function rawLayout(st, cat) {
